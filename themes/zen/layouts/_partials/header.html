@@ -1,11 +1,11 @@
 <header class="site-header">
     <div class="site-branding">
-        {{/* Use the bulletproof .Site.Home.Permalink variable for the main site link */}}
-        <h1><a href="{{ .Site.Home.Permalink }}">{{ .Site.Title }}</a></h1>
+        {{/* Use the literal baseURL string. This is the most direct method. */}}
+        <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
     </div>
     <nav class="site-navigation">
-        {{/* And use it for the "Home" navigation link as well */}}
-        <a href="{{ .Site.Home.Permalink }}">Home</a>
+        {{/* And use it here as well. */}}
+        <a href="{{ .Site.BaseURL }}">Home</a>
         <a href="{{ "posts/" | relURL }}">Posts</a>
         <a href="{{ "about/" | relURL }}">About</a>
     </nav>
