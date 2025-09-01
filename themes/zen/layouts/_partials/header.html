@@ -1,9 +1,11 @@
 <header class="site-header">
     <div class="site-branding">
-        <h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
+        {{/* Use the bulletproof .Site.Home.Permalink variable for the main site link */}}
+        <h1><a href="{{ .Site.Home.Permalink }}">{{ .Site.Title }}</a></h1>
     </div>
     <nav class="site-navigation">
-        <a href="{{ "/" | relURL }}">Home</a>
+        {{/* And use it for the "Home" navigation link as well */}}
+        <a href="{{ .Site.Home.Permalink }}">Home</a>
         <a href="{{ "posts/" | relURL }}">Posts</a>
         <a href="{{ "about/" | relURL }}">About</a>
     </nav>
