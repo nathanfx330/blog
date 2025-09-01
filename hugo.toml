@@ -1,0 +1,4 @@
+baseURL = "https://nathanfx330.github.io/blog/"
+languageCode = "en-us"
+title = "Nathaniel's Developer Blog"
+theme = "zen"

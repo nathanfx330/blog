@@ -1,0 +1,13 @@
+{{ define "main" }}
+    <ul class="post-list">
+        {{/* We sort the pages by date, newest first, and only show posts from the "posts" section */}}
+        {{ range .Site.RegularPages.ByDate.Reverse }}
+            {{ if eq .Section "posts" }}
+                <li>
+                    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                    <time>{{ .Date.Format "January 2, 2006" }}</time>
+                </li>
+            {{ end }}
+        {{ end }}
+    </ul>
+{{ end }}

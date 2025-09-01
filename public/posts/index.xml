@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Nathaniel&#39;s Developer Blog</title>
+    <link>http://localhost:1313/blog/posts/</link>
+    <description>Recent content in Posts on Nathaniel&#39;s Developer Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Sep 2025 02:56:51 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anatomy of a Hugo Theme</title>
+      <link>http://localhost:1313/blog/posts/anatomy-of-a-hugo-theme/</link>
+      <pubDate>Mon, 01 Sep 2025 02:56:51 -0400</pubDate>
+      <guid>http://localhost:1313/blog/posts/anatomy-of-a-hugo-theme/</guid>
+      <description>&lt;p&gt;My recent journey into building a Hugo blog led me down a rabbit hole of complex themes. While powerful, they often felt like a black box. I decided to strip everything away and ask: what are the absolute essentials to make a Hugo theme work?&lt;/p&gt;&#xA;&lt;p&gt;It turns out, you only need three core files.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;The Skeleton: layouts/_default/baseof.html&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;This is the master template for the entire site. It&amp;rsquo;s the HTML document that holds everything else. The most important part is the {{ block &amp;ldquo;main&amp;rdquo; . }} section, which acts as a hollowed-out space where other templates will inject their content.&#xA;code Html&#xA;IGNORE_WHEN_COPYING_START&#xA;IGNORE_WHEN_COPYING_END&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

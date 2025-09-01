@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomy of a Hugo Theme | Nathaniel&#39;s Developer Blog</title>
+    <link rel="stylesheet" href="http://localhost:1313/blog/css/style.css">
+</head>
+<body>
+    
+    <h1>Nathaniel&#39;s Developer Blog</h1>
+
+  <nav>
+    <ul>
+    <li>
+      <a href="/blog/">Home</a>
+    </li>
+    <li>
+      <a aria-current="true" class="ancestor" href="/blog/posts/">Posts</a>
+    </li>
+    <li>
+      <a href="/blog/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+
+
+    <main>
+        
+  <h1>Anatomy of a Hugo Theme</h1>
+
+  
+  
+  <time datetime="2025-09-01T02:56:51-04:00">September 1, 2025</time>
+
+  <p>My recent journey into building a Hugo blog led me down a rabbit hole of complex themes. While powerful, they often felt like a black box. I decided to strip everything away and ask: what are the absolute essentials to make a Hugo theme work?</p>
+<p>It turns out, you only need three core files.</p>
+<ol>
+<li>The Skeleton: layouts/_default/baseof.html</li>
+</ol>
+<p>This is the master template for the entire site. It&rsquo;s the HTML document that holds everything else. The most important part is the {{ block &ldquo;main&rdquo; . }} section, which acts as a hollowed-out space where other templates will inject their content.
+code Html
+IGNORE_WHEN_COPYING_START
+IGNORE_WHEN_COPYING_END</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<ol start="2">
+<li>The Homepage: layouts/index.html</li>
+</ol>
+<p>This template defines what goes into the &ldquo;main&rdquo; block on your homepage. Its job is typically to loop through all your pages and create a list. The {{ range .Site.RegularPages }} function is the engine for this.
+code Html
+IGNORE_WHEN_COPYING_START
+IGNORE_WHEN_COPYING_END</p>
+<p>{{ define &ldquo;main&rdquo; }}
+<!-- raw HTML omitted -->Posts<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+{{ range .Site.RegularPages }}
+<!-- raw HTML omitted --><!-- raw HTML omitted -->{{ .Title }}<!-- raw HTML omitted --><!-- raw HTML omitted -->
+{{ end }}
+<!-- raw HTML omitted -->
+{{ end }}</p>
+<ol start="3">
+<li>The Content Page: layouts/_default/single.html</li>
+</ol>
+<p>Finally, this template defines how to display a single piece of content, like this very blog post. It pulls in the specific post&rsquo;s title ({{ .Title }}) and its main content ({{ .Content }}).
+code Html
+IGNORE_WHEN_COPYING_START
+IGNORE_WHEN_COPYING_END</p>
+<p>{{ define &ldquo;main&rdquo; }}
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{{ .Title }}<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+{{ .Content }}
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+{{ end }}</p>
+<p>And that&rsquo;s it. With just these three files, you have a complete, functional theme. It&rsquo;s a powerful and minimalist foundation to build upon.</p>
+<p>Feel free to use this as a starting point. Happy writing</p>
+
+  
+
+
+    </main>
+
+</body>
+</html>
