@@ -10,10 +10,12 @@
     
     <header class="site-header">
     <div class="site-branding">
-        <h1><a href="/">Nathaniel&#39;s Developer Blog</a></h1>
+        
+        <h1><a href="http://localhost:1313/blog/">Nathaniel&#39;s Developer Blog</a></h1>
     </div>
     <nav class="site-navigation">
-        <a href="/">Home</a>
+        
+        <a href="http://localhost:1313/blog/">Home</a>
         <a href="/blog/posts/">Posts</a>
         <a href="/blog/about/">About</a>
     </nav>
@@ -21,13 +23,12 @@
 
     <main>
         
-  <h1>Anatomy of a Hugo Theme</h1>
-
-  
-  
-  <time datetime="2025-09-01T02:56:51-04:00">September 1, 2025</time>
-
-  <p>My recent journey into building a Hugo blog led me down a rabbit hole of complex themes. While powerful, they often felt like a black box. I decided to strip everything away and ask: what are the absolute essentials to make a Hugo theme work?</p>
+    <article class="post-content">
+        <header>
+            <h1>Anatomy of a Hugo Theme</h1>
+            <time>September 1, 2025</time>
+        </header>
+        <p>My recent journey into building a Hugo blog led me down a rabbit hole of complex themes. While powerful, they often felt like a black box. I decided to strip everything away and ask: what are the absolute essentials to make a Hugo theme work?</p>
 <p>It turns out, you only need three core files.</p>
 <ol>
 <li>The Skeleton: layouts/_default/baseof.html</li>
@@ -71,10 +72,58 @@ IGNORE_WHEN_COPYING_END</p>
 <p>And that&rsquo;s it. With just these three files, you have a complete, functional theme. It&rsquo;s a powerful and minimalist foundation to build upon.</p>
 <p>Feel free to use this as a starting point. Happy writing</p>
 
-  
-
+    </article>
 
     </main>
+
+    
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-lightbox');
+
+        
+        const figures = document.querySelectorAll('.post-content figure');
+
+        figures.forEach(figure => {
+          const image = figure.querySelector('img');
+          if (image) {
+            figure.style.cursor = 'zoom-in'; 
+            figure.addEventListener('click', function() {
+              lightbox.style.display = 'flex';
+              lightboxImg.src = image.src;
+            });
+          }
+        });
+
+        
+        function closeLightbox() {
+          lightbox.style.display = 'none';
+        }
+
+        
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeLightbox();
+          }
+        });
+      });
+    </script>
 
 </body>
 </html>

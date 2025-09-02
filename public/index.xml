@@ -6,8 +6,15 @@
     <description>Recent content on Nathaniel&#39;s Developer Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Sep 2025 08:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 02 Sep 2025 00:50:30 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redleaf Engine Update</title>
+      <link>http://localhost:1313/blog/posts/redleaf-engine-update/</link>
+      <pubDate>Tue, 02 Sep 2025 00:50:30 -0400</pubDate>
+      <guid>http://localhost:1313/blog/posts/redleaf-engine-update/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve always been struck by the fact that while our computers can &lt;em&gt;store&lt;/em&gt; files, they don&amp;rsquo;t really &lt;em&gt;understand&lt;/em&gt; them. That&amp;rsquo;s the idea behind &lt;strong&gt;Redleaf&lt;/strong&gt;—and I&amp;rsquo;m excited to announce that version &lt;strong&gt;2.0&lt;/strong&gt; is now ready.&lt;/p&gt;&#xA;&lt;p&gt;For anyone new to the project, Redleaf is a &lt;strong&gt;local-first knowledge engine&lt;/strong&gt;. The goal is to take a folder of documents (PDFs, transcripts, HTML, etc.) and turn it into a private, interconnected knowledge graph that you actually own and control.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>About Me</title>
       <link>http://localhost:1313/blog/about/</link>

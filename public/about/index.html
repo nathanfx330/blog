@@ -10,10 +10,12 @@
     
     <header class="site-header">
     <div class="site-branding">
-        <h1><a href="/">Nathaniel&#39;s Developer Blog</a></h1>
+        
+        <h1><a href="http://localhost:1313/blog/">Nathaniel&#39;s Developer Blog</a></h1>
     </div>
     <nav class="site-navigation">
-        <a href="/">Home</a>
+        
+        <a href="http://localhost:1313/blog/">Home</a>
         <a href="/blog/posts/">Posts</a>
         <a href="/blog/about/">About</a>
     </nav>
@@ -35,6 +37,55 @@
 
 
     </main>
+
+    
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-lightbox');
+
+        
+        const figures = document.querySelectorAll('.post-content figure');
+
+        figures.forEach(figure => {
+          const image = figure.querySelector('img');
+          if (image) {
+            figure.style.cursor = 'zoom-in'; 
+            figure.addEventListener('click', function() {
+              lightbox.style.display = 'flex';
+              lightboxImg.src = image.src;
+            });
+          }
+        });
+
+        
+        function closeLightbox() {
+          lightbox.style.display = 'none';
+        }
+
+        
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeLightbox();
+          }
+        });
+      });
+    </script>
 
 </body>
 </html>

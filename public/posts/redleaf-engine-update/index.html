@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redleaf Engine Update | Nathaniel&#39;s Developer Blog</title>
+    <link rel="stylesheet" href="/blog/css/style.css">
+</head>
+<body>
+    
+    <header class="site-header">
+    <div class="site-branding">
+        
+        <h1><a href="http://localhost:1313/blog/">Nathaniel&#39;s Developer Blog</a></h1>
+    </div>
+    <nav class="site-navigation">
+        
+        <a href="http://localhost:1313/blog/">Home</a>
+        <a href="/blog/posts/">Posts</a>
+        <a href="/blog/about/">About</a>
+    </nav>
+</header>
+
+    <main>
+        
+    <article class="post-content">
+        <header>
+            <h1>Redleaf Engine Update</h1>
+            <time>September 2, 2025</time>
+        </header>
+        <p>I&rsquo;ve always been struck by the fact that while our computers can <em>store</em> files, they don&rsquo;t really <em>understand</em> them. That&rsquo;s the idea behind <strong>Redleaf</strong>—and I&rsquo;m excited to announce that version <strong>2.0</strong> is now ready.</p>
+<p>For anyone new to the project, Redleaf is a <strong>local-first knowledge engine</strong>. The goal is to take a folder of documents (PDFs, transcripts, HTML, etc.) and turn it into a private, interconnected knowledge graph that you actually own and control.</p>
+<figure><img src="/blog/posts/redleaf-engine-update/dashboard.jpg" width="750px"><figcaption>
+      <h4>The main dashboard view in Redleaf.</h4>
+    </figcaption>
+</figure>
+
+<p>This new version is a big step up in stability and usability. Here are some of the main things I&rsquo;ve been working on.</p>
+<h3 id="better-document-intelligence">Better Document Intelligence</h3>
+<p>Redleaf 1.0 already used spaCy to extract people, places, and organizations. In 2.0, browsing that information is much faster. On the side of every document there is now an integrated indexing tab showing every detected person, place, and thing—making it much easier to navigate documents at a glance.</p>
+<figure><img src="/blog/posts/redleaf-engine-update/side_pannel.jpg" width="750px"><figcaption>
+      <h4>The side panel showing extracted entities.</h4>
+    </figcaption>
+</figure>
+
+<h3 id="implied-relationships">Implied Relationships</h3>
+<p>Beyond just listing entities, the engine now analyzes their proximity and context to automatically suggest implied relationships. This helps uncover connections you might have missed.</p>
+<figure><img src="/blog/posts/redleaf-engine-update/relationship.jpg" width="750px"><figcaption>
+      <h4>Automatically detecting relationships between detected elements.</h4>
+    </figcaption>
+</figure>
+
+<h3 id="a-more-practical-writing-setup">A More Practical Writing Setup</h3>
+<p>The new dual-pane editor is designed for actually getting work done. It has citation tools built-in that generate Chicago-style citations and export to <code>.odt</code> without messing up the formatting.</p>
+<figure><img src="/blog/posts/redleaf-engine-update/writeup.jpg" width="750px"><figcaption>
+      <h4>The dual-pane write-up editor.</h4>
+    </figcaption>
+</figure>
+
+<h3 id="interactive-media-viewer">Interactive Media Viewer</h3>
+<p>I put a lot of work into the media tools. You can now pair <code>.srt</code> files with podcast <code>.xml</code> feeds to get all the metadata, and the SRT viewer now syncs the audio/video with an animated transcript. The PDF viewer has also been overhauled for a smoother experience.</p>
+<p><figure><img src="/blog/posts/redleaf-engine-update/srt.jpg" width="750px"><figcaption>
+      <h4>The interactive SRT viewer in action.</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/blog/posts/redleaf-engine-update/pdf_writeup.jpg" width="750px"><figcaption>
+      <h4>A PDF loaded up in Synthetist to cite.</h4>
+    </figcaption>
+</figure>
+</p>
+<h3 id="portable-knowledge-graphs">Portable Knowledge Graphs</h3>
+<p>You can now export an entire graph as a single <code>.rklf</code> file. A teammate can import it, point it to their copy of the source documents, and the whole graph links back up without any reprocessing.</p>
+<h3 id="under-the-hood">Under the Hood</h3>
+<p>I also spent a lot of time on stability. I redesigned the multiprocessing core to make it more robust, and the PDF viewer got an overhaul with in-document search, which makes it much nicer to use.</p>
+<hr>
+<h2 id="whats-next-on-the-roadmap">What&rsquo;s Next on the Roadmap</h2>
+<p>I&rsquo;m already planning the next steps for the engine. Here are two of the big ideas I&rsquo;m exploring:</p>
+<ul>
+<li><strong>Optimized PDF Experience:</strong> Rather than just loading a standard PDF, I&rsquo;m working on a process that ingests and converts PDFs into an optimized internal format. The goal is a much faster and more integrated experience, similar to how sites like Archive.org handle documents.</li>
+<li><strong>Local Email Indexing:</strong> I want to add the ability to ingest exported emails (like <code>.mbox</code> files). This would allow you to build a searchable, interconnected graph of your email history without having to keep it all on a cloud server.</li>
+</ul>
+<hr>
+<p>Redleaf Engine 2.0 is ready. I&rsquo;d love for you to try it, break it, and let me know what you think.</p>
+
+    </article>
+
+    </main>
+
+    
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-lightbox');
+
+        
+        const figures = document.querySelectorAll('.post-content figure');
+
+        figures.forEach(figure => {
+          const image = figure.querySelector('img');
+          if (image) {
+            figure.style.cursor = 'zoom-in'; 
+            figure.addEventListener('click', function() {
+              lightbox.style.display = 'flex';
+              lightboxImg.src = image.src;
+            });
+          }
+        });
+
+        
+        function closeLightbox() {
+          lightbox.style.display = 'none';
+        }
+
+        
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeLightbox();
+          }
+        });
+      });
+    </script>
+
+</body>
+</html>
