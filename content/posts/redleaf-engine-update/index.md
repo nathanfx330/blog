@@ -56,4 +56,4 @@ I'm already planning the next steps for the engine. Here are two of the big idea
 
 ---
 
-Redleaf Engine 2.0 is ready. I'd love for you to try it, break it, and let me know what you think.
+Redleaf Engine 2.0 is ready. I'd love for you to try it, break it, and let me know what you think. - Nathaniel Westveer
