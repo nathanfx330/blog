@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redleaf Tutorial 2 Core Workflow | Nathaniel&#39;s Developer Blog</title>
+    <link rel="stylesheet" href="/blog/css/style.css">
+</head>
+<body>
+    
+    <header class="site-header">
+    <div class="site-branding">
+        
+        <h1><a href="http://localhost:1313/blog/">Nathaniel&#39;s Developer Blog</a></h1>
+    </div>
+    <nav class="site-navigation">
+        
+        <a href="http://localhost:1313/blog/">Home</a>
+        <a href="/blog/posts/">Posts</a>
+        <a href="/blog/about/">About</a>
+    </nav>
+</header>
+
+    <main>
+        
+    <article class="post-content">
+        <header>
+            <h1>Redleaf Tutorial 2 Core Workflow</h1>
+            <time>September 9, 2025</time>
+        </header>
+        <p>Now that you have Redleaf installed and your documents added, it&rsquo;s time to build your knowledge graph. The Redleaf Dashboard features three main workflow buttons that control the entire process. This guide explains what each one does.</p>
+<figure><img src="/blog/posts/redleaf-tutorial-2-core-workflow/dashboard.jpg" width="750px"><figcaption>
+      <h4>The Three Main Workflow Buttons On The Redleaf Dashboard.</h4>
+    </figcaption>
+</figure>
+
+<h3 id="the-three-step-process">The Three-Step Process</h3>
+<p>The core workflow is designed to be simple and explicit, giving you control over when your computer&rsquo;s resources are used. The process consists of three sequential steps:</p>
+<ol>
+<li><strong>Discover Docs</strong>: Scan the <code>documents/</code> folder and register files.</li>
+<li><strong>Process All &lsquo;New&rsquo;</strong>: Perform the heavy-lifting NLP analysis.</li>
+<li><strong>Update Browse Cache</strong>: Pre-compute data for fast browsing.</li>
+</ol>
+<p>Let&rsquo;s go through each one.</p>
+<h3 id="step-1-discover-docs">Step 1: Discover Docs</h3>
+<figure><img src="/blog/posts/redleaf-tutorial-2-core-workflow/discover.jpg" width="750px"><figcaption>
+      <h4>Discover</h4>
+    </figcaption>
+</figure>
+
+<p>Clicking this button tells Redleaf to scan your <code>documents/</code> directory. It looks for any files that are new or have been modified since the last scan.</p>
+<ul>
+<li><strong>What it does:</strong> Redleaf reads the basic file information (filename, size, modification date) and adds a new entry for each document into the registry.</li>
+<li><strong>What you&rsquo;ll see:</strong> The status for any new documents will appear as <strong>&ldquo;New&rdquo;</strong> in the Document Registry table on the dashboard.</li>
+</ul>
+<p>You should run &ldquo;Discover Docs&rdquo; anytime you add or update files in your <code>documents/</code> folder.</p>
+<h3 id="step-2-process-all-new">Step 2: Process All &ldquo;New&rdquo;</h3>
+<p><figure><img src="/blog/posts/redleaf-tutorial-2-core-workflow/process.jpg" width="750px"><figcaption>
+      <h4>Discovered Documents Listed in the Document Registry.</h4>
+    </figcaption>
+</figure>
+
+This is the most intensive step, where the actual knowledge extraction happens. When you click <strong>Process All &lsquo;New&rsquo;</strong>, Redleaf creates a background job to analyze every document with the &ldquo;New&rdquo; status.</p>
+<ul>
+<li><strong>What it does:</strong> For each document, a background worker will:
+<ul>
+<li>Extract all text content.</li>
+<li>Identify and catalog named entities (people, places, organizations, dates).</li>
+<li>Analyze sentences to infer relationships between those entities.</li>
+<li>Index the full text for searching.</li>
+</ul>
+</li>
+<li><strong>What you&rsquo;ll see:</strong> The status of the documents will change from <code>&quot;New&quot;</code> -&gt; <code>&quot;Queued&quot;</code> -&gt; <code>&quot;Indexing&quot;</code>. Once successfully completed, the status will become <strong>&ldquo;Indexed&rdquo;</strong>. If a file cannot be processed, it will be marked <strong>&ldquo;Error&rdquo;</strong> with a descriptive message.</li>
+</ul>
+<p>Because this runs in the background, you can continue to browse and use the Redleaf interface while your documents are processing.</p>
+<h3 id="step-3-update-browse-cache">Step 3: Update Browse Cache</h3>
+<figure><img src="/blog/posts/redleaf-tutorial-2-core-workflow/update_cache.jpg" width="750px"><figcaption>
+      <h4>Update Browser Cache</h4>
+    </figcaption>
+</figure>
+
+<p>After your documents have been successfully &ldquo;Indexed,&rdquo; there is one final step. The &ldquo;Update Browse Cache&rdquo; button takes all the raw data extracted in Step 2 and organizes it for the <strong>Discovery</strong> and <strong>Search</strong> features.</p>
+<ul>
+<li><strong>What it does:</strong> This process pre-computes the relationships between documents, entities, and tags. It builds a &ldquo;cache&rdquo; that allows the Discovery pages to load instantly, even with thousands of connections.</li>
+<li><strong>What you&rsquo;ll see:</strong> This is a very fast process. A &ldquo;Cache updating&hellip;&rdquo; message will appear, and the button will be disabled momentarily.</li>
+</ul>
+<p>You should run this after a large batch of documents has finished processing, or if you feel the Discovery view is not showing the latest information.</p>
+<figure><img src="/blog/posts/redleaf-tutorial-2-core-workflow/discovery_view.jpg" width="750px"><figcaption>
+      <h4>Discovery Page</h4>
+    </figcaption>
+</figure>
+
+<p><figure><img src="/blog/posts/redleaf-tutorial-2-core-workflow/search.jpg" width="750px"><figcaption>
+      <h4>Keyword Search</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/blog/posts/redleaf-tutorial-2-core-workflow/discovery_tab.jpg" width="750px"><figcaption>
+      <h4>Discovery Tab</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/blog/posts/redleaf-tutorial-2-core-workflow/discovery_tab_expanded.jpg" width="750px"><figcaption>
+      <h4>Discovery Tab Expanded</h4>
+    </figcaption>
+</figure>
+</p>
+<hr>
+<p><strong>That&rsquo;s it!</strong> Once you have completed these three steps, your knowledge graph is fully built and ready to be explored.</p>
+<p>In the next tutorial, we will dive into the <strong>Discovery</strong> interface to search your documents and navigate the connections you&rsquo;ve just uncovered.</p>
+
+    </article>
+
+    </main>
+
+    
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-lightbox');
+
+        
+        const figures = document.querySelectorAll('.post-content figure');
+
+        figures.forEach(figure => {
+          const image = figure.querySelector('img');
+          if (image) {
+            figure.style.cursor = 'zoom-in'; 
+            figure.addEventListener('click', function() {
+              lightbox.style.display = 'flex';
+              lightboxImg.src = image.src;
+            });
+          }
+        });
+
+        
+        function closeLightbox() {
+          lightbox.style.display = 'none';
+        }
+
+        
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeLightbox();
+          }
+        });
+      });
+    </script>
+
+</body>
+</html>

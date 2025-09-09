@@ -6,8 +6,15 @@
     <description>Recent content on Nathaniel&#39;s Developer Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Sep 2025 00:50:30 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 09 Sep 2025 03:54:52 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redleaf Tutorial 2 Core Workflow</title>
+      <link>http://localhost:1313/blog/posts/redleaf-tutorial-2-core-workflow/</link>
+      <pubDate>Tue, 09 Sep 2025 03:54:52 -0400</pubDate>
+      <guid>http://localhost:1313/blog/posts/redleaf-tutorial-2-core-workflow/</guid>
+      <description>&lt;p&gt;Now that you have Redleaf installed and your documents added, it&amp;rsquo;s time to build your knowledge graph. The Redleaf Dashboard features three main workflow buttons that control the entire process. This guide explains what each one does.&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/blog/posts/redleaf-tutorial-2-core-workflow/dashboard.jpg&#34; width=&#34;750px&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;The Three Main Workflow Buttons On The Redleaf Dashboard.&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;the-three-step-process&#34;&gt;The Three-Step Process&lt;/h3&gt;&#xA;&lt;p&gt;The core workflow is designed to be simple and explicit, giving you control over when your computer&amp;rsquo;s resources are used. The process consists of three sequential steps:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Redleaf Engine Update</title>
       <link>http://localhost:1313/blog/posts/redleaf-engine-update/</link>
