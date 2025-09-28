@@ -70,9 +70,10 @@ python run.py
 
   
 
-    Automatic Setup – Redleaf detects the precomputed.marker and automatically builds the entire knowledge base from the provided .sql file. No processing is needed.
+- ⚙️ **Automatic Setup** – Redleaf detects the `precomputed.marker` and automatically builds the entire knowledge base from the provided `.sql` file. No processing is needed.
 
-    Welcome Aboard – On their first visit, the Explorer is greeted by a special welcome screen to create their own private, local account.
+- 👋 **Welcome Aboard** – On their first visit, the Explorer is greeted by a special welcome screen to create their own private, local account.
+
 
 Once logged in, the Explorer has access to the complete, fully-featured knowledge graph. They can search, browse entities, and explore relationships instantly.
 
