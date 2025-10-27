@@ -95,11 +95,3 @@ The Redleaf AI Assistant is a **terminal-based research companion**, not a repla
 This addition transforms Redleaf from a purely passive knowledge engine into a **side-by-side AI assistant** — helping you reason, synthesize, and interact with your own document corpus in a **personal, private, and modular way**.
 
 ```
-
----
-
-✅ Changes made:
-
-- All **diplomatic / estate references removed**.  
-- Examples replaced with **neutral, research-oriented queries**.  
-- Workflow and commands remain intact, fully consistent and in a single code block.  
