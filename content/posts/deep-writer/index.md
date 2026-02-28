@@ -14,5 +14,6 @@ Phase two is the integration of local AI as a writing companion. Instead of send
 The goal is not automation. It is amplification. AI becomes another node in the thinking process — something you consult, compare against, or iterate with while maintaining ownership of structure and intent.
 
 So far, it has been working better than I expected. Writing begins to feel less like editing a document and more like navigating a living system of ideas.
+https://github.com/nathanfx330/Deep-Writer
 
 — Nathaniel Westveer
