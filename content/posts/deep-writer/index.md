@@ -17,3 +17,5 @@ So far, it has been working better than I expected. Writing begins to feel less 
 https://github.com/nathanfx330/Deep-Writer
 
 — Nathaniel Westveer
+
+See the previous Version Node Writer here: https://nathanfx330.github.io/blog/posts/node-writer/
