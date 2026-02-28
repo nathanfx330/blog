@@ -18,4 +18,4 @@ https://github.com/nathanfx330/Deep-Writer
 
 — Nathaniel Westveer
 
-See the previous Version Node Writer here: https://nathanfx330.github.io/blog/posts/node-writer/
+See the previous version Node Writer here: https://nathanfx330.github.io/blog/posts/node-writer/
