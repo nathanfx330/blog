@@ -1,6 +1,7 @@
 ---
 title: "Deep Writer"
 date: 2026-02-27T20:58:20-05:00
+author: "Nathaniel Westveer"
 draft: false
 ---
 
