@@ -16,11 +16,11 @@ The driving force behind this project is the challenge of AI alignment at the in
 
 Instead of encountering LLM rejection or hallucinations when introducing unfamiliar concepts, a nodal design allows us to guide the model's understanding step by step. It works by turning context retrieval into a transparent, visual pipeline:
 
-    Targeted Retrieval: Building on Redleaf’s spaCy-powered entity indexer, specific nodes can query exact entities, documents, or catalogs.
+Targeted Retrieval: Building on Redleaf’s spaCy-powered entity indexer, specific nodes can query exact entities, documents, or catalogs.
 
-    Transparent Context: A context node acts as a scratchpad where searches can be executed and previewed before being sent to the model. If the retrieved data is flawed, it can be corrected before the AI ever sees it.
+Transparent Context: A context node acts as a scratchpad where searches can be executed and previewed before being sent to the model. If the retrieved data is flawed, it can be corrected before the AI ever sees it.
 
-    Paragraph-Level Assistance: Because context is modular, LLM analysis can be injected at any point in the writing process. This allows experimentation with branches and variations without collapsing the entire context window.
+Paragraph-Level Assistance: Because context is modular, LLM analysis can be injected at any point in the writing process. This allows experimentation with branches and variations without collapsing the entire context window.
 
 This modular design encourages exploration and critical thinking rather than passive prompting.
 
