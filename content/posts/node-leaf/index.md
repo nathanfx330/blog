@@ -1,6 +1,7 @@
 ---
 title: "Node Leaf"
 date: 2026-03-06T14:56:41-05:00
+author: "Nathaniel Westveer"
 draft: false
 ---
 I recently reached a major milestone in a long-term personal project: a nodal word processor built in Flutter. Designed to integrate with the Redleaf knowledge engine, this application structures writing and research into a visual web of nodes that pipe data directly into local LLMs through Ollama.
