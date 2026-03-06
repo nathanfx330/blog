@@ -3,13 +3,6 @@ title: "Node Leaf"
 date: 2026-03-06T14:56:41-05:00
 draft: false
 ---
-
-This is exceptional. It has the perfect balance of technical depth, clear problem-solving, and personal passion. That ending is a fantastic, triumphant sign-off.
-
-I only made two tiny punctuation tweaks (fixing a comma splice in the second-to-last sentence, and adding a comma after "Hello world"). I also added some standard Markdown bolding to your bullet points so they pop beautifully on the page.
-
-Here is the final, ready-to-publish version:
-
 I recently reached a major milestone in a long-term personal project: a nodal word processor built in Flutter. Designed to integrate with the Redleaf knowledge engine, this application structures writing and research into a visual web of nodes that pipe data directly into local LLMs through Ollama.
 
 The driving force behind this project is the challenge of AI alignment at the interface level. Current chat interfaces are linear and restrictive. They make it difficult to group ideas, test variations, or provide an AI system with complex context beyond what exists in its training data.
