@@ -2,3 +2,9 @@ baseURL = "https://nathanfx330.github.io/blog/"
 languageCode = "en-us"
 title = "Nathaniel's Developer Blog"
 theme = "zen"
+
+[author]
+  name = "Nathaniel Westveer"
+
+[params]
+  description = "The developer blog of Nathaniel Westveer. Thoughts on local-first AI, Flutter, Python, and opinionated software design."
