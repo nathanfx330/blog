@@ -4,15 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deep Writer | Nathaniel&#39;s Developer Blog</title>
-    <link rel="stylesheet" href="/blog/css/style.css">
-
-    <meta name="author" content="">
-    <meta name="description" content="The developer blog of Nathaniel Westveer. Thoughts on local-first AI, Flutter, Python, and opinionated software design.">
-
     
+    <meta name="author" content="Nathaniel Westveer">
+    <meta name="description" content=" Deep Writer I recently released Node Writer. On its own, it was my response to the skeuomorphic persistence of digital paper and the blinking cursor. …">
+    
+    <meta property="og:title" content="Deep Writer | Nathaniel&#39;s Developer Blog">
+    <meta property="og:description" content=" Deep Writer I recently released Node Writer. On its own, it was my response to the skeuomorphic persistence of digital paper and the blinking cursor. …">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://localhost:1313/blog/posts/deep-writer/">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nathaniel Westveer",
+      "url": "http:\/\/localhost:1313\/blog\/",
+      "jobTitle": "Developer",
+      "knowsAbout": ["Local-first AI", "Flutter", "Python", "Software Design"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/blog/css/style.css">
 </head>
 <body>
-    
     <header class="site-header">
     <div class="site-branding">
         
@@ -64,7 +78,6 @@ I recently released Node Writer. On its own, it was my response to the skeuomorp
         const lightboxImg = document.getElementById('lightbox-img');
         const closeBtn = document.querySelector('.close-lightbox');
 
-        
         const figures = document.querySelectorAll('.post-content figure');
 
         figures.forEach(figure => {
@@ -78,12 +91,10 @@ I recently released Node Writer. On its own, it was my response to the skeuomorp
           }
         });
 
-        
         function closeLightbox() {
           lightbox.style.display = 'none';
         }
 
-        
         closeBtn.addEventListener('click', closeLightbox);
         lightbox.addEventListener('click', function(e) {
           if (e.target === lightbox) {
@@ -91,7 +102,6 @@ I recently released Node Writer. On its own, it was my response to the skeuomorp
           }
         });
 
-        
         document.addEventListener('keydown', function(e) {
           if (e.key === 'Escape') {
             closeLightbox();
@@ -99,6 +109,5 @@ I recently released Node Writer. On its own, it was my response to the skeuomorp
         });
       });
     </script>
-
 </body>
 </html>

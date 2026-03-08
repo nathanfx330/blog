@@ -4,15 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redleaf Engine Update | Nathaniel&#39;s Developer Blog</title>
-    <link rel="stylesheet" href="/blog/css/style.css">
-
-    <meta name="author" content="">
-    <meta name="description" content="The developer blog of Nathaniel Westveer. Thoughts on local-first AI, Flutter, Python, and opinionated software design.">
-
     
+    <meta name="author" content="Nathaniel Westveer">
+    <meta name="description" content="I&rsquo;ve always been struck by the fact that while our computers can store files, they don&rsquo;t really understand them. That&rsquo;s the idea behind …">
+    
+    <meta property="og:title" content="Redleaf Engine Update | Nathaniel&#39;s Developer Blog">
+    <meta property="og:description" content="I&rsquo;ve always been struck by the fact that while our computers can store files, they don&rsquo;t really understand them. That&rsquo;s the idea behind …">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://localhost:1313/blog/posts/redleaf-engine-update/">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nathaniel Westveer",
+      "url": "http:\/\/localhost:1313\/blog\/",
+      "jobTitle": "Developer",
+      "knowsAbout": ["Local-first AI", "Flutter", "Python", "Software Design"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/blog/css/style.css">
 </head>
 <body>
-    
     <header class="site-header">
     <div class="site-branding">
         
@@ -108,7 +122,6 @@
         const lightboxImg = document.getElementById('lightbox-img');
         const closeBtn = document.querySelector('.close-lightbox');
 
-        
         const figures = document.querySelectorAll('.post-content figure');
 
         figures.forEach(figure => {
@@ -122,12 +135,10 @@
           }
         });
 
-        
         function closeLightbox() {
           lightbox.style.display = 'none';
         }
 
-        
         closeBtn.addEventListener('click', closeLightbox);
         lightbox.addEventListener('click', function(e) {
           if (e.target === lightbox) {
@@ -135,7 +146,6 @@
           }
         });
 
-        
         document.addEventListener('keydown', function(e) {
           if (e.key === 'Escape') {
             closeLightbox();
@@ -143,6 +153,5 @@
         });
       });
     </script>
-
 </body>
 </html>

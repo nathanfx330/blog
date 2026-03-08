@@ -4,15 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curators and Explorers | Nathaniel&#39;s Developer Blog</title>
-    <link rel="stylesheet" href="/blog/css/style.css">
-
-    <meta name="author" content="">
-    <meta name="description" content="The developer blog of Nathaniel Westveer. Thoughts on local-first AI, Flutter, Python, and opinionated software design.">
-
     
+    <meta name="author" content="Nathaniel Westveer">
+    <meta name="description" content="Today marks a major milestone for the Redleaf Engine. I’m thrilled to announce a new set of features that transform Redleaf from a personal knowledge tool into …">
+    
+    <meta property="og:title" content="Curators and Explorers | Nathaniel&#39;s Developer Blog">
+    <meta property="og:description" content="Today marks a major milestone for the Redleaf Engine. I’m thrilled to announce a new set of features that transform Redleaf from a personal knowledge tool into …">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://localhost:1313/blog/posts/curators-and-explorers/">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nathaniel Westveer",
+      "url": "http:\/\/localhost:1313\/blog\/",
+      "jobTitle": "Developer",
+      "knowsAbout": ["Local-first AI", "Flutter", "Python", "Software Design"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/blog/css/style.css">
 </head>
 <body>
-    
     <header class="site-header">
     <div class="site-branding">
         
@@ -121,7 +135,6 @@ cd their-redleaf-project</p>
         const lightboxImg = document.getElementById('lightbox-img');
         const closeBtn = document.querySelector('.close-lightbox');
 
-        
         const figures = document.querySelectorAll('.post-content figure');
 
         figures.forEach(figure => {
@@ -135,12 +148,10 @@ cd their-redleaf-project</p>
           }
         });
 
-        
         function closeLightbox() {
           lightbox.style.display = 'none';
         }
 
-        
         closeBtn.addEventListener('click', closeLightbox);
         lightbox.addEventListener('click', function(e) {
           if (e.target === lightbox) {
@@ -148,7 +159,6 @@ cd their-redleaf-project</p>
           }
         });
 
-        
         document.addEventListener('keydown', function(e) {
           if (e.key === 'Escape') {
             closeLightbox();
@@ -156,6 +166,5 @@ cd their-redleaf-project</p>
         });
       });
     </script>
-
 </body>
 </html>
