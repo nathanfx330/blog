@@ -54,6 +54,15 @@ a:hover {
     cursor: zoom-in; /* Add this to make images look clickable */
 }
 
+/* Author Byline Styling */
+.author-byline {
+    color: #888;
+    font-size: 0.95rem;
+    margin-top: -10px;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
 /* Code Block Styling */
 pre {
     background-color: #282c34;
