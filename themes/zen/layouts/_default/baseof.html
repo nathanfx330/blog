@@ -6,7 +6,7 @@
     <title>{{ .Title }} | {{ .Site.Title }}</title>
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 
-    <meta name="author" content="{{ .Site.Author.name }}">
+    <meta name="author" content="{{ .Site.Params.author.name }}">
     <meta name="description" content="{{ .Site.Params.description }}">
 
     {{ if .IsHome }}
@@ -18,7 +18,7 @@
       "name": "{{ .Site.Title }}",
       "author": {
         "@type": "Person",
-        "name": "{{ .Site.Author.name }}"
+        "name": "{{ .Site.Params.author.name }}"
       },
       "description": "{{ .Site.Params.description }}"
     }

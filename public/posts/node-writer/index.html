@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Writer | Nathaniel&#39;s Developer Blog</title>
+    <link rel="stylesheet" href="/blog/css/style.css">
+
+    <meta name="author" content="">
+    <meta name="description" content="The developer blog of Nathaniel Westveer. Thoughts on local-first AI, Flutter, Python, and opinionated software design.">
+
+    
+</head>
+<body>
+    
+    <header class="site-header">
+    <div class="site-branding">
+        
+        <h1><a href="http://localhost:1313/blog/">Nathaniel&#39;s Developer Blog</a></h1>
+    </div>
+    <nav class="site-navigation">
+        
+        <a href="http://localhost:1313/blog/">Home</a>
+        <a href="/blog/posts/">Posts</a>
+        <a href="/blog/about/">About</a>
+    </nav>
+</header>
+
+    <main>
+        
+    <article class="post-content">
+        <header>
+            <h1>Node Writer</h1>
+            
+            <div class="author-byline">By Nathaniel Westveer</div>
+            <time>February 25, 2026</time>
+        </header>
+        <p>My first word processor was ClarisWorks on Mac OS 8 in the late nineties. Since then, nothing has changed. We are still staring at a fake digital piece of paper. After years of Microsoft Word, LibreOffice, and Google Docs, the core experience remains exactly the same. Moving text with a cursor is a tedious, character-by-character chore, with no simple way to rearrange blocks of writing. Writing is about abstracting ideas, exploring structure, and developing details. We get so caught up in modern UX capabilities that we forget to innovate. Too often, we don&rsquo;t reinvent the paradigm, we just digitize it.</p>
+<p>So I made Node Writer. It is not just a word processor; it is an engine that lets you build your outline, rearrange your thoughts, and experiment with different versions of your work all within a single two-dimensional canvas. Each paragraph exists as a node that you can move, edit, or connect to other nodes. This approach allows you to see your writing as a network of ideas instead of a single line of text. You can focus on the relationships between paragraphs, the flow of your story, and the structure of your argument without losing your place in the process. Node Writer turns writing into a visual and modular experience where ideas are easy to shift, expand, or compress without losing their context.</p>
+<p>Structure and write your way. — Nathaniel Westveer, author of Node Writer 1.0<br>
+<a href="https://github.com/nathanfx330/node-writer">https://github.com/nathanfx330/node-writer</a></p>
+<p><figure><img src="/blog/posts/node-writer/nw-1.png" width="750px"><figcaption>
+      <h4>Node Writer interface.</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/blog/posts/node-writer/nw-2.png" width="750px"><figcaption>
+      <h4>Add nodes to map out your writing.</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/blog/posts/node-writer/nw-3.png" width="750px"><figcaption>
+      <h4>Expand and connect your ideas visually.</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/blog/posts/node-writer/nw-3.png" width="750px"><figcaption>
+      <h4>Experiment with ideas directly through nodes.</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/blog/posts/node-writer/nw-4.png" width="750px"><figcaption>
+      <h4>Detach nodes from a chain with a single click.</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/blog/posts/node-writer/nw-5.png" width="750px"><figcaption>
+      <h4>Link new ideas to the final output seamlessly.</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/blog/posts/node-writer/nw-6.png" width="750px"><figcaption>
+      <h4>View the full composite in the Final Output node and jump back to any node to edit.</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/blog/posts/node-writer/nw-7.png" width="750px"><figcaption>
+      <h4>Structure and write freely, your way.</h4>
+    </figcaption>
+</figure>
+</p>
+
+    </article>
+
+    </main>
+
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-lightbox');
+
+        
+        const figures = document.querySelectorAll('.post-content figure');
+
+        figures.forEach(figure => {
+          const image = figure.querySelector('img');
+          if (image) {
+            figure.style.cursor = 'zoom-in'; 
+            figure.addEventListener('click', function() {
+              lightbox.style.display = 'flex';
+              lightboxImg.src = image.src;
+            });
+          }
+        });
+
+        
+        function closeLightbox() {
+          lightbox.style.display = 'none';
+        }
+
+        
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeLightbox();
+          }
+        });
+      });
+    </script>
+
+</body>
+</html>

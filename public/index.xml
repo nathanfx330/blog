@@ -6,8 +6,43 @@
     <description>Recent content on Nathaniel&#39;s Developer Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Sep 2025 03:54:52 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2026 14:56:41 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Node Leaf</title>
+      <link>http://localhost:1313/blog/posts/node-leaf/</link>
+      <pubDate>Fri, 06 Mar 2026 14:56:41 -0500</pubDate>
+      <guid>http://localhost:1313/blog/posts/node-leaf/</guid>
+      <description>&lt;p&gt;I recently reached a major milestone in a long-term personal project: a nodal word processor built in Flutter. &lt;a href=&#34;https://nathanfx330.github.io/blog/posts/deep-writer/&#34;&gt;Deep Writer Blog Post&lt;/a&gt;&#xA;Designed to integrate with the Redleaf knowledge engine, this application structures writing and research into a visual web of nodes that pipe data directly into local LLMs through Ollama. I started Node Writer to pursue a long-held dream of creating a nodal word processor, with the vision that it would naturally merge with Redleaf’s development—evolving into an assistant that grows its ability to help you work with nodes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deep Writer</title>
+      <link>http://localhost:1313/blog/posts/deep-writer/</link>
+      <pubDate>Fri, 27 Feb 2026 20:58:20 -0500</pubDate>
+      <guid>http://localhost:1313/blog/posts/deep-writer/</guid>
+      <description>&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/blog/posts/deep-writer/dw.png&#34; width=&#34;750px&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Deep Writer&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;I recently released Node Writer. On its own, it was my response to the skeuomorphic persistence of digital paper and the blinking cursor. Traditional editors still assume writing happens linearly, as if ideas arrive fully formed from top to bottom. Node Writer challenges that assumption by abstracting writing into nodes — movable units of thought that can be stacked, rearranged, and explored spatially rather than sequentially.&lt;/p&gt;&#xA;&lt;p&gt;But that release was only the first milestone.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Node Writer</title>
+      <link>http://localhost:1313/blog/posts/node-writer/</link>
+      <pubDate>Wed, 25 Feb 2026 10:29:22 -0500</pubDate>
+      <guid>http://localhost:1313/blog/posts/node-writer/</guid>
+      <description>&lt;p&gt;My first word processor was ClarisWorks on Mac OS 8 in the late nineties. Since then, nothing has changed. We are still staring at a fake digital piece of paper. After years of Microsoft Word, LibreOffice, and Google Docs, the core experience remains exactly the same. Moving text with a cursor is a tedious, character-by-character chore, with no simple way to rearrange blocks of writing. Writing is about abstracting ideas, exploring structure, and developing details. We get so caught up in modern UX capabilities that we forget to innovate. Too often, we don&amp;rsquo;t reinvent the paradigm, we just digitize it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Redleaf Ai Assistant</title>
+      <link>http://localhost:1313/blog/posts/redleaf-ai-assistant/</link>
+      <pubDate>Mon, 27 Oct 2025 06:48:25 -0400</pubDate>
+      <guid>http://localhost:1313/blog/posts/redleaf-ai-assistant/</guid>
+      <description>&lt;h2 id=&#34;-how-the-terminal-ai-assistant-works&#34;&gt;🔎 How the Terminal AI Assistant Works&lt;/h2&gt;&#xA;&lt;p&gt;The assistant provides a &lt;strong&gt;two-step workflow&lt;/strong&gt;: first search and summarize, then follow-up question mode.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-search-and-summarize&#34;&gt;1️⃣ Search and Summarize&lt;/h3&gt;&#xA;&lt;p&gt;When you issue a query, the assistant can:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Find documents&lt;/strong&gt; by ID or filename using &lt;code&gt;find_documents()&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Perform keyword search&lt;/strong&gt; for pages containing specific terms via &lt;code&gt;search_document_content()&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Conduct semantic search&lt;/strong&gt; using embeddings via &lt;code&gt;semantic_search_document_content()&lt;/code&gt;, returning conceptually relevant sections even if exact words aren’t matched.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Once relevant results are found, the assistant &lt;strong&gt;summarizes each document or page&lt;/strong&gt;, producing concise, context-aware overviews.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Curators and Explorers</title>
+      <link>http://localhost:1313/blog/posts/curators-and-explorers/</link>
+      <pubDate>Sun, 28 Sep 2025 04:14:29 -0400</pubDate>
+      <guid>http://localhost:1313/blog/posts/curators-and-explorers/</guid>
+      <description>&lt;p&gt;Today marks a major milestone for the Redleaf Engine. I’m thrilled to announce a new set of features that transform Redleaf from a personal knowledge tool into a powerful platform for &lt;strong&gt;distributing curated datasets and enabling team collaboration&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The core idea is simple but powerful: what if you could do all the heavy lifting of processing hundreds of documents and then package the entire, fully-analyzed knowledge base into a single, portable unit? What if you could send that “knowledge package” to a colleague, a research team, or even publish it for the world to explore?&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Redleaf Tutorial 2 Core Workflow</title>
       <link>http://localhost:1313/blog/posts/redleaf-tutorial-2-core-workflow/</link>
@@ -27,7 +62,7 @@
       <link>http://localhost:1313/blog/about/</link>
       <pubDate>Mon, 01 Sep 2025 08:00:00 -0400</pubDate>
       <guid>http://localhost:1313/blog/about/</guid>
-      <description>&lt;p&gt;Hi, I&amp;rsquo;m Nathaniel Westveer&lt;/p&gt;&#xA;&lt;p&gt;My work isn&amp;rsquo;t driven by a single passion, but by a curiosity for what ideas can become.&lt;/p&gt;&#xA;&lt;p&gt;With a foundation in design and a career in visual effects, I also create tools that I hope empower your work as much as they do my own. Welcome.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Hi, I&amp;rsquo;m Nathaniel Westveer&lt;/p&gt;&#xA;&lt;p&gt;My work isn&amp;rsquo;t driven by a single passion, but by a curiosity for what ideas can become.&lt;/p&gt;&#xA;&lt;p&gt;With a foundation in design and a career in visual effects, I also build tools meant to empower your work as much as they do mine. Welcome.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Anatomy of a Hugo Theme</title>

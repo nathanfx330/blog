@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anatomy of a Hugo Theme | Nathaniel&#39;s Developer Blog</title>
     <link rel="stylesheet" href="/blog/css/style.css">
+
+    <meta name="author" content="">
+    <meta name="description" content="The developer blog of Nathaniel Westveer. Thoughts on local-first AI, Flutter, Python, and opinionated software design.">
+
+    
 </head>
 <body>
     
@@ -26,6 +31,8 @@
     <article class="post-content">
         <header>
             <h1>Anatomy of a Hugo Theme</h1>
+            
+            <div class="author-byline">By Nathaniel Westveer</div>
             <time>September 1, 2025</time>
         </header>
         <p>My recent journey into building a Hugo blog led me down a rabbit hole of complex themes. While powerful, they often felt like a black box. I decided to strip everything away and ask: what are the absolute essentials to make a Hugo theme work?</p>
@@ -76,13 +83,11 @@ IGNORE_WHEN_COPYING_END</p>
 
     </main>
 
-    
     <div id="lightbox" class="lightbox">
       <span class="close-lightbox">&times;</span>
       <img class="lightbox-content" id="lightbox-img">
     </div>
 
-    
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const lightbox = document.getElementById('lightbox');

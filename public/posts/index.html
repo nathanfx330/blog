@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Posts | Nathaniel&#39;s Developer Blog</title>
     <link rel="stylesheet" href="/blog/css/style.css">
+
+    <meta name="author" content="">
+    <meta name="description" content="The developer blog of Nathaniel Westveer. Thoughts on local-first AI, Flutter, Python, and opinionated software design.">
+
+    
 </head>
 <body>
     
@@ -26,10 +31,42 @@
   <h1>Posts</h1>
   
   
+    <h2><a href="/blog/posts/node-leaf/">Node Leaf</a></h2>
+    <p>I recently reached a major milestone in a long-term personal project: a nodal word processor built in Flutter. <a href="https://nathanfx330.github.io/blog/posts/deep-writer/">Deep Writer Blog Post</a>
+Designed to integrate with the Redleaf knowledge engine, this application structures writing and research into a visual web of nodes that pipe data directly into local LLMs through Ollama. I started Node Writer to pursue a long-held dream of creating a nodal word processor, with the vision that it would naturally merge with Redleaf’s development—evolving into an assistant that grows its ability to help you work with nodes.</p>
+  
+    <h2><a href="/blog/posts/deep-writer/">Deep Writer</a></h2>
+    <p><figure><img src="/blog/posts/deep-writer/dw.png" width="750px"><figcaption>
+      <h4>Deep Writer</h4>
+    </figcaption>
+</figure>
+
+I recently released Node Writer. On its own, it was my response to the skeuomorphic persistence of digital paper and the blinking cursor. Traditional editors still assume writing happens linearly, as if ideas arrive fully formed from top to bottom. Node Writer challenges that assumption by abstracting writing into nodes — movable units of thought that can be stacked, rearranged, and explored spatially rather than sequentially.</p>
+<p>But that release was only the first milestone.</p>
+  
+    <h2><a href="/blog/posts/node-writer/">Node Writer</a></h2>
+    <p>My first word processor was ClarisWorks on Mac OS 8 in the late nineties. Since then, nothing has changed. We are still staring at a fake digital piece of paper. After years of Microsoft Word, LibreOffice, and Google Docs, the core experience remains exactly the same. Moving text with a cursor is a tedious, character-by-character chore, with no simple way to rearrange blocks of writing. Writing is about abstracting ideas, exploring structure, and developing details. We get so caught up in modern UX capabilities that we forget to innovate. Too often, we don&rsquo;t reinvent the paradigm, we just digitize it.</p>
+  
+    <h2><a href="/blog/posts/redleaf-ai-assistant/">Redleaf Ai Assistant</a></h2>
+    <h2 id="-how-the-terminal-ai-assistant-works">🔎 How the Terminal AI Assistant Works</h2>
+<p>The assistant provides a <strong>two-step workflow</strong>: first search and summarize, then follow-up question mode.</p>
+<h3 id="1-search-and-summarize">1️⃣ Search and Summarize</h3>
+<p>When you issue a query, the assistant can:</p>
+<ul>
+<li><strong>Find documents</strong> by ID or filename using <code>find_documents()</code>.</li>
+<li><strong>Perform keyword search</strong> for pages containing specific terms via <code>search_document_content()</code>.</li>
+<li><strong>Conduct semantic search</strong> using embeddings via <code>semantic_search_document_content()</code>, returning conceptually relevant sections even if exact words aren’t matched.</li>
+</ul>
+<p>Once relevant results are found, the assistant <strong>summarizes each document or page</strong>, producing concise, context-aware overviews.</p>
+  
+    <h2><a href="/blog/posts/curators-and-explorers/">Curators and Explorers</a></h2>
+    <p>Today marks a major milestone for the Redleaf Engine. I’m thrilled to announce a new set of features that transform Redleaf from a personal knowledge tool into a powerful platform for <strong>distributing curated datasets and enabling team collaboration</strong>.</p>
+<p>The core idea is simple but powerful: what if you could do all the heavy lifting of processing hundreds of documents and then package the entire, fully-analyzed knowledge base into a single, portable unit? What if you could send that “knowledge package” to a colleague, a research team, or even publish it for the world to explore?</p>
+  
     <h2><a href="/blog/posts/redleaf-tutorial-2-core-workflow/">Redleaf Tutorial 2 Core Workflow</a></h2>
     <p>Now that you have Redleaf installed and your documents added, it&rsquo;s time to build your knowledge graph. The Redleaf Dashboard features three main workflow buttons that control the entire process. This guide explains what each one does.</p>
 <figure><img src="/blog/posts/redleaf-tutorial-2-core-workflow/dashboard.jpg" width="750px"><figcaption>
-      <h4>The three main workflow buttons on the Redleaf Dashboard.</h4>
+      <h4>The Three Main Workflow Buttons On The Redleaf Dashboard.</h4>
     </figcaption>
 </figure>
 
@@ -54,13 +91,11 @@ IGNORE_WHEN_COPYING_END</p>
 
     </main>
 
-    
     <div id="lightbox" class="lightbox">
       <span class="close-lightbox">&times;</span>
       <img class="lightbox-content" id="lightbox-img">
     </div>
 
-    
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const lightbox = document.getElementById('lightbox');

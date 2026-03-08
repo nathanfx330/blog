@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curators and Explorers | Nathaniel&#39;s Developer Blog</title>
+    <link rel="stylesheet" href="/blog/css/style.css">
+
+    <meta name="author" content="">
+    <meta name="description" content="The developer blog of Nathaniel Westveer. Thoughts on local-first AI, Flutter, Python, and opinionated software design.">
+
+    
+</head>
+<body>
+    
+    <header class="site-header">
+    <div class="site-branding">
+        
+        <h1><a href="http://localhost:1313/blog/">Nathaniel&#39;s Developer Blog</a></h1>
+    </div>
+    <nav class="site-navigation">
+        
+        <a href="http://localhost:1313/blog/">Home</a>
+        <a href="/blog/posts/">Posts</a>
+        <a href="/blog/about/">About</a>
+    </nav>
+</header>
+
+    <main>
+        
+    <article class="post-content">
+        <header>
+            <h1>Curators and Explorers</h1>
+            
+            <div class="author-byline">By Nathaniel Westveer</div>
+            <time>September 28, 2025</time>
+        </header>
+        <p>Today marks a major milestone for the Redleaf Engine. I’m thrilled to announce a new set of features that transform Redleaf from a personal knowledge tool into a powerful platform for <strong>distributing curated datasets and enabling team collaboration</strong>.</p>
+<p>The core idea is simple but powerful: what if you could do all the heavy lifting of processing hundreds of documents and then package the entire, fully-analyzed knowledge base into a single, portable unit? What if you could send that “knowledge package” to a colleague, a research team, or even publish it for the world to explore?</p>
+<p>Now you can. This is made possible by two new, distinct workflows: the <strong>Curator</strong> and the <strong>Explorer</strong>.</p>
+<hr>
+<h2 id="-the-git-powered-workflow">🔄 The Git-Powered Workflow</h2>
+<p>At its heart, this new model uses Git as the distribution backbone. The entire collaborative process can be visualized like this:</p>
+<p>🏛️ The Curator: Building the Exhibit</p>
+<p>Think of a museum curator. They meticulously gather artifacts, conduct research, and arrange everything into a coherent exhibit. The Redleaf Curator does the same with digital documents.</p>
+<p>The Curator uses Redleaf in its full, standard mode. They have access to the entire processing workflow: discovering documents, running the NLP pipeline, and building the knowledge graph. They are the gatekeepers of the canonical dataset.</p>
+<p>When the &ldquo;exhibit&rdquo; is ready, the Curator runs:
+code Bash</p>
+<p>python bulk_manage.py export-precomputed-state</p>
+<p>This command does two crucial things:</p>
+<ul>
+<li>
+<p>🔒 <strong>Sanitizes the Database</strong> – First warns the Curator, then wipes all private, user-specific data (like user accounts and private notes) from the local database. Ensures no private information is included in the public release.</p>
+</li>
+<li>
+<p>📦 <strong>Packages the Knowledge</strong> – Exports the entire public knowledge graph (all documents, entities, relationships, and tags) into a single <code>initial_state.sql</code> file. Also creates a <code>precomputed.marker</code> file, which acts as the &ldquo;seal&rdquo; on the package.</p>
+</li>
+</ul>
+<p>The Curator then commits these files, along with the source documents/ folder, to a Git repository to publish the new version.
+code Bash</p>
+<h1 id="add-the-newly-exported-state-files-and-any-new-documents">Add the newly exported state files and any new documents</h1>
+<p>git add instance/initial_state.sql instance/precomputed.marker
+git add documents/</p>
+<h1 id="commit-the-changes-with-a-clear-message">Commit the changes with a clear message</h1>
+<p>git commit -m &ldquo;Release v1.1 of the knowledge base&rdquo;</p>
+<h1 id="push-to-the-remote-repository">Push to the remote repository</h1>
+<p>git push</p>
+<p>🔎 The Explorer: Unpacking and Discovering</p>
+<p>An Explorer is anyone who receives this precomputed knowledge package. Their experience is designed to be effortless:</p>
+<pre><code>Clone &amp; Run – The Explorer clones the Curator’s repository from GitHub and runs the application:
+</code></pre>
+<p>code Bash</p>
+<p>git clone <a href="https://github.com/curator/their-redleaf-project.git">https://github.com/curator/their-redleaf-project.git</a>
+cd their-redleaf-project</p>
+<h1 id="now-install-the-environment-and-run">Now, install the environment and run&hellip;</h1>
+<p>python run.py</p>
+<ul>
+<li>
+<p>⚙️ <strong>Automatic Setup</strong> – Redleaf detects the <code>precomputed.marker</code> and automatically builds the entire knowledge base from the provided <code>.sql</code> file. No processing is needed.</p>
+</li>
+<li>
+<p>👋 <strong>Welcome Aboard</strong> – On their first visit, the Explorer is greeted by a special welcome screen to create their own private, local account.</p>
+</li>
+</ul>
+<p>Once logged in, the Explorer has access to the complete, fully-featured knowledge graph. They can search, browse entities, and explore relationships instantly.</p>
+<figure><img src="/blog/posts/curators-and-explorers/dashboard_explorer.jpg" width="750px"><figcaption>
+      <h4>The Redleaf dashboard in Explorer Mode. Note that the processing buttons are disabled.</h4>
+    </figcaption>
+</figure>
+
+<p>The processing buttons on the dashboard are intentionally disabled, or &ldquo;braced for transit,&rdquo; keeping the interface clean and focused on discovery.</p>
+<hr>
+<h2 id="-closing-the-loop-the-collaboration-model">🔄 Closing the Loop: The Collaboration Model</h2>
+<p>This isn&rsquo;t just a one-way street. Explorers can also contribute back to the main project.</p>
+<p>To share their annotations:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python bulk_manage.py export-contributions &lt;their-username&gt;
+</span></span></code></pre></div><p>This creates a small, lightweight <code>.json</code> file containing only their new annotations. They can send this file to the Curator, who can then use the <strong>Import Contributions</strong> panel in the Settings page to review and selectively merge these suggestions into the main knowledge base.</p>
+<p>This transforms Redleaf into a <strong>true collaborative tool</strong>, allowing teams to work together to enrich a central dataset.</p>
+<hr>
+<h2 id="-what-this-means-for-redleaf">🌟 What This Means for Redleaf</h2>
+<p>This update fundamentally expands what Redleaf is for. It’s now a platform for:</p>
+<ul>
+<li>Researchers to share fully processed datasets with colleagues.</li>
+<li>Archivists to publish digital collections that are immediately explorable.</li>
+<li>Teams to collaborate asynchronously on a shared body of knowledge.</li>
+</ul>
+<p>I’m incredibly excited about the new possibilities this unlocks and can’t wait to see what you build with it.</p>
+
+    </article>
+
+    </main>
+
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-lightbox');
+
+        
+        const figures = document.querySelectorAll('.post-content figure');
+
+        figures.forEach(figure => {
+          const image = figure.querySelector('img');
+          if (image) {
+            figure.style.cursor = 'zoom-in'; 
+            figure.addEventListener('click', function() {
+              lightbox.style.display = 'flex';
+              lightboxImg.src = image.src;
+            });
+          }
+        });
+
+        
+        function closeLightbox() {
+          lightbox.style.display = 'none';
+        }
+
+        
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeLightbox();
+          }
+        });
+      });
+    </script>
+
+</body>
+</html>

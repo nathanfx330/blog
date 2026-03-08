@@ -2,7 +2,7 @@
     <article class="post-content">
         <header>
             <h1>{{ .Title }}</h1>
-            {{ $author := .Params.author | default .Site.Author.name | default "Nathaniel Westveer" }}
+            {{ $author := .Params.author | default .Site.Params.author.name | default "Nathaniel Westveer" }}
             <div class="author-byline">By {{ $author }}</div>
             <time>{{ .Date.Format "January 2, 2006" }}</time>
         </header>
