@@ -7,4 +7,4 @@ theme = "zen"
   name = "Nathaniel Westveer"
 
 [params]
-  description = "The developer blog of Nathaniel Westveer. Thoughts on local-first AI, Flutter, Python, and opinionated software design."
+  description = "The developer blog of Nathaniel Westveer. Exploring opinionated software design, VFX, Python, Flutter, and Hugo."
