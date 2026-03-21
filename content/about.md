@@ -3,6 +3,8 @@ title: "About Me"
 date: '2025-09-01T08:00:00-04:00'
 draft: false
 ---
+{{< figure src="/images/me.jpg" class="float-left" width="300px" >}}
+
 Hi, I'm Nathaniel Westveer
 
 My work isn't driven by a single passion, but by a curiosity for what ideas can become.

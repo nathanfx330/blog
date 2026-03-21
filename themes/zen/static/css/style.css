@@ -58,6 +58,39 @@ main img {
     cursor: zoom-in;
 }
 
+/* 1. Float Left Utility (Image on left, paragraphs WRAP around it) */
+figure.float-left, img.float-left {
+    float: left;
+    margin: 0.5rem 1.5rem 1rem 0;
+    display: table; /* Forces the caption to stay perfectly underneath the image */
+}
+figure.float-left img {
+    margin: 0; /* Removes the default auto margin so it aligns cleanly */
+}
+figure.float-left figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    text-align: center;
+    font-size: 0.9em;
+    color: #aaa;
+    margin-top: 0.5rem;
+}
+
+/* 2. Align Left Utility (Image on left, paragraphs stay BELOW it) */
+figure.align-left, img.align-left {
+    margin: 2rem auto 2rem 0; /* Removes auto on the left to push it to the edge */
+    display: block;
+}
+figure.align-left img {
+    margin: 0; 
+}
+figure.align-left figcaption {
+    text-align: left;
+    font-size: 0.9em;
+    color: #aaa;
+    margin-top: 0.5rem;
+}
+
 /* Author Byline Styling */
 .author-byline {
     color: #888;
