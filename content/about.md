@@ -5,8 +5,10 @@ draft: false
 ---
 {{< figure src="/images/me.jpg" class="float-left" width="240px" >}}
 
-Hi, I'm Nathaniel Westveer
+I’m Nathaniel Westveer.
 
-My work isn't driven by a single passion, but by a curiosity for what ideas can become.
+My work isn’t driven by a single passion, but by a curiosity for what ideas can become.
 
-With a foundation in design and a career in visual effects, I also build tools meant to empower your work as much as they do mine. Welcome.
+Drawing from a foundation in design and a career in VFX, I build tools designed to empower your workflow as much as they do mine.
+
+Welcome.
