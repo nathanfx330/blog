@@ -3,7 +3,7 @@ title: "About Me"
 date: '2025-09-01T08:00:00-04:00'
 draft: false
 ---
-{{< figure src="/images/me.jpg" class="float-left" width="300px" >}}
+{{< figure src="/images/me.jpg" class="float-left" width="240px" >}}
 
 Hi, I'm Nathaniel Westveer
 
