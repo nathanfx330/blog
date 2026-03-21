@@ -1,7 +1,7 @@
 {{ define "main" }}
     <ul class="post-list">
-        {{/* We now loop through ALL regular pages, sorted by date with the newest first */}}
-        {{ range .Site.RegularPages.ByDate.Reverse }}
+        {{/* We now loop through only pages in the "posts" section, sorted by date with the newest first */}}
+        {{ range (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
             <li>
                 <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
                 <time>{{ .Date.Format "January 2, 2006" }}</time>
