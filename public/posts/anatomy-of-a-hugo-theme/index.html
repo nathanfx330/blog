@@ -51,47 +51,41 @@
         </header>
         <p>My recent journey into building a Hugo blog led me down a rabbit hole of complex themes. While powerful, they often felt like a black box. I decided to strip everything away and ask: what are the absolute essentials to make a Hugo theme work?</p>
 <p>It turns out, you only need three core files.</p>
-<ol>
-<li>The Skeleton: layouts/_default/baseof.html</li>
-</ol>
-<p>This is the master template for the entire site. It&rsquo;s the HTML document that holds everything else. The most important part is the {{ block &ldquo;main&rdquo; . }} section, which acts as a hollowed-out space where other templates will inject their content.
-code Html
-IGNORE_WHEN_COPYING_START
-IGNORE_WHEN_COPYING_END</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<ol start="2">
-<li>The Homepage: layouts/index.html</li>
-</ol>
-<p>This template defines what goes into the &ldquo;main&rdquo; block on your homepage. Its job is typically to loop through all your pages and create a list. The {{ range .Site.RegularPages }} function is the engine for this.
-code Html
-IGNORE_WHEN_COPYING_START
-IGNORE_WHEN_COPYING_END</p>
-<p>{{ define &ldquo;main&rdquo; }}
-<!-- raw HTML omitted -->Posts<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-{{ range .Site.RegularPages }}
-<!-- raw HTML omitted --><!-- raw HTML omitted -->{{ .Title }}<!-- raw HTML omitted --><!-- raw HTML omitted -->
-{{ end }}
-<!-- raw HTML omitted -->
-{{ end }}</p>
-<ol start="3">
-<li>The Content Page: layouts/_default/single.html</li>
-</ol>
-<p>Finally, this template defines how to display a single piece of content, like this very blog post. It pulls in the specific post&rsquo;s title ({{ .Title }}) and its main content ({{ .Content }}).
-code Html
-IGNORE_WHEN_COPYING_START
-IGNORE_WHEN_COPYING_END</p>
-<p>{{ define &ldquo;main&rdquo; }}
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->{{ .Title }}<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-{{ .Content }}
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-{{ end }}</p>
-<p>And that&rsquo;s it. With just these three files, you have a complete, functional theme. It&rsquo;s a powerful and minimalist foundation to build upon.</p>
-<p>Feel free to use this as a starting point. Happy writing</p>
+<h3 id="1-the-skeleton-layouts_defaultbaseofhtml">1. The Skeleton: <code>layouts/_default/baseof.html</code></h3>
+<p>This is the master template for the entire site. It&rsquo;s the HTML document that holds everything else. The most important part is the <code>{{ block &quot;main&quot; . }}</code> section, which acts as a hollowed-out space where other templates will inject their content.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">title</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>        {{ block &#34;main&#34; . }}{{ end }}
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><h3 id="2-the-homepage-layoutsindexhtml">2. The Homepage: <code>layouts/index.html</code></h3>
+<p>This template defines what goes into the &ldquo;main&rdquo; block on your homepage. Its job is typically to loop through all your pages and create a list. The <code>{{ range .Site.RegularPages }}</code> function is the engine for this.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h2</span>&gt;Posts&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>        {{ range .Site.RegularPages }}
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>        {{ end }}
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><h3 id="3-the-content-page-layouts_defaultsinglehtml">3. The Content Page: <code>layouts/_default/single.html</code></h3>
+<p>Finally, this template defines how to display a single piece of content, like this very blog post. It pulls in the specific post&rsquo;s title (<code>{{ .Title }}</code>) and its main content (<code>{{ .Content }}</code>).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">h2</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>            {{ .Content }}
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><p>And that&rsquo;s it. With just these three files, you have a complete, functional theme. It&rsquo;s a powerful and minimalist foundation to build upon.</p>
+<p>Feel free to use this as a starting point. Happy writing!</p>
 
     </article>
 

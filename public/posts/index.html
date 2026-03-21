@@ -49,8 +49,8 @@
     <p><figure><img src="/posts/node-leaf/nl.png" width="750px">
 </figure>
 
-<strong>Update: Node Leaf is now live.</strong></p>
-<p><a href="https://github.com/nathanfx330/node-leaf">https://github.com/nathanfx330/node-leaf</a></p>
+<strong>Update: Node Leaf is now live.</strong><br>
+<a href="https://github.com/nathanfx330/node-leaf">https://github.com/nathanfx330/node-leaf</a></p>
 <p>I recently reached a major milestone in a long-term personal project: a nodal word processor built in Flutter. Designed to integrate with the Redleaf knowledge engine, this application structures writing and research into a visual web of nodes that pipe data directly into local LLMs through Ollama. I started Node Writer to pursue a long-held dream of creating a nodal word processor, with the vision that it would naturally merge with Redleaf’s development—evolving into an assistant that grows its ability to help you work with nodes.</p>
   
     <h2><a href="/posts/deep-writer/">Deep Writer</a></h2>
@@ -98,13 +98,8 @@ I recently released Node Writer. On its own, it was my response to the skeuomorp
     <h2><a href="/posts/anatomy-of-a-hugo-theme/">Anatomy of a Hugo Theme</a></h2>
     <p>My recent journey into building a Hugo blog led me down a rabbit hole of complex themes. While powerful, they often felt like a black box. I decided to strip everything away and ask: what are the absolute essentials to make a Hugo theme work?</p>
 <p>It turns out, you only need three core files.</p>
-<ol>
-<li>The Skeleton: layouts/_default/baseof.html</li>
-</ol>
-<p>This is the master template for the entire site. It&rsquo;s the HTML document that holds everything else. The most important part is the {{ block &ldquo;main&rdquo; . }} section, which acts as a hollowed-out space where other templates will inject their content.
-code Html
-IGNORE_WHEN_COPYING_START
-IGNORE_WHEN_COPYING_END</p>
+<h3 id="1-the-skeleton-layouts_defaultbaseofhtml">1. The Skeleton: <code>layouts/_default/baseof.html</code></h3>
+<p>This is the master template for the entire site. It&rsquo;s the HTML document that holds everything else. The most important part is the <code>{{ block &quot;main&quot; . }}</code> section, which acts as a hollowed-out space where other templates will inject their content.</p>
   
 
     </main>
