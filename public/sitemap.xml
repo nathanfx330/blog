@@ -2,41 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2026-03-06T14:56:41-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/node-leaf/</loc>
+    <loc>http://localhost:1313/posts/node-leaf/</loc>
     <lastmod>2026-03-06T14:56:41-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2026-03-06T14:56:41-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/deep-writer/</loc>
+    <loc>http://localhost:1313/posts/deep-writer/</loc>
     <lastmod>2026-02-27T20:58:20-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/node-writer/</loc>
+    <loc>http://localhost:1313/posts/node-writer/</loc>
     <lastmod>2026-02-25T10:29:22-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/redleaf-ai-assistant/</loc>
+    <loc>http://localhost:1313/posts/redleaf-ai-assistant/</loc>
     <lastmod>2025-10-27T06:48:25-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/curators-and-explorers/</loc>
+    <loc>http://localhost:1313/posts/curators-and-explorers/</loc>
     <lastmod>2025-09-28T04:14:29-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/redleaf-tutorial-2-core-workflow/</loc>
+    <loc>http://localhost:1313/posts/redleaf-tutorial-2-core-workflow/</loc>
     <lastmod>2025-09-09T03:54:52-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/redleaf-engine-update/</loc>
+    <loc>http://localhost:1313/posts/redleaf-engine-update/</loc>
     <lastmod>2025-09-02T00:50:30-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2025-09-01T08:00:00-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/anatomy-of-a-hugo-theme/</loc>
+    <loc>http://localhost:1313/posts/anatomy-of-a-hugo-theme/</loc>
     <lastmod>2025-09-01T02:56:51-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

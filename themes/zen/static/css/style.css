@@ -44,14 +44,18 @@ a:hover {
     margin-left: 1.5rem;
 }
 
-/* Post Content Styling */
-.post-content img {
+/* Base Image Styling (Fits all images perfectly) */
+main img {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 2rem auto;
     border-radius: 6px;
-    cursor: zoom-in; /* Add this to make images look clickable */
+}
+
+/* Post Content Styling (Only adds zoom cursor to single posts) */
+.post-content img {
+    cursor: zoom-in;
 }
 
 /* Author Byline Styling */

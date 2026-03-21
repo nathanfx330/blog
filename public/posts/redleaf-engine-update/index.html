@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redleaf Engine Update | Nathaniel&#39;s Developer Blog</title>
@@ -11,32 +11,32 @@
     <meta property="og:title" content="Redleaf Engine Update | Nathaniel&#39;s Developer Blog">
     <meta property="og:description" content="I&rsquo;ve always been struck by the fact that while our computers can store files, they don&rsquo;t really understand them. That&rsquo;s the idea behind …">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="http://localhost:1313/blog/posts/redleaf-engine-update/">
+    <meta property="og:url" content="http://localhost:1313/posts/redleaf-engine-update/">
     
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Nathaniel Westveer",
-      "url": "http:\/\/localhost:1313\/blog\/",
+      "url": "http:\/\/localhost:1313\/",
       "jobTitle": "Developer",
       "knowsAbout": ["Local-first AI", "Flutter", "Python", "Software Design"]
     }
     </script>
 
-    <link rel="stylesheet" href="/blog/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <header class="site-header">
     <div class="site-branding">
         
-        <h1><a href="http://localhost:1313/blog/">Nathaniel&#39;s Developer Blog</a></h1>
+        <h1><a href="http://localhost:1313/">Nathaniel&#39;s Developer Blog</a></h1>
     </div>
     <nav class="site-navigation">
         
-        <a href="http://localhost:1313/blog/">Home</a>
-        <a href="/blog/posts/">Posts</a>
-        <a href="/blog/about/">About</a>
+        <a href="http://localhost:1313/">Home</a>
+        <a href="/posts/">Posts</a>
+        <a href="/about/">About</a>
     </nav>
 </header>
 
@@ -51,7 +51,7 @@
         </header>
         <p>I&rsquo;ve always been struck by the fact that while our computers can <em>store</em> files, they don&rsquo;t really <em>understand</em> them. That&rsquo;s the idea behind <strong>Redleaf</strong>—and I&rsquo;m excited to announce that version <strong>2.0</strong> is now ready.</p>
 <p>For anyone new to the project, Redleaf is a <strong>local-first knowledge engine</strong>. The goal is to take a folder of documents (PDFs, transcripts, HTML, etc.) and turn it into a private, interconnected knowledge graph that you actually own and control.</p>
-<figure><img src="/blog/posts/redleaf-engine-update/dashboard.jpg" width="750px"><figcaption>
+<figure><img src="/posts/redleaf-engine-update/dashboard.jpg" width="750px"><figcaption>
       <h4>The main dashboard view in Redleaf.</h4>
     </figcaption>
 </figure>
@@ -59,33 +59,33 @@
 <p>This new version is a big step up in stability and usability. Here are some of the main things I&rsquo;ve been working on.</p>
 <h3 id="better-document-intelligence">Better Document Intelligence</h3>
 <p>Redleaf 1.0 already used spaCy to extract people, places, and organizations. In 2.0, browsing that information is much faster. On the side of every document there is now an integrated indexing tab showing every detected person, place, and thing—making it much easier to navigate documents at a glance.</p>
-<figure><img src="/blog/posts/redleaf-engine-update/side_pannel.jpg" width="750px"><figcaption>
+<figure><img src="/posts/redleaf-engine-update/side_pannel.jpg" width="750px"><figcaption>
       <h4>The side panel showing extracted entities.</h4>
     </figcaption>
 </figure>
 
 <h3 id="implied-relationships">Implied Relationships</h3>
 <p>Beyond just listing entities, the engine now analyzes their proximity and context to automatically suggest implied relationships. This helps uncover connections you might have missed.</p>
-<figure><img src="/blog/posts/redleaf-engine-update/relationship.jpg" width="750px"><figcaption>
+<figure><img src="/posts/redleaf-engine-update/relationship.jpg" width="750px"><figcaption>
       <h4>Automatically detecting relationships between detected elements.</h4>
     </figcaption>
 </figure>
 
 <h3 id="a-more-practical-writing-setup">A More Practical Writing Setup</h3>
 <p>The new dual-pane editor is designed for actually getting work done. It has citation tools built-in that generate Chicago-style citations and export to <code>.odt</code> without messing up the formatting.</p>
-<figure><img src="/blog/posts/redleaf-engine-update/writeup.jpg" width="750px"><figcaption>
+<figure><img src="/posts/redleaf-engine-update/writeup.jpg" width="750px"><figcaption>
       <h4>The dual-pane write-up editor.</h4>
     </figcaption>
 </figure>
 
 <h3 id="interactive-media-viewer">Interactive Media Viewer</h3>
 <p>I put a lot of work into the media tools. You can now pair <code>.srt</code> files with podcast <code>.xml</code> feeds to get all the metadata, and the SRT viewer now syncs the audio/video with an animated transcript. The PDF viewer has also been overhauled for a smoother experience.</p>
-<p><figure><img src="/blog/posts/redleaf-engine-update/srt.jpg" width="750px"><figcaption>
+<p><figure><img src="/posts/redleaf-engine-update/srt.jpg" width="750px"><figcaption>
       <h4>The interactive SRT viewer in action.</h4>
     </figcaption>
 </figure>
 
-<figure><img src="/blog/posts/redleaf-engine-update/pdf_writeup.jpg" width="750px"><figcaption>
+<figure><img src="/posts/redleaf-engine-update/pdf_writeup.jpg" width="750px"><figcaption>
       <h4>A PDF loaded up in Synthetist to cite.</h4>
     </figcaption>
 </figure>
