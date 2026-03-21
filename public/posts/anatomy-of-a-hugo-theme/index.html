@@ -6,10 +6,14 @@
     <title>Anatomy of a Hugo Theme | Nathaniel&#39;s Developer Blog</title>
     
     <meta name="author" content="Nathaniel Westveer">
-    <meta name="description" content="My recent journey into building a Hugo blog led me down a rabbit hole of complex themes. While powerful, they often felt like a black box. I decided to strip …">
+    <meta name="description" content="My recent journey into building a Hugo blog led me down a rabbit hole of complex themes.
+https://gohugo.io/
+While powerful, they often felt like a black box. I …">
     
     <meta property="og:title" content="Anatomy of a Hugo Theme | Nathaniel&#39;s Developer Blog">
-    <meta property="og:description" content="My recent journey into building a Hugo blog led me down a rabbit hole of complex themes. While powerful, they often felt like a black box. I decided to strip …">
+    <meta property="og:description" content="My recent journey into building a Hugo blog led me down a rabbit hole of complex themes.
+https://gohugo.io/
+While powerful, they often felt like a black box. I …">
     <meta property="og:type" content="article">
     <meta property="og:url" content="http://localhost:1313/posts/anatomy-of-a-hugo-theme/">
     
@@ -49,8 +53,13 @@
             <div class="author-byline">By Nathaniel Westveer</div>
             <time>September 1, 2025</time>
         </header>
-        <p>My recent journey into building a Hugo blog led me down a rabbit hole of complex themes. While powerful, they often felt like a black box. I decided to strip everything away and ask: what are the absolute essentials to make a Hugo theme work?</p>
-<p>It turns out, you only need three core files.</p>
+        <p>My recent journey into building a Hugo blog led me down a rabbit hole of complex themes.<br>
+<a href="https://gohugo.io/">https://gohugo.io/</a></p>
+<p>While powerful, they often felt like a black box. I decided to strip everything away and ask: what are the absolute essentials to make a Hugo theme work?</p>
+<p>To truly start from &ldquo;scratch,&rdquo; you first need the underlying folder structure. There is a blank slate theme that nobody talks about called <strong>Zen</strong>. It’s a bare-minimum boilerplate that sets up the necessary folders and semantic HTML without any of the bloated CSS or scripts.</p>
+<p>First, you need to download this theme into your project. Open your terminal at the root of your Hugo site and run this command to clone it directly from its repository (<a href="https://github.com/frjo/hugo-theme-zen)">https://github.com/frjo/hugo-theme-zen)</a>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/frjo/hugo-theme-zen.git themes/zen
+</span></span></code></pre></div><p>Once Zen sets up your folders, you can strip it right down to the absolute bare minimum to see how it ticks. It turns out, you really only need three core files.</p>
 <h3 id="1-the-skeleton-layouts_defaultbaseofhtml">1. The Skeleton: <code>layouts/_default/baseof.html</code></h3>
 <p>This is the master template for the entire site. It&rsquo;s the HTML document that holds everything else. The most important part is the <code>{{ block &quot;main&quot; . }}</code> section, which acts as a hollowed-out space where other templates will inject their content.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>

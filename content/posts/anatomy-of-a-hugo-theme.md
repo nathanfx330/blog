@@ -4,9 +4,20 @@ draft = false
 title = 'Anatomy of a Hugo Theme'
 +++
 
-My recent journey into building a Hugo blog led me down a rabbit hole of complex themes. While powerful, they often felt like a black box. I decided to strip everything away and ask: what are the absolute essentials to make a Hugo theme work?
+My recent journey into building a Hugo blog led me down a rabbit hole of complex themes.  
+https://gohugo.io/
 
-It turns out, you only need three core files.
+While powerful, they often felt like a black box. I decided to strip everything away and ask: what are the absolute essentials to make a Hugo theme work?
+
+To truly start from "scratch," you first need the underlying folder structure. There is a blank slate theme that nobody talks about called **Zen**. It’s a bare-minimum boilerplate that sets up the necessary folders and semantic HTML without any of the bloated CSS or scripts.
+
+First, you need to download this theme into your project. Open your terminal at the root of your Hugo site and run this command to clone it directly from its repository (https://github.com/frjo/hugo-theme-zen):
+
+```bash
+git clone https://github.com/frjo/hugo-theme-zen.git themes/zen
+```
+
+Once Zen sets up your folders, you can strip it right down to the absolute bare minimum to see how it ticks. It turns out, you really only need three core files.
 
 ### 1. The Skeleton: `layouts/_default/baseof.html`
 
