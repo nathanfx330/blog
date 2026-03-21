@@ -11,7 +11,7 @@ While powerful, they often felt like a black box. I decided to strip everything 
 
 To truly start from "scratch," you first need the underlying folder structure. There is a blank slate theme that nobody talks about called **Zen**. It’s a bare-minimum boilerplate that sets up the necessary folders and semantic HTML without any of the bloated CSS or scripts.
 
-First, you need to download this theme into your project. Open your terminal at the root of your Hugo site and run this command to clone it directly from its repository (https://github.com/frjo/hugo-theme-zen):
+First, you need to download this theme into your project. Open your terminal at the root of your Hugo site and run this command to clone it directly from its repository https://github.com/frjo/hugo-theme-zen :
 
 ```bash
 git clone https://github.com/frjo/hugo-theme-zen.git themes/zen

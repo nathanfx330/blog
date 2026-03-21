@@ -62,7 +62,7 @@
       <link>http://localhost:1313/posts/anatomy-of-a-hugo-theme/</link>
       <pubDate>Mon, 01 Sep 2025 02:56:51 -0400</pubDate>
       <guid>http://localhost:1313/posts/anatomy-of-a-hugo-theme/</guid>
-      <description>&lt;p&gt;My recent journey into building a Hugo blog led me down a rabbit hole of complex themes. While powerful, they often felt like a black box. I decided to strip everything away and ask: what are the absolute essentials to make a Hugo theme work?&lt;/p&gt;&#xA;&lt;p&gt;To truly start from &amp;ldquo;scratch,&amp;rdquo; you first need the underlying folder structure. There is a blank slate theme that nobody talks about called &lt;strong&gt;Zen&lt;/strong&gt;. You download it with a command, and it sets up all the necessary boilerplate folders for you.&lt;/p&gt;</description>
+      <description>&lt;p&gt;My recent journey into building a Hugo blog led me down a rabbit hole of complex themes.&lt;br&gt;&#xA;&lt;a href=&#34;https://gohugo.io/&#34;&gt;https://gohugo.io/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;While powerful, they often felt like a black box. I decided to strip everything away and ask: what are the absolute essentials to make a Hugo theme work?&lt;/p&gt;&#xA;&lt;p&gt;To truly start from &amp;ldquo;scratch,&amp;rdquo; you first need the underlying folder structure. There is a blank slate theme that nobody talks about called &lt;strong&gt;Zen&lt;/strong&gt;. It’s a bare-minimum boilerplate that sets up the necessary folders and semantic HTML without any of the bloated CSS or scripts.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
