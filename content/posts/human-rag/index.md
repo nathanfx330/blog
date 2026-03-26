@@ -20,8 +20,8 @@ I think of it as **Symmetrical RAG**.
 
 It is a system where retrieval serves the human mind just as powerfully as it serves the algorithmic one.
 
-{{< figure src="rome1.png" title="Redleaf surfaces connections to the human first." width="750px" >}}
-{{< figure src="rome2.png" title="Redleaf surfaces connections to the human first." width="750px" >}}
+{{< figure src="rome1.png" title="Redleaf surfaces connections." width="750px" >}}
+{{< figure src="rome2.png" title="Boost semantic search by emphasising which signal should be stronger." width="750px" >}}
 
 
 In Redleaf, retrieval is transparent. When a document is processed, it doesn’t disappear into a vector store for later use. It is analyzed, decomposed, and surfaced. People, organizations, and relationships are extracted and presented directly in the Discovery interface. You can trace the exact sentences where entities intersect. The system gives *you* context before anything is ever passed to a model.
