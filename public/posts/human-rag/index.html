@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human RAG: The Forgotten Half of Retrieval | Nathaniel&#39;s Developer Blog</title>
+    
+    <meta name="author" content="Nathaniel Westveer">
+    <meta name="description" content="The AI industry is currently fixated on RAG (Retrieval-Augmented Generation). The premise is straightforward: an LLM is only as effective as the context it …">
+    
+    <meta property="og:title" content="Human RAG: The Forgotten Half of Retrieval | Nathaniel&#39;s Developer Blog">
+    <meta property="og:description" content="The AI industry is currently fixated on RAG (Retrieval-Augmented Generation). The premise is straightforward: an LLM is only as effective as the context it …">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://localhost:1313/posts/human-rag/">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nathaniel Westveer",
+      "url": "http:\/\/localhost:1313\/",
+      "jobTitle": "Developer",
+      "knowsAbout": ["Local-first AI", "Flutter", "Python", "Software Design"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+    <div class="site-branding">
+        
+        <h1><a href="http://localhost:1313/">Nathaniel&#39;s Developer Blog</a></h1>
+    </div>
+    <nav class="site-navigation">
+        
+        <a href="http://localhost:1313/">Home</a>
+        <a href="/posts/">Posts</a>
+        <a href="/about/">About</a>
+    </nav>
+</header>
+
+    <main>
+        
+    <article class="post-content">
+        <header>
+            <h1>Human RAG: The Forgotten Half of Retrieval</h1>
+            
+            <div class="author-byline">By Nathaniel Westveer</div>
+            <time>March 25, 2026</time>
+        </header>
+        <p>The AI industry is currently fixated on RAG (Retrieval-Augmented Generation). The premise is straightforward: an LLM is only as effective as the context it receives, so we augment prompts with relevant information retrieved from vector databases.</p>
+<p>This approach works well, for machines.</p>
+<p>But it quietly overlooks something critical: the human in the loop.</p>
+<p>Before RAG became a buzzword, we called this process something much simpler, <em>search</em>. But search has fundamentally degraded for humans. We’ve watched the death of powerful, standalone search utilities (like the old Google Search Appliance hardware) in favor of walled-garden cloud storage like Google Drive, where finding a specific document feels like a roll of the dice.</p>
+<p>Search has become worse for humans, but paradoxically, better for AI. We’ve engineered incredibly sophisticated pipelines to retrieve and feed context into language models, while leaving the human user with almost none of that context themselves.</p>
+<p>This is the gap I set out to address with the Redleaf Knowledge Engine and its visual counterpart, Node Leaf.</p>
+<p>I think of it as <strong>Symmetrical RAG</strong>.</p>
+<p>It is a system where retrieval serves the human mind just as powerfully as it serves the algorithmic one.</p>
+<p><figure><img src="/posts/human-rag/rome1.png" width="750px"><figcaption>
+      <h4>Redleaf surfaces connections to the human first.</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/posts/human-rag/rome2.png" width="750px"><figcaption>
+      <h4>Redleaf surfaces connections to the human first.</h4>
+    </figcaption>
+</figure>
+</p>
+<p>In Redleaf, retrieval is transparent. When a document is processed, it doesn’t disappear into a vector store for later use. It is analyzed, decomposed, and surfaced. People, organizations, and relationships are extracted and presented directly in the Discovery interface. You can trace the exact sentences where entities intersect. The system gives <em>you</em> context before anything is ever passed to a model.</p>
+<p>Node Leaf extends this idea into a spatial environment.</p>
+<p>Instead of interacting with a hidden retrieval pipeline through a chat window, you construct it directly. Document nodes, search nodes, and entity nodes can be arranged, connected, and evaluated in real time. You curate the context yourself. You inspect it. You refine it.</p>
+<p>Only after that process, the Human RAG layer is complete do you pass the result into an LLM, such as through an Ollama output node.</p>
+<p>This changes the role of AI from an opaque generator into a final step in a visible reasoning process.</p>
+<p>When retrieval is hidden, users become dependent on the system and vulnerable to hallucination. When retrieval is exposed—when it becomes visual, spatial, and symmetrical—users remain in control. They think more critically. They engage more deeply.</p>
+<p>As I noted in the release of Deep Writer, the goal is not automation.</p>
+<p>It is amplification.</p>
+
+    </article>
+
+    </main>
+
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-lightbox');
+
+        const figures = document.querySelectorAll('.post-content figure');
+
+        figures.forEach(figure => {
+          const image = figure.querySelector('img');
+          if (image) {
+            figure.style.cursor = 'zoom-in'; 
+            figure.addEventListener('click', function() {
+              lightbox.style.display = 'flex';
+              lightboxImg.src = image.src;
+            });
+          }
+        });
+
+        function closeLightbox() {
+          lightbox.style.display = 'none';
+        }
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeLightbox();
+          }
+        });
+      });
+    </script>
+</body>
+</html>

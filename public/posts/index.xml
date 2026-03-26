@@ -6,8 +6,22 @@
     <description>Recent content in Posts on Nathaniel&#39;s Developer Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Mar 2026 14:56:41 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 25 Mar 2026 02:35:15 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redleaf Hub</title>
+      <link>http://localhost:1313/posts/redleaf-hub/</link>
+      <pubDate>Wed, 25 Mar 2026 02:35:15 -0400</pubDate>
+      <guid>http://localhost:1313/posts/redleaf-hub/</guid>
+      <description>&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/posts/redleaf-hub/hub-setup.png&#34; width=&#34;750px&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;The Redleaf Hub Setup&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Redleaf was built around the Flask framework because it aligns perfectly with the core ethos of the project. Flask enabled me to build Redleaf as a highly portable and team-based system—one simple enough to either run over a local network or distribute as a standalone, precomputed project folder.&lt;/p&gt;&#xA;&lt;p&gt;However, to use the Redleaf Engine alongside the Node Leaf visual canvas, you often had to juggle multiple steps—open a terminal, navigate directories, activate environments, start backend services, and launch the interface. Each step adds friction. And friction is the enemy of flow.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Human RAG: The Forgotten Half of Retrieval</title>
+      <link>http://localhost:1313/posts/human-rag/</link>
+      <pubDate>Wed, 25 Mar 2026 02:35:06 -0400</pubDate>
+      <guid>http://localhost:1313/posts/human-rag/</guid>
+      <description>&lt;p&gt;The AI industry is currently fixated on RAG (Retrieval-Augmented Generation). The premise is straightforward: an LLM is only as effective as the context it receives, so we augment prompts with relevant information retrieved from vector databases.&lt;/p&gt;&#xA;&lt;p&gt;This approach works well—for machines.&lt;/p&gt;&#xA;&lt;p&gt;But it quietly overlooks something critical: the human in the loop.&lt;/p&gt;&#xA;&lt;p&gt;Before RAG became a buzzword, we called this process something much simpler—&lt;em&gt;search&lt;/em&gt;. But search has fundamentally degraded for humans. We’ve watched the death of powerful, standalone search utilities (like the old Google Search Appliance hardware) in favor of walled-garden cloud storage like Google Drive, where finding a specific document feels like a roll of the dice.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Node Leaf</title>
       <link>http://localhost:1313/posts/node-leaf/</link>

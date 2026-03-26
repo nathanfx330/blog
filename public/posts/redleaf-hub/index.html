@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redleaf Hub | Nathaniel&#39;s Developer Blog</title>
+    
+    <meta name="author" content="Nathaniel Westveer">
+    <meta name="description" content="Redleaf was built around the Flask framework because it aligns perfectly with the core ethos of the project. Flask enabled me to build Redleaf as a highly …">
+    
+    <meta property="og:title" content="Redleaf Hub | Nathaniel&#39;s Developer Blog">
+    <meta property="og:description" content="Redleaf was built around the Flask framework because it aligns perfectly with the core ethos of the project. Flask enabled me to build Redleaf as a highly …">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://localhost:1313/posts/redleaf-hub/">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nathaniel Westveer",
+      "url": "http:\/\/localhost:1313\/",
+      "jobTitle": "Developer",
+      "knowsAbout": ["Local-first AI", "Flutter", "Python", "Software Design"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+    <div class="site-branding">
+        
+        <h1><a href="http://localhost:1313/">Nathaniel&#39;s Developer Blog</a></h1>
+    </div>
+    <nav class="site-navigation">
+        
+        <a href="http://localhost:1313/">Home</a>
+        <a href="/posts/">Posts</a>
+        <a href="/about/">About</a>
+    </nav>
+</header>
+
+    <main>
+        
+    <article class="post-content">
+        <header>
+            <h1>Redleaf Hub</h1>
+            
+            <div class="author-byline">By Nathaniel Westveer</div>
+            <time>March 25, 2026</time>
+        </header>
+        <p>Redleaf was built around the Flask framework because it aligns perfectly with the core ethos of the project. Flask enabled me to build Redleaf as a highly portable and team-based system—one simple enough to either run over a local network or distribute as a standalone, precomputed project folder.</p>
+<p>However, to use the Redleaf Engine alongside the Node Leaf visual canvas, you often had to juggle multiple steps—open a terminal, navigate directories, activate environments, start backend services, and launch the interface. Each step adds friction. And friction is the enemy of flow.</p>
+<p>Redleaf Hub was created to remove that friction.</p>
+<p>It is a standalone desktop application built with Flutter, designed to orchestrate your entire Redleaf ecosystem from a single interface. Instead of managing processes manually, you manage projects visually.</p>
+<figure><img src="/posts/redleaf-hub/hub-setup.png" width="750px"><figcaption>
+      <h4>The Redleaf Hub Setup</h4>
+    </figcaption>
+</figure>
+
+<h3 id="offline-instant-project-generation">Offline, Instant Project Generation</h3>
+<p>Managing multiple isolated knowledge bases used to require manual setup and duplication. Redleaf Hub streamlines this by maintaining a local, hidden template of the Redleaf repository.</p>
+<p>With a single action, you can create a new, fully isolated instance of the engine directly on your machine—no internet required.</p>
+<figure><img src="/posts/redleaf-hub/hub_start.png" width="750px"><figcaption>
+      <h4>The Redleaf Hub Setup</h4>
+    </figcaption>
+</figure>
+
+<h3 id="smart-server-orchestration">Smart Server Orchestration</h3>
+<figure><img src="/posts/redleaf-hub/hub-library1.png" width="750px"><figcaption>
+      <h4>Managing isolated knowledge bases.</h4>
+    </figcaption>
+</figure>
+
+<p>The Hub understands your local environment.</p>
+<p>Once you configure your Conda environment and your Node Leaf executable path within the settings, the Hub handles the rest. When you start a project, it automatically activates the environment, launches the backend, and manages the process lifecycle.</p>
+<p>It also monitors the system directly. Using a lightweight polling mechanism, it detects exactly when the backend server is ready and updates the interface in real time. The moment the system comes online, the UI responds with a clear, actionable state and a one-click launch into Node Leaf.</p>
+<figure><img src="/posts/redleaf-hub/hub-library2.png" width="750px"><figcaption>
+      <h4>The Node Leaf Launcher Bar</h4>
+    </figcaption>
+</figure>
+
+<p>With Redleaf Hub, the ecosystem becomes unified.</p>
+<p>The Python engine powers the processing. Node Leaf provides a spatial interface for working with ideas. The Hub ties everything together into a single, coherent experience.</p>
+<p>No terminal juggling. No scattered processes. Just a controlled, local-first environment for building and exploring knowledge.</p>
+<p>You can find the repository and download the latest release here:<br>
+<a href="https://github.com/nathanfx330/Redleaf-Hub">https://github.com/nathanfx330/Redleaf-Hub</a></p>
+
+    </article>
+
+    </main>
+
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-lightbox');
+
+        const figures = document.querySelectorAll('.post-content figure');
+
+        figures.forEach(figure => {
+          const image = figure.querySelector('img');
+          if (image) {
+            figure.style.cursor = 'zoom-in'; 
+            figure.addEventListener('click', function() {
+              lightbox.style.display = 'flex';
+              lightboxImg.src = image.src;
+            });
+          }
+        });
+
+        function closeLightbox() {
+          lightbox.style.display = 'none';
+        }
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeLightbox();
+          }
+        });
+      });
+    </script>
+</body>
+</html>
