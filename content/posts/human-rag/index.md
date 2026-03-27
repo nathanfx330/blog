@@ -19,12 +19,19 @@ This is the gap I set out to address with the Redleaf Knowledge Engine and its v
 I think of it as **Symmetrical RAG**. 
 
 It is a system where retrieval serves the human mind just as powerfully as it serves the algorithmic one.
-
-{{< figure src="rome1.png" title="Redleaf surfaces connections." width="750px" >}}
-{{< figure src="rome2.png" title="Boost semantic search by emphasising which signal should be stronger." width="750px" >}}
-
-
 In Redleaf, retrieval is transparent. When a document is processed, it doesn’t disappear into a vector store for later use. It is analyzed, decomposed, and surfaced. People, organizations, and relationships are extracted and presented directly in the Discovery interface. You can trace the exact sentences where entities intersect. The system gives *you* context before anything is ever passed to a model.
+
+Below are screenshots of a Redleaf index of the Federalist Papers.
+
+The Federalist Papers have long served as a benchmark corpus in Unix-style text processing and are commonly associated with early grep-era workflows. They've been digitized in the public domain since the dawn of computing, and their scope makes them an incredible test bench for exercising Redleaf.
+
+{{< figure src="f1.png" title="Redleaf surfaces connections. spaCy identifies people, places, and things automatically." width="750px" >}}
+{{< figure src="f2.png" title="Here we are choosing Great Britain." width="750px" >}}
+{{< figure src="f3.png" title="In the indexing process, we have already identified patterns of words between spaCy entities. This is found in the Inferred Relationships." width="750px" >}}
+{{< figure src="f4.png" title="Each entity has an assigned profile where we can boost semantic meaning by emphasizing which signal should be stronger." width="750px" >}}
+
+
+
 
 Node Leaf extends this idea into a spatial environment.
 

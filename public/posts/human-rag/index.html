@@ -56,18 +56,30 @@
 <p>Search has become worse for humans, but paradoxically, better for AI. We’ve engineered incredibly sophisticated pipelines to retrieve and feed context into language models, while leaving the human user with almost none of that context themselves.</p>
 <p>This is the gap I set out to address with the Redleaf Knowledge Engine and its visual counterpart, Node Leaf.</p>
 <p>I think of it as <strong>Symmetrical RAG</strong>.</p>
-<p>It is a system where retrieval serves the human mind just as powerfully as it serves the algorithmic one.</p>
-<p><figure><img src="/posts/human-rag/rome1.png" width="750px"><figcaption>
-      <h4>Redleaf surfaces connections to the human first.</h4>
+<p>It is a system where retrieval serves the human mind just as powerfully as it serves the algorithmic one.
+In Redleaf, retrieval is transparent. When a document is processed, it doesn’t disappear into a vector store for later use. It is analyzed, decomposed, and surfaced. People, organizations, and relationships are extracted and presented directly in the Discovery interface. You can trace the exact sentences where entities intersect. The system gives <em>you</em> context before anything is ever passed to a model.</p>
+<p>Below are screenshots of a Redleaf index of the Federalist Papers.</p>
+<p>The Federalist Papers have long served as a benchmark corpus in Unix-style text processing and are commonly associated with early grep-era workflows. It&rsquo;s open source, and its ability makes it an incredible test bench to exercise Redleaf.</p>
+<p><figure><img src="/posts/human-rag/f1.png" width="750px"><figcaption>
+      <h4>Redleaf surfaces connections. spaCy identifies people, places, and things automatically.</h4>
     </figcaption>
 </figure>
 
-<figure><img src="/posts/human-rag/rome2.png" width="750px"><figcaption>
-      <h4>Redleaf surfaces connections to the human first.</h4>
+<figure><img src="/posts/human-rag/f2.png" width="750px"><figcaption>
+      <h4>Here we are choosing Great Britain.</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/posts/human-rag/f3.png" width="750px"><figcaption>
+      <h4>In the indexing process, we have already identified patterns of words between spaCy entities. This is found in the Inferred Relationships.</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/posts/human-rag/f4.png" width="750px"><figcaption>
+      <h4>Each entity has an assigned profile where we can boost semantic meaning by emphasizing which signal should be stronger.</h4>
     </figcaption>
 </figure>
 </p>
-<p>In Redleaf, retrieval is transparent. When a document is processed, it doesn’t disappear into a vector store for later use. It is analyzed, decomposed, and surfaced. People, organizations, and relationships are extracted and presented directly in the Discovery interface. You can trace the exact sentences where entities intersect. The system gives <em>you</em> context before anything is ever passed to a model.</p>
 <p>Node Leaf extends this idea into a spatial environment.</p>
 <p>Instead of interacting with a hidden retrieval pipeline through a chat window, you construct it directly. Document nodes, search nodes, and entity nodes can be arranged, connected, and evaluated in real time. You curate the context yourself. You inspect it. You refine it.</p>
 <p>Only after that process, the Human RAG layer is complete do you pass the result into an LLM, such as through an Ollama output node.</p>
