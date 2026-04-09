@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic Wiki | Nathaniel&#39;s Developer Blog</title>
+    
+    <meta name="author" content="Nathaniel Westveer">
+    <meta name="description" content="Current AI chat interfaces suffer from a terminal case of amnesia.
+You can spend hours building context, extracting insights, and refining ideas, but the moment …">
+    
+    <meta property="og:title" content="Agentic Wiki | Nathaniel&#39;s Developer Blog">
+    <meta property="og:description" content="Current AI chat interfaces suffer from a terminal case of amnesia.
+You can spend hours building context, extracting insights, and refining ideas, but the moment …">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://localhost:1313/posts/agentic-wiki/">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nathaniel Westveer",
+      "url": "http:\/\/localhost:1313\/",
+      "jobTitle": "Developer",
+      "knowsAbout": ["Local-first AI", "Flutter", "Python", "Software Design"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+    <div class="site-branding">
+        
+        <h1><a href="http://localhost:1313/">Nathaniel&#39;s Developer Blog</a></h1>
+    </div>
+    <nav class="site-navigation">
+        
+        <a href="http://localhost:1313/">Home</a>
+        <a href="/posts/">Posts</a>
+        <a href="/about/">About</a>
+    </nav>
+</header>
+
+    <main>
+        
+    <article class="post-content">
+        <header>
+            <h1>Agentic Wiki</h1>
+            
+            <div class="author-byline">By Nathaniel Westveer</div>
+            <time>April 9, 2026</time>
+        </header>
+        <p>Current AI chat interfaces suffer from a terminal case of amnesia.</p>
+<p>You can spend hours building context, extracting insights, and refining ideas, but the moment the session ends, everything disappears. The system resets. If you want to continue, you don’t build forward, you start over.</p>
+<p>This makes chat interfaces powerful for isolated tasks, but fundamentally broken for long-term, compounding research. There is no continuity. No accumulation. No memory.</p>
+<p>Node Leaf replaces this model entirely.
+<a href="https://github.com/nathanfx330/node-leaf/">https://github.com/nathanfx330/node-leaf/</a></p>
+<p>It introduces a new architecture: the <strong>Agentic Wiki</strong>.</p>
+<p>Instead of producing ephemeral outputs, AI agents now maintain a persistent, evolving body of knowledge on your local machine—stored as plain, portable Markdown (<code>.md</code>) files. This isn’t just output. It’s a system that remembers.</p>
+<hr>
+<h2 id="the-continuous-synthesis-loop">The Continuous Synthesis Loop</h2>
+<p>At the core of the Agentic Wiki is a simple but powerful idea: separate raw information from synthesized knowledge.</p>
+<ul>
+<li><strong>Source of Truth:</strong> Your Redleaf documents (read-only)</li>
+<li><strong>Working Knowledge:</strong> Editable Markdown files maintained by agents</li>
+</ul>
+<p>This separation enables a continuous synthesis loop—one that behaves like a real researcher, but operates indefinitely:</p>
+<ol>
+<li>
+<p><strong>Read Current State</strong>
+The Wiki Reader loads the current draft of a page (e.g., <code>Project_Alpha.md</code>) into context.
+If the file doesn’t exist, the agent starts from a blank slate.</p>
+</li>
+<li>
+<p><strong>Identify Gaps</strong>
+A Deep Study node analyzes the draft, identifies missing or weak areas, and retrieves relevant information from the Redleaf corpus.</p>
+</li>
+<li>
+<p><strong>Rewrite and Persist</strong>
+The Wiki Writer merges the existing draft with new findings, rewrites the document with structured Markdown, and saves it back to disk.</p>
+</li>
+</ol>
+<p>This loop doesn’t just run once—it can run continuously. The system doesn’t forget, and it doesn’t stop unless you tell it to.</p>
+<figure><img src="/posts/agentic-wiki/wiki-stack.png" width="750px"><figcaption>
+      <h4>Agentic Wiki Node-chain</h4>
+    </figcaption>
+</figure>
+
+<hr>
+<h2 id="epistemological-integrity">Epistemological Integrity</h2>
+<p>Real research is messy. Sources conflict. Interpretations evolve.</p>
+<p>Most systems handle this poorly,they overwrite old conclusions with new ones, erasing the reasoning process entirely.</p>
+<p>The Agentic Wiki takes a different approach.</p>
+<p>The Wiki Writer is explicitly instructed to preserve contradictions, not eliminate them. When new evidence conflicts with prior understanding, it is recorded transparently:</p>
+<blockquote>
+<p><em>“Earlier documents suggested X; however, newly analyzed [Doc Y] indicates Z.”</em></p>
+</blockquote>
+<p>All claims are tied to their sources. The result is not just a document, but a traceable evolution of understanding.</p>
+<p>To reinforce this, every write operation is versioned locally. Before saving, the system creates a timestamped backup in a hidden <code>.history</code> directory.</p>
+<p>This gives you:</p>
+<ul>
+<li>A complete record of every iteration</li>
+<li>The ability to roll back instantly</li>
+<li>Protection against hallucinations or bad synthesis</li>
+</ul>
+<p>It functions like version control, without friction.</p>
+<hr>
+<h2 id="from-notes-to-knowledge-systems">From Notes to Knowledge Systems</h2>
+<p>Because the output is plain Markdown, it remains fully portable. You can open it anywhere: editors, note-taking apps, or version control systems.</p>
+<p>But the real shift isn’t format, it’s scale.</p>
+<p>You’re no longer interacting with documents in isolation. You’re deploying a distributed system of AI agents, each responsible for maintaining a portion of a larger body of knowledge.</p>
+<p>Over time, these agents don’t just summarize—they construct.</p>
+<p>They refine arguments.
+They track contradictions.
+They expand coverage.</p>
+<p>Given enough time and data, they produce something far more substantial than chat output: a structured, evolving manuscript.</p>
+<hr>
+<h2 id="beyond-chat">Beyond Chat</h2>
+<p>This isn’t about automating research.</p>
+<p>It’s about building a system that remembers, revises, and compounds understanding over time.</p>
+<p>You’re no longer prompting an AI for answers.
+You’re maintaining a living body of knowledge—one that grows, corrects itself, and persists beyond any single session.</p>
+<p>The shift is simple, but fundamental:</p>
+<p>From stateless interaction<br>
+to<br>
+continuous cognition.</p>
+
+    </article>
+
+    </main>
+
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-lightbox');
+
+        const figures = document.querySelectorAll('.post-content figure');
+
+        figures.forEach(figure => {
+          const image = figure.querySelector('img');
+          if (image) {
+            figure.style.cursor = 'zoom-in'; 
+            figure.addEventListener('click', function() {
+              lightbox.style.display = 'flex';
+              lightboxImg.src = image.src;
+            });
+          }
+        });
+
+        function closeLightbox() {
+          lightbox.style.display = 'none';
+        }
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeLightbox();
+          }
+        });
+      });
+    </script>
+</body>
+</html>

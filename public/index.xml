@@ -6,8 +6,15 @@
     <description>Recent content on Nathaniel&#39;s Developer Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Mar 2026 02:35:15 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2026 01:08:59 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agentic Wiki</title>
+      <link>http://localhost:1313/posts/agentic-wiki/</link>
+      <pubDate>Thu, 09 Apr 2026 01:08:59 -0400</pubDate>
+      <guid>http://localhost:1313/posts/agentic-wiki/</guid>
+      <description>&lt;p&gt;Current AI chat interfaces suffer from a terminal case of amnesia.&lt;/p&gt;&#xA;&lt;p&gt;You can spend hours building context, extracting insights, and refining ideas, but the moment the session ends, everything disappears. The system resets. If you want to continue, you don’t build forward, you start over.&lt;/p&gt;&#xA;&lt;p&gt;This makes chat interfaces powerful for isolated tasks, but fundamentally broken for long-term, compounding research. There is no continuity. No accumulation. No memory.&lt;/p&gt;&#xA;&lt;p&gt;Node Leaf replaces this model entirely.&#xA;&lt;a href=&#34;https://github.com/nathanfx330/node-leaf/&#34;&gt;https://github.com/nathanfx330/node-leaf/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Redleaf Hub</title>
       <link>http://localhost:1313/posts/redleaf-hub/</link>
