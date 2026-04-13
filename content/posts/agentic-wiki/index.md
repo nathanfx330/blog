@@ -13,7 +13,7 @@ Return a month later, and you don’t continue forward, you reconstruct from fra
 This makes chat interfaces powerful for isolated problem-solving, but fundamentally inadequate for long-term, compounding research. There is no continuity. No accumulation. No persistent state.
 
 **Node Leaf replaces this paradigm entirely.**  
-https://github.com/nathanfx330/node-leaf/
+[https://github.com/nathanfx330/node-leaf/](https://github.com/nathanfx330/node-leaf/)
 
 It introduces a new architecture: the **Agentic Wiki**.
 
@@ -110,6 +110,32 @@ The output is actionable: a prioritized map of missing connections, along with s
 It functions as an autonomous “What’s Next?” engine for research.
 
 {{< figure src="wiki-council.png" title="Wiki Council" width="750px" >}}
+
+---
+
+## The Agentic "I'm Feeling Lucky": The Research Party
+
+For decades, search engines offered a blunt instrument for serendipity: the "I'm Feeling Lucky" button. It bypassed the index, circumvented choice, and dropped you directly at a destination. It was a leap of faith designed for an era of static web pages.
+
+In a continuous knowledge system, serendipity requires a different mechanic. It requires the **Research Party**.
+
+If the Wiki Council is designed to audit *existing* territory, the Research Party is designed to chart the *unknown*. It is the agentic evolution of "Feeling Lucky"—engineered to force intellectual breakthroughs through **system signal novelty**.
+
+Here is how the mechanics operate:
+
+You do not ask it a specific question. You give it a broad, thematic directive (e.g., *"Explore the 1980s Tech Boom"*). 
+
+1. **The Scout Reads the Map:** It analyzes your current Wiki network via the local NodeRank algorithm. Crucially, it treats your existing, documented knowledge as mere "unverified rumors."
+2. **Hunting for Novelty:** It compares what you *think* you know against the raw, unprocessed Redleaf database, actively seeking out primary source data that exists in your archives but has not yet been synthesized into your Wiki.
+3. **The Forager Extracts:** It bypasses high-level summarization, pulling only hard, cited facts (`[Doc X]`) from the unmapped corners of your corpus.
+4. **The Chronicler Synthesizes:** It returns with a "Campfire Report"—a grounded, highly-cited intelligence briefing that introduces entirely new conceptual nodes and suggested `[[Wiki Links]]` to your network.
+
+This is not random search. It is an algorithmic collision. 
+
+By systematically contrasting your established mental models against the latent, unexplored signals hidden deep within your archives, the Research Party manufactures serendipity. It doesn't just retrieve data; it catalyzes breakthroughs.
+
+{{< figure src="research-party.png" title="Research Party Node" width="750px" >}}
+
 
 ---
 
