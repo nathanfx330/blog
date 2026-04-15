@@ -35,21 +35,11 @@ At the core of the Agentic Wiki is a simple but transformative principle:
 
 This separation enables a perpetual synthesis loop—one that behaves less like a chatbot and more like an autonomous researcher:
 
-1. **Read Current State**  
-   The Wiki Reader loads the current draft of a page (e.g., `Project_Alpha.md`).  
-   If no draft exists, the system initializes from zero.
+1. **Read Current State:** The Wiki Reader loads the current draft of a page.
+2. **Identify Gaps:** A Deep Study node evaluates the draft and retrieves missing material from the Redleaf corpus.
+3. **Rewrite and Persist:** The Wiki Writer integrates new findings, restructures the document, and writes it back to disk.
 
-2. **Identify Gaps**  
-   A Deep Study node evaluates the draft, detects weak or missing areas, and retrieves relevant material from the Redleaf corpus.
-
-3. **Rewrite and Persist**  
-   The Wiki Writer integrates new findings, restructures the document, and writes it back to disk as coherent Markdown.
-
-This loop is not episodic—it is continuous.
-
-The system does not forget.  
-It does not reset.  
-It improves.
+This loop is not episodic—it is continuous. The system does not forget. It does not reset. It improves.
 
 {{< figure src="wiki-stack.png" title="Agentic Wiki Node-chain" width="750px" >}}
 
@@ -59,105 +49,68 @@ It improves.
 
 Real research is not linear. Sources conflict. Interpretations shift. Understanding evolves.
 
-Most systems flatten this process, overwriting old conclusions with new ones, erasing the reasoning that led there.
-
-The Agentic Wiki does the opposite.
-
-Contradictions are preserved, not discarded. When new evidence challenges prior conclusions, the system records the divergence explicitly:
+Most systems flatten this process, overwriting old conclusions with new ones, erasing the reasoning that led there. The Agentic Wiki does the opposite. Contradictions are preserved explicitly:
 
 > *“Earlier analysis suggested X; however, newly examined [Doc Y] indicates Z.”*
 
-Every claim remains anchored to its source. The result is not just a document, but a transparent record of intellectual evolution.
-
-To enforce this integrity, every write operation is versioned locally. Before modification, the system creates a timestamped backup in a hidden `.history` directory.
-
-This provides:
-
-- Full revision history  
-- Instant rollback capability  
-- Protection against hallucination or regression  
+Every claim remains anchored to its source. To enforce this integrity, every write operation is versioned locally. Before modification, the system creates a timestamped backup in a hidden `.history` directory.
 
 It behaves like version control—without introducing friction.
 
 ---
 
-## The Wiki Council: Expanding the Knowledge Frontier
+## The Wiki Council: Steering the Knowledge Frontier
 
-Deep research naturally converges. Once a topic is well-developed, exploration tends to narrow.
+Deep research naturally converges. Once a topic is well-developed, exploration tends to narrow. The Agentic Wiki counteracts this with the **Wiki Council**—a simulated Mixture of Experts (MoE) designed to audit your Wiki against the broader Redleaf knowledge graph and expose blind spots.
 
-The Agentic Wiki counteracts this with the **Wiki Council**—a multi-agent system designed not to validate conclusions, but to expose blind spots.
+But autonomous agents introduce a hazard: **unguided compute waste.**
 
-The Council evaluates a completed Wiki page against the broader Redleaf knowledge graph, identifying missing conceptual links and unexplored territory.
+Letting a swarm of experts loose is a roll of the dice. Often, the resulting conversation just misses the mark. You spin up the agents, and they wander down a path you simply don't care about. Rerolling doesn't fix it; they just miss in a different way. Meanwhile, your local GPU is pinned at 100%, wasting time and heat on a useless output.
 
-To operate within consumer hardware constraints (8–12GB VRAM), Node Leaf employs **VRAM-efficient sequential prompting**—simulating a multi-agent Mixture of Experts using a single loaded model.
+To solve this, the Wiki Council is not a black box. It is a **steerable, Human-in-the-Loop (HITL) system:**
 
-The process unfolds as follows:
+1. **The Directive:** Before the council convenes, you issue a strict focus (e.g., *"Focus entirely on the economic implications"*). The agents must operate within this bounding box, eliminating wasted compute.
+2. **Context & Mapping:** Core themes are distilled from the Wiki and queried against the Redleaf corpus.
+3. **Structured Debate:** A rotating set of expert personas (*Visionary, Skeptic, Archivist*) interrogate the gaps, strictly adhering to your Directive.
+4. **The Chairman's Review:** The debate pauses mid-stream. You act as "The Chairman," reading the live transcript and injecting feedback. If the conversation is drifting, you rein it in. The experts respond directly to your critique before proceeding.
+5. **Synthesis:** A Director persona consolidates the aligned discussion into a structured Audit Report.
 
-1. **Context Extraction**  
-   Core themes are distilled from the current Wiki page.
+The output is an actionable, prioritized map of missing connections and suggested new `.md` files. It functions as an autonomous, steerable “What’s Next?” engine.
 
-2. **Graph Mapping**  
-   The system queries the Redleaf corpus for adjacent and related concepts.
-
-3. **Structured Debate**  
-   A rotating set of expert personas—*Visionary, Skeptic, Archivist, Pragmatist*—interrogate the gaps from distinct perspectives.
-
-4. **Directed Synthesis**  
-   A Director persona consolidates the discussion into a structured Audit Report.
-
-The output is actionable: a prioritized map of missing connections, along with suggested new `.md` files and seeded prompts.
-
-It functions as an autonomous “What’s Next?” engine for research.
-
-{{< figure src="wiki-council.png" title="Wiki Council" width="750px" >}}
+{{< figure src="wiki-council2.png" title="Wiki Council" width="750px" >}}
 
 ---
 
 ## The Agentic "I'm Feeling Lucky": The Research Party
 
-For decades, search engines offered a blunt instrument for serendipity: the "I'm Feeling Lucky" button. It bypassed the index, circumvented choice, and dropped you directly at a destination. It was a leap of faith designed for an era of static web pages.
+For decades, search engines offered a blunt instrument for serendipity: the "I'm Feeling Lucky" button. It bypassed the index and dropped you directly at a destination. 
 
-In a continuous knowledge system, serendipity requires a different mechanic. It requires the **Research Party**.
+In a continuous knowledge system, serendipity requires the **Research Party**.
 
-If the Wiki Council is designed to audit *existing* territory, the Research Party is designed to chart the *unknown*. It is the agentic evolution of "Feeling Lucky"—engineered to force intellectual breakthroughs through **system signal novelty**.
+If the Wiki Council audits *existing* territory, the Research Party charts the *unknown*. It is engineered to force intellectual breakthroughs through system signal novelty. 
 
-Here is how the mechanics operate:
+You give it a broad thematic directive (e.g., *"Explore the 1980s Tech Boom"*):
 
-You do not ask it a specific question. You give it a broad, thematic directive (e.g., *"Explore the 1980s Tech Boom"*). 
+1. **The Scout Reads the Map:** It analyzes your current Wiki network. Crucially, it treats your existing knowledge as mere "unverified rumors."
+2. **Hunting for Novelty:** It compares what you *think* you know against the raw Redleaf database, seeking primary source data not yet synthesized into your Wiki.
+3. **The Forager Extracts:** It pulls only hard, cited facts (`[Doc X]`) from the unmapped corners of your corpus.
+4. **The Chronicler Synthesizes:** It returns with a "Campfire Report"—a grounded intelligence briefing that introduces entirely new conceptual nodes to your network.
 
-1. **The Scout Reads the Map:** It analyzes your current Wiki network via the local NodeRank algorithm. Crucially, it treats your existing, documented knowledge as mere "unverified rumors."
-2. **Hunting for Novelty:** It compares what you *think* you know against the raw, unprocessed Redleaf database, actively seeking out primary source data that exists in your archives but has not yet been synthesized into your Wiki.
-3. **The Forager Extracts:** It bypasses high-level summarization, pulling only hard, cited facts (`[Doc X]`) from the unmapped corners of your corpus.
-4. **The Chronicler Synthesizes:** It returns with a "Campfire Report"—a grounded, highly-cited intelligence briefing that introduces entirely new conceptual nodes and suggested `[[Wiki Links]]` to your network.
-
-This is not random search. It is an algorithmic collision. 
-
-By systematically contrasting your established mental models against the latent, unexplored signals hidden deep within your archives, the Research Party manufactures serendipity. It doesn't just retrieve data; it catalyzes breakthroughs.
+This is not random search. It is an algorithmic collision. By contrasting established mental models against latent signals hidden deep within your archives, the Research Party manufactures serendipity.
 
 {{< figure src="research-party.png" title="Research Party Node" width="750px" >}}
-
 
 ---
 
 ## From Notes to Knowledge Systems
 
-Because all outputs are plain Markdown, the system remains fully portable, compatible with editors, note-taking tools, and version control systems.
-
-But portability is not the innovation.
+Because all outputs are plain Markdown, the system remains fully portable. But portability is not the innovation.
 
 **Accumulation is.**
 
 You are no longer interacting with isolated documents. You are orchestrating a distributed system of agents, each responsible for maintaining and evolving a segment of a larger knowledge structure.
 
-Over time, these agents do more than summarize:
-
-They refine arguments.  
-They track contradictions.  
-They expand conceptual coverage.  
-
-Given sufficient time and data, they produce something qualitatively different from chat output:
-
-A structured, continuously evolving manuscript.
+Over time, these agents refine arguments, track contradictions, and expand conceptual coverage. Given sufficient time and data, they produce a structured, continuously evolving manuscript.
 
 ---
 
