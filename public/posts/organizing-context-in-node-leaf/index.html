@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizing Context in Node Leaf | Nathaniel&#39;s Developer Blog</title>
+    
+    <meta name="author" content="Nathaniel Westveer">
+    <meta name="description" content="In a spatial environment, structure should be visible at a glance instead of something you have to reconstruct by squinting at a long chain of nodes.
+When I …">
+    
+    <meta property="og:title" content="Organizing Context in Node Leaf | Nathaniel&#39;s Developer Blog">
+    <meta property="og:description" content="In a spatial environment, structure should be visible at a glance instead of something you have to reconstruct by squinting at a long chain of nodes.
+When I …">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://localhost:1313/posts/organizing-context-in-node-leaf/">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nathaniel Westveer",
+      "url": "http:\/\/localhost:1313\/",
+      "jobTitle": "Developer",
+      "knowsAbout": ["Local-first AI", "Flutter", "Python", "Software Design"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+    <div class="site-branding">
+        
+        <h1><a href="http://localhost:1313/">Nathaniel&#39;s Developer Blog</a></h1>
+    </div>
+    <nav class="site-navigation">
+        
+        <a href="http://localhost:1313/">Home</a>
+        <a href="/posts/">Posts</a>
+        <a href="/about/">About</a>
+    </nav>
+</header>
+
+    <main>
+        
+    <article class="post-content">
+        <header>
+            <h1>Organizing Context in Node Leaf</h1>
+            
+            <div class="author-byline">By Nathaniel Westveer</div>
+            <time>April 16, 2026</time>
+        </header>
+        <p>In a spatial environment, structure should be visible at a glance instead of something you have to reconstruct by squinting at a long chain of nodes.</p>
+<p>When I first built Node Leaf, there was no Merge Node.
+And at the time, that made sense.</p>
+<p>Assembling context for an LLM is not like video compositing. You are not layering A over B. The model does not care about visual stacking or strict ordering. It just needs access to the full set of inputs.</p>
+<p>So a single vertical chain worked.
+You could keep adding nodes, and technically, everything held together.</p>
+<p>Until it did not.</p>
+<p>As workflows grew more complex, the limitation was not the model. It was the interface. Long chains turned into long scrolls. A Document Reader feeding into a Global Search into a Scratchpad became a dense, unreadable column.</p>
+<p>The structure was still there.
+You just could not see it anymore.
+<figure><img src="/posts/organizing-context-in-node-leaf/merge-node.png" width="750px"><figcaption>
+      <h4>The Merge Node</h4>
+    </figcaption>
+</figure>
+</p>
+<p>The Merge Node fixes that.</p>
+<p>Not by changing how context is processed, but by changing how it is organized.</p>
+<figure><img src="/posts/organizing-context-in-node-leaf/merge-node2.png" width="750px"><figcaption>
+      <h4>The Merge Node combining parallel branches into a single stream.</h4>
+    </figcaption>
+</figure>
+
+<p>Instead of forcing everything into a single sequence, you can break your work into parallel columns. One for historical context, one for geographical context, another for whatever else matters.</p>
+<p>Each branch stays clean.
+Legible.
+Independent.</p>
+<p>And when you are ready to synthesize, you connect them.</p>
+<p>The Merge Node gathers those branches and passes them forward as a single context path to add nodes down stream, as if they had always been one chain.</p>
+<h3 id="the-hidden-math-of-parallel-thought">The Hidden Math of Parallel Thought</h3>
+<p>Getting this to feel obvious required solving problems that were not obvious at all.</p>
+<figure><img src="/posts/organizing-context-in-node-leaf/merge-node3.png" width="750px"><figcaption>
+      <h4>Rejecting Columns Crossover .</h4>
+    </figcaption>
+</figure>
+
+<p><strong>Reading Left to Right</strong><br>
+Originally, Node Leaf compiled context by walking backward along a single wire. The Merge Node breaks that assumption. Now there are multiple paths.</p>
+<p>If combined incorrectly, the output reads like scrambled thoughts.</p>
+<p>The solution was to replace the backward trace with Kahn’s Algorithm for topological sorting, using the physical X position of nodes as a tie breaker. The compiler now literally reads your canvas from left to right.</p>
+<p><strong>Visual Truth vs Mathematical Truth</strong><br>
+Users expect precision. If you drag a wire to a specific port, it should go there.</p>
+<p>But arrays do not think that way. They append.</p>
+<p>Early versions created a visual lie, where connections snapped somewhere other than where you aimed. Fixing this meant giving each port its own identity and tracking mouse position at the pixel level, allowing connections to displace existing ones exactly where intended.</p>
+<p><strong>Preventing Cross Contamination</strong><br>
+Parallel columns introduce a subtle failure mode known as the diamond problem.</p>
+<p>If a node from one column feeds into multiple inputs of the same Merge Node, especially by crossing into another column, you lose conceptual separation. Independent branches contaminate each other.</p>
+<p>To prevent this, Node Leaf performs upstream path tracing. If a connection would cause a single source to appear multiple times within the same merge, the wire is rejected immediately.</p>
+<h3 id="the-real-shift">The Real Shift</h3>
+<p>The Merge Node is not just a utility. It changes how you think while building.</p>
+<p>You no longer have to serialize your thoughts while you are still exploring them.</p>
+<p>Above the Merge Node, everything stays parallel and structured.
+Below it, everything becomes unified again for the model.</p>
+<p>It keeps the canvas readable.
+And your mind sharp at the task at hand.</p>
+
+    </article>
+
+    </main>
+
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-lightbox');
+
+        const figures = document.querySelectorAll('.post-content figure');
+
+        figures.forEach(figure => {
+          const image = figure.querySelector('img');
+          if (image) {
+            figure.style.cursor = 'zoom-in'; 
+            figure.addEventListener('click', function() {
+              lightbox.style.display = 'flex';
+              lightboxImg.src = image.src;
+            });
+          }
+        });
+
+        function closeLightbox() {
+          lightbox.style.display = 'none';
+        }
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeLightbox();
+          }
+        });
+      });
+    </script>
+</body>
+</html>

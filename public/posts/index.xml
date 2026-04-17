@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Nathaniel&#39;s Developer Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Apr 2026 01:08:59 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 03:05:49 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Organizing Context in Node Leaf</title>
+      <link>http://localhost:1313/posts/organizing-context-in-node-leaf/</link>
+      <pubDate>Thu, 16 Apr 2026 03:05:49 -0400</pubDate>
+      <guid>http://localhost:1313/posts/organizing-context-in-node-leaf/</guid>
+      <description>&lt;p&gt;In a spatial environment, structure should be visible at a glance instead of something you have to reconstruct by squinting at a long chain of nodes.&lt;/p&gt;&#xA;&lt;p&gt;When I first built Node Leaf, there was no Merge Node.&#xA;And at the time, that made sense.&lt;/p&gt;&#xA;&lt;p&gt;Assembling context for an LLM is not like video compositing. You are not layering A over B. The model does not care about visual stacking or strict ordering. It just needs access to the full set of inputs.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Agentic Wiki</title>
       <link>http://localhost:1313/posts/agentic-wiki/</link>
