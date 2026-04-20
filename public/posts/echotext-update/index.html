@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoText Update | Nathaniel&#39;s Developer Blog</title>
+    
+    <meta name="author" content="Nathaniel Westveer">
+    <meta name="description" content=" Text-to-speech has taken a massive turn this decade. We went from reading obscure Google Tacotron papers to listening to incredibly natural-sounding neural …">
+    
+    <meta property="og:title" content="EchoText Update | Nathaniel&#39;s Developer Blog">
+    <meta property="og:description" content=" Text-to-speech has taken a massive turn this decade. We went from reading obscure Google Tacotron papers to listening to incredibly natural-sounding neural …">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://localhost:1313/posts/echotext-update/">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nathaniel Westveer",
+      "url": "http:\/\/localhost:1313\/",
+      "jobTitle": "Developer",
+      "knowsAbout": ["Local-first AI", "Flutter", "Python", "Software Design"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+    <div class="site-branding">
+        
+        <h1><a href="http://localhost:1313/">Nathaniel&#39;s Developer Blog</a></h1>
+    </div>
+    <nav class="site-navigation">
+        
+        <a href="http://localhost:1313/">Home</a>
+        <a href="/posts/">Posts</a>
+        <a href="/about/">About</a>
+    </nav>
+</header>
+
+    <main>
+        
+    <article class="post-content">
+        <header>
+            <h1>EchoText Update</h1>
+            
+            <div class="author-byline">By Nathaniel Westveer</div>
+            <time>April 20, 2026</time>
+        </header>
+        <figure><img src="/posts/echotext-update/echotextcover.png" width="750px">
+</figure>
+
+<p>Text-to-speech has taken a massive turn this decade. We went from reading obscure Google Tacotron papers to listening to incredibly natural-sounding neural networks taking the world by storm.</p>
+<p>But there is a catch. Most of the time, the good stuff is locked behind a paywall.</p>
+<p>There are local, open-source alternatives, but they are often difficult for the average user to implement. That was part of the reason I built <strong>EchoText</strong>. I wanted to use <a href="https://github.com/rhasspy/piper">Piper</a>. Actually, I didn&rsquo;t just want to use it—I loved Piper. Not just liked, <em>loved</em>. It isn&rsquo;t the most polished corporate product, but its vision and local-first ethos strike a solid chord with me.</p>
+<p>EchoText was born out of a specific moment: staring at a massive wall of text and realizing I didn’t just want to scan it with my eyes. I wanted to absorb it.</p>
+<figure><img src="/posts/echotext-update/echotext1.png" width="750px"><figcaption>
+      <h4>The EchoText interface, featuring dynamic voice selection.</h4>
+    </figcaption>
+</figure>
+
+<p>I have spent the last few weeks ironing out exactly what that experience should look like.</p>
+<h3 id="streaming-thought">Streaming Thought</h3>
+<p>If you are staring at a wall of text, you don&rsquo;t want to wait for a progress bar. You want to start listening immediately.</p>
+<p>In this update, EchoText now streams the document bit-by-bit into the Piper engine. By breaking the text down and piping it sequentially, playback starts almost instantly, generating the next chunk in the background while you listen to the current one.</p>
+<p>As it reads, the text is highlighted sentence-by-sentence. If you want to jump around, you just click a sentence, and the audio instantly follows.</p>
+<figure><img src="/posts/echotext-update/echotext2.png" width="750px"><figcaption>
+      <h4>Text is highlighted sentence-by-sentence as it reads, allowing for interactive playback.</h4>
+    </figcaption>
+</figure>
+
+<h3 id="the-vision-audiobooks-for-redleaf">The Vision: Audiobooks for Redleaf</h3>
+<p>But the real goal—the vision behind this entire update—was something bigger.</p>
+<p>I wanted a way to create a full document &ldquo;audiobook&rdquo; export. Not just a <code>.wav</code> file, but a perfectly synced <code>.srt</code> subtitle file to go with it.</p>
+<p>To do this, EchoText mathematically calculates exact audio durations from the raw WAV headers, sentence-by-sentence, stitching them together without relying on external transcription tools.</p>
+<figure><img src="/posts/echotext-update/echotext3.png" width="750px"><figcaption>
+      <h4>Exporting the generated audio alongside a perfectly timed .srt subtitle file.</h4>
+    </figcaption>
+</figure>
+
+<p>Why go through all that trouble?</p>
+<p>Because I wanted to be able to take a massive research document, export it from EchoText as an audiobook, and drop it directly into <strong>Redleaf’s SRT viewer</strong>.</p>
+<figure><img src="/posts/echotext-update/echotext4.png" width="750px"><figcaption>
+      <h4>The generated audio and perfectly synced SRT file loaded seamlessly into Redleaf&#39;s media viewer.</h4>
+    </figcaption>
+</figure>
+
+<p>Now, the loop is closed. You can generate a private, local AI voiceover of any text, load it into your knowledge engine, and follow along with a perfectly synced transcript.</p>
+<p>Absorbing information, rather than just scanning it.</p>
+<p>If you paste text from an LLM, there is also a new &ldquo;Magic Wand&rdquo; tool that strips out Markdown artifacts (<code>**bold**</code>, <code>### headers</code>) so Piper reads natural language, not punctuation. And custom voices can now be managed simply by dropping them into folders.</p>
+<p>You can find the repository and download the latest release here:<br>
+<a href="https://github.com/nathanfx330/echotext">https://github.com/nathanfx330/echotext</a></p>
+
+    </article>
+
+    </main>
+
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-lightbox');
+
+        const figures = document.querySelectorAll('.post-content figure');
+
+        figures.forEach(figure => {
+          const image = figure.querySelector('img');
+          if (image) {
+            figure.style.cursor = 'zoom-in'; 
+            figure.addEventListener('click', function() {
+              lightbox.style.display = 'flex';
+              lightboxImg.src = image.src;
+            });
+          }
+        });
+
+        function closeLightbox() {
+          lightbox.style.display = 'none';
+        }
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeLightbox();
+          }
+        });
+      });
+    </script>
+</body>
+</html>

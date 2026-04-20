@@ -6,8 +6,15 @@
     <description>Recent content on Nathaniel&#39;s Developer Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Apr 2026 03:05:49 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 03:02:47 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EchoText Update</title>
+      <link>http://localhost:1313/posts/echotext-update/</link>
+      <pubDate>Mon, 20 Apr 2026 03:02:47 -0400</pubDate>
+      <guid>http://localhost:1313/posts/echotext-update/</guid>
+      <description>&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/posts/echotext-update/echotextcover.png&#34; width=&#34;750px&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Text-to-speech has taken a massive turn this decade. We went from reading obscure Google Tacotron papers to listening to incredibly natural-sounding neural networks taking the world by storm.&lt;/p&gt;&#xA;&lt;p&gt;But there is a catch. Most of the time, the good stuff is locked behind a paywall.&lt;/p&gt;&#xA;&lt;p&gt;There are local, open-source alternatives, but they are often difficult for the average user to implement. That was part of the reason I built &lt;strong&gt;EchoText&lt;/strong&gt;. I wanted to use &lt;a href=&#34;https://github.com/rhasspy/piper&#34;&gt;Piper&lt;/a&gt;. Actually, I didn&amp;rsquo;t just want to use it—I loved Piper. Not just liked, &lt;em&gt;loved&lt;/em&gt;. It isn&amp;rsquo;t the most polished corporate product, but its vision and local-first ethos strike a solid chord with me.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Organizing Context in Node Leaf</title>
       <link>http://localhost:1313/posts/organizing-context-in-node-leaf/</link>
