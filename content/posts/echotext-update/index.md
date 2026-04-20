@@ -3,50 +3,82 @@ title: "EchoText Update"
 date: 2026-04-20T03:02:47-04:00
 draft: false
 ---
+
 {{< figure src="echotextcover.png" width="750px" >}}
 
-Text-to-speech has taken a massive turn this decade. We went from reading obscure Google Tacotron papers to listening to incredibly natural-sounding neural networks taking the world by storm. 
+Text-to-speech has taken a massive leap this decade. We’ve gone from digging through obscure Tacotron papers to listening to neural voices that are nearly indistinguishable from human narration.
 
-But there is a catch. Most of the time, the good stuff is locked behind a paywall. 
+There’s just one problem: the best tools are usually locked behind a paywall.
 
-There are local, open-source alternatives, but they are often difficult for the average user to implement. That was part of the reason I built **EchoText**. I wanted to use [Piper](https://github.com/rhasspy/piper). It isn't the most polished TTS solution, but its vision and local-first ethos strike a solid chord with me. 
+There are open-source, local alternatives—but they tend to be difficult to set up and even harder to integrate into a daily workflow. That gap is what led me to build **EchoText**.
 
-EchoText was born out of a specific moment: staring at a massive wall of text and realizing I didn’t just want to scan it with my eyes. I wanted to absorb it.
+At its core, EchoText is built around [Piper](https://github.com/rhasspy/piper). It’s not the most polished TTS system out there, but its local-first philosophy and simplicity make it incredibly compelling.
+
+---
+
+## Why EchoText Exists
+
+This project started with a simple moment: staring at a massive wall of text and realizing I didn’t want to *read* it—I wanted to *listen* to it.
+
+Not as a robotic voice, but as something closer to an audiobook—something I could absorb passively in the background.
 
 {{< figure src="echotext1.png" title="The EchoText interface, featuring dynamic voice selection." width="750px" >}}
 
-I have spent the last few weeks ironing out exactly what that experience should look like.
+---
 
-### Streaming Thought
-If you are staring at a wall of text, you don't want to wait for a progress bar. You want to start listening immediately. 
+## Streaming Thought
 
-In this update, EchoText now streams the document bit-by-bit into the Piper engine. By breaking the text down and piping it sequentially, playback starts almost instantly, generating the next chunk in the background while you listen to the current one. 
+When you hit “play” on a long document, waiting for a progress bar kills the experience.
 
-As it reads, the text is highlighted sentence-by-sentence. If you want to jump around, you just click a sentence, and the audio instantly follows. 
+EchoText now streams text into Piper incrementally. Instead of generating the entire audio upfront, it processes the document in chunks—so playback starts almost immediately while the rest continues rendering in the background.
+
+As it plays, each sentence is highlighted in real time. You can click anywhere in the text, and playback jumps instantly to that point.
 
 {{< figure src="echotext2.png" title="Text is highlighted sentence-by-sentence as it reads, allowing for interactive playback." width="750px" >}}
 
-### The Vision: Audiobooks for Redleaf
+---
 
-But the real goal—the vision behind this entire update—was something bigger. 
+## The Bigger Goal: Audiobooks for Redleaf
 
-I wanted a way to create a full document "audiobook" export. Not just a `.wav` file, but a perfectly synced `.srt` subtitle file to go with it. 
+The real goal behind this update was bigger than streaming.
 
-To do this, EchoText mathematically calculates exact audio durations from the raw WAV headers, sentence-by-sentence, stitching them together without relying on external transcription tools. 
+I wanted full document exports—complete audiobook-style output with perfectly synchronized subtitles.
+
+Not just a `.wav` file, but a matching `.srt`.
+
+To make that work, EchoText calculates precise timing directly from WAV headers, sentence by sentence. No external transcription. No guesswork. Just deterministic timing stitched together into a clean subtitle track.
 
 {{< figure src="echotext3.png" title="Exporting the generated audio alongside a perfectly timed .srt subtitle file." width="750px" >}}
 
-Why go through all that trouble?
+---
 
-Because I wanted to be able to take a massive research document, export it from EchoText as an audiobook, and drop it directly into **Redleaf’s SRT viewer**. 
+## Closing the Loop
 
-{{< figure src="echotext4.png" title="The generated audio and perfectly synced SRT file loaded seamlessly into Redleaf's media viewer." width="750px" >}}
+That’s where everything connects.
 
-Now, the loop is closed. You can generate a private, local AI voiceover of any text, load it into your knowledge engine, and follow along with a perfectly synced transcript.
+You can now:
 
-Absorbing information, rather than just scanning it.
+- Generate a private, local voiceover of any document  
+- Export it with perfectly synced subtitles  
+- Drop it directly into Redleaf’s SRT viewer  
 
-If you paste text from an LLM, there is also a new "Magic Wand" tool that strips out Markdown artifacts (`**bold**`, `### headers`) so Piper reads natural language, not punctuation. And custom voices can now be managed simply by dropping them into folders.
+The result is a seamless loop: text → audio → explorable knowledge.
+
+Not just scanning information—but actually absorbing it.
+
+{{< figure src="echotext4.png" title="Follow along and take notes as the audio and SRT stay perfectly in sync inside Redleaf’s media viewer." width="750px" >}}
+
+---
+
+## Small but Important Details
+
+A few quality-of-life improvements round things out:
+
+- A “Magic Wand” tool strips Markdown artifacts (`**bold**`, headers, etc.) so speech sounds natural  
+- Custom voices are plug-and-play—just drop them into a folder  
+- The entire system stays local and self-contained  
+
+---
 
 You can find the repository and download the latest release here:  
-[https://github.com/nathanfx330/echotext](https://github.com/nathanfx330/echotext)
+https://github.com/nathanfx330/echotext
