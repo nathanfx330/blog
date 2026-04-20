@@ -9,7 +9,7 @@ Text-to-speech has taken a massive turn this decade. We went from reading obscur
 
 But there is a catch. Most of the time, the good stuff is locked behind a paywall. 
 
-There are local, open-source alternatives, but they are often difficult for the average user to implement. That was part of the reason I built **EchoText**. I wanted to use [Piper](https://github.com/rhasspy/piper). Actually, I didn't just want to use it—I loved Piper. Not just liked, *loved*. It isn't the most polished corporate product, but its vision and local-first ethos strike a solid chord with me. 
+There are local, open-source alternatives, but they are often difficult for the average user to implement. That was part of the reason I built **EchoText**. I wanted to use [Piper](https://github.com/rhasspy/piper). It isn't the most polished TTS solution, but its vision and local-first ethos strike a solid chord with me. 
 
 EchoText was born out of a specific moment: staring at a massive wall of text and realizing I didn’t just want to scan it with my eyes. I wanted to absorb it.
 
