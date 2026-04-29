@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Folders | Nathaniel&#39;s Developer Blog</title>
+    
+    <meta name="author" content="Nathaniel Westveer">
+    <meta name="description" content="Redleaf’s design mission has always been portability: a fully processed knowledge graph, encapsulated in a single folder, ready to hand to a colleague.
+But …">
+    
+    <meta property="og:title" content="Virtual Folders | Nathaniel&#39;s Developer Blog">
+    <meta property="og:description" content="Redleaf’s design mission has always been portability: a fully processed knowledge graph, encapsulated in a single folder, ready to hand to a colleague.
+But …">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://localhost:1313/posts/virtual-folders/">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nathaniel Westveer",
+      "url": "http:\/\/localhost:1313\/",
+      "jobTitle": "Developer",
+      "knowsAbout": ["Local-first AI", "Flutter", "Python", "Software Design"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+    <div class="site-branding">
+        
+        <h1><a href="http://localhost:1313/">Nathaniel&#39;s Developer Blog</a></h1>
+    </div>
+    <nav class="site-navigation">
+        
+        <a href="http://localhost:1313/">Home</a>
+        <a href="/posts/">Posts</a>
+        <a href="/about/">About</a>
+    </nav>
+</header>
+
+    <main>
+        
+    <article class="post-content">
+        <header>
+            <h1>Virtual Folders</h1>
+            
+            <div class="author-byline">By Nathaniel Westveer</div>
+            <time>April 20, 2026</time>
+        </header>
+        <p>Redleaf’s design mission has always been portability: a fully processed knowledge graph, encapsulated in a single folder, ready to hand to a colleague.</p>
+<p>But building a local first knowledge engine inevitably runs into a very physical constraint: data gravity.</p>
+<p>With a few dozen PDFs, keeping everything neatly inside a <code>documents/</code> directory is trivial. At the scale of terabytes, historical archives, podcast libraries, parsed email dumps, that requirement becomes friction.</p>
+<p>You cannot always bring the data into your workspace. Sometimes you have to meet it where it lives.</p>
+<p>Duplicating massive datasets just to analyze them is not a real solution.</p>
+<p>Introducing <code>.rlink</code> files is how Redleaf adapts to that reality.</p>
+<hr>
+<h2 id="the-rlink-portal">The <code>.rlink</code> Portal</h2>
+<p>Operating system shortcuts, macOS aliases, Windows links, are lightweight pointer files that redirect the user to another location on disk. <code>.rlink</code> builds on that concept, but replaces opaque system behavior with a transparent, deterministic format that Redleaf can fully control.</p>
+<p>If you have a large archive on an external drive, you can create an alias directly from Redleaf Hub or the web settings. This generates a human readable <code>.rlink</code> file inside your <code>documents/</code> directory.</p>
+<p>That file contains nothing more than an absolute path.</p>
+<p>During Discovery, the engine treats it as a portal. It transparently traverses the external location, indexes the contents, and maps them into the graph using a virtual path:</p>
+<p><code>MyArchive.rlink/report.pdf</code></p>
+<p>From the user’s perspective, everything behaves as if the data lives locally.</p>
+<p>When you open a document in Synthesis, or pass it to Node Leaf for analysis, the backend resolver reconstructs the real OS path instantly.</p>
+<p>No duplication. No migration. No compromise.</p>
+<p><figure><img src="/posts/virtual-folders/virtual-folders.png" width="750px"><figcaption>
+      <h4>Mapping external drives to Redleaf using Virtual Folders.</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/posts/virtual-folders/virtual-folders2.png" width="750px"><figcaption>
+      <h4>The virtual folder path works as if the document were in the portable directory.</h4>
+    </figcaption>
+</figure>
+</p>
+<hr>
+<h2 id="the-persistence-problem">The Persistence Problem</h2>
+<p>External data introduces a more subtle and more dangerous failure mode:</p>
+<p>It disappears.</p>
+<p>In earlier versions, Redleaf used a strict hard delete model. If Discovery ran and a file was missing, the system assumed it was gone permanently.</p>
+<p>The result was aggressive:</p>
+<ul>
+<li>The document was removed from the database</li>
+<li>All embeddings were deleted</li>
+<li>Graph relationships were destroyed</li>
+<li>Notes, tags, and curation vanished</li>
+</ul>
+<p>If an external drive was unplugged or simply asleep, you could lose hours of work instantly.</p>
+<p>That level of fragility is unacceptable for a system built around long term knowledge.</p>
+<hr>
+<h2 id="the-recycle-bin">The Recycle Bin</h2>
+<p>Redleaf now treats absence as a state, not a deletion.</p>
+<p>When a file or an entire <code>.rlink</code> target goes missing, it is marked as <code>Missing</code> instead of being purged.</p>
+<p>These documents are:</p>
+<ul>
+<li>Hidden from the dashboard</li>
+<li>Excluded from full text search</li>
+<li>Removed from the semantic vector space</li>
+</ul>
+<p>AI agents will not see them. Queries will not reference them.</p>
+<p>But everything that matters is preserved:</p>
+<p>Tags. Notes. Relationships. Context.</p>
+<figure><img src="/posts/virtual-folders/recycle-bin.png" width="750px"><figcaption>
+      <h4>Missing documents are safely stashed in the Recycle Bin until their source is restored.</h4>
+    </figcaption>
+</figure>
+
+<p>If the removal was intentional, you can permanently delete the data from the Recycle Bin.</p>
+<p>If not, recovery is instant.</p>
+<p>Plug the drive back in.<br>
+Run Discovery.</p>
+<p>Redleaf recognizes the returning files by hash and restores them in place, fully intact.</p>
+<p>Every connection, every annotation, every layer of synthesis snaps back into the graph.</p>
+<p>This behavior is consistent across both the web interface and the high throughput DuckDB pipeline.</p>
+<hr>
+<p>This is not just recovery.</p>
+<p>It is persistence.</p>
+<p>Your knowledge graph should not shatter because a cable was bumped.</p>
+<p>With Virtual Folders and the Recycle Bin, Redleaf stops fighting the realities of local file systems and starts working with them.</p>
+
+    </article>
+
+    </main>
+
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-lightbox');
+
+        const figures = document.querySelectorAll('.post-content figure');
+
+        figures.forEach(figure => {
+          const image = figure.querySelector('img');
+          if (image) {
+            figure.style.cursor = 'zoom-in'; 
+            figure.addEventListener('click', function() {
+              lightbox.style.display = 'flex';
+              lightboxImg.src = image.src;
+            });
+          }
+        });
+
+        function closeLightbox() {
+          lightbox.style.display = 'none';
+        }
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeLightbox();
+          }
+        });
+      });
+    </script>
+</body>
+</html>

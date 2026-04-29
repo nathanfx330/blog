@@ -6,14 +6,28 @@
     <description>Recent content in Posts on Nathaniel&#39;s Developer Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Apr 2026 03:02:47 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 01:55:58 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redleaf Engine 2.5</title>
+      <link>http://localhost:1313/posts/redleaf-engine-2-5/</link>
+      <pubDate>Wed, 29 Apr 2026 01:55:58 -0400</pubDate>
+      <guid>http://localhost:1313/posts/redleaf-engine-2-5/</guid>
+      <description>&lt;p&gt;Redleaf was originally built to solve a human problem. In early 2025, LLMs were unreliable for deep research: feed them a long document, and they would lose the thread halfway through. So, I built Redleaf to help people do RAG properly—extract entities, map relationships, and navigate information as a living structure instead of a wall of text.&lt;/p&gt;&#xA;&lt;p&gt;Then, something changed.&lt;/p&gt;&#xA;&lt;p&gt;As open-weight models improved, they stopped feeling like simple token generators and started behaving more like agents. In that shift, something unexpected happened.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Virtual Folders</title>
+      <link>http://localhost:1313/posts/virtual-folders/</link>
+      <pubDate>Mon, 20 Apr 2026 19:43:01 -0400</pubDate>
+      <guid>http://localhost:1313/posts/virtual-folders/</guid>
+      <description>&lt;p&gt;Redleaf’s design mission has always been portability: a fully processed knowledge graph, encapsulated in a single folder, ready to hand to a colleague.&lt;/p&gt;&#xA;&lt;p&gt;But building a local first knowledge engine inevitably runs into a very physical constraint: data gravity.&lt;/p&gt;&#xA;&lt;p&gt;With a few dozen PDFs, keeping everything neatly inside a &lt;code&gt;documents/&lt;/code&gt; directory is trivial. At the scale of terabytes, historical archives, podcast libraries, parsed email dumps, that requirement becomes friction.&lt;/p&gt;&#xA;&lt;p&gt;You cannot always bring the data into your workspace. Sometimes you have to meet it where it lives.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>EchoText Update</title>
       <link>http://localhost:1313/posts/echotext-update/</link>
       <pubDate>Mon, 20 Apr 2026 03:02:47 -0400</pubDate>
       <guid>http://localhost:1313/posts/echotext-update/</guid>
-      <description>&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/posts/echotext-update/echotextcover.png&#34; width=&#34;750px&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Text-to-speech has taken a massive leap this decade. We’ve gone from digging through obscure Tacotron papers to listening to neural voices that are nearly indistinguishable from human narration.&lt;/p&gt;&#xA;&lt;p&gt;There’s just one problem: the best tools are usually locked behind a paywall.&lt;/p&gt;&#xA;&lt;p&gt;There are open-source, local alternatives—but they tend to be difficult to set up and even harder to integrate into a daily workflow. That gap is what led me to build &lt;strong&gt;EchoText&lt;/strong&gt;.&lt;/p&gt;</description>
+      <description>&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/posts/echotext-update/echotextcover1a.png&#34; width=&#34;750px&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Updated Screenshot April 29 2026&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Text-to-speech has taken a massive leap this decade. We’ve gone from digging through obscure Tacotron papers to listening to neural voices that are nearly indistinguishable from human narration.&lt;/p&gt;&#xA;&lt;p&gt;There’s just one problem: the best tools are usually locked behind a paywall.&lt;/p&gt;&#xA;&lt;p&gt;There are open-source, local alternatives—but they tend to be difficult to set up and even harder to integrate into a daily workflow. That gap is what led me to build &lt;strong&gt;EchoText&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Organizing Context in Node Leaf</title>

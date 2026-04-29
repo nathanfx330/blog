@@ -4,7 +4,7 @@ date: 2026-04-20T03:02:47-04:00
 draft: false
 ---
 
-{{< figure src="echotextcover.png" width="750px" >}}
+{{< figure src="echotextcover1a.png" title="Updated Screenshot April 29 2026" width="750px" >}}
 
 Text-to-speech has taken a massive leap this decade. We’ve gone from digging through obscure Tacotron papers to listening to neural voices that are nearly indistinguishable from human narration.
 
