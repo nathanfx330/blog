@@ -52,7 +52,7 @@ We have made this as efficient as possible, and with Redleaf, I believe I've clo
 * **Intersectional Filtering:** Advanced search allows you to build a set of conditions to filter down documents, finding highly specific intersections of pure signal.
 
 Humans and agents, navigating the same graph, using the exact same tools.
-{{< figure src="advanced_search.png" title="Redleaf Engine 2.5" width="750px" >}}
+{{< figure src="advanced_search.png" title="Redleaf’s new advanced search" width="750px" >}}
 
 ---
 
