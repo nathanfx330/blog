@@ -64,9 +64,9 @@ What began as a document explorer is now a backend system designed to be used by
 
 The engine is.
 
-{{< figure src="redleaf-emmerson.png" width="750px" >}}
-{{< figure src="msa_handbook.png" width="750px" >}}
-{{< figure src="msa_handbook2.png" width="750px" >}}
+{{< figure src="redleaf-emmerson.jpg" width="750px" >}}
+{{< figure src="msa_handbook.jpg" width="750px" >}}
+{{< figure src="msa_handbook2.jpg" width="750px" >}}
 
 
 
