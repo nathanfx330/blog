@@ -101,7 +101,7 @@ This is what powers Node Leaf's "Research Party": coordinated agents that search
 
 {{< figure src="api_calls.png" title="Node Leaf agents utilizing Redleaf 2.5 APIs to forage for primary source data" width="750px" >}}
 
-{{< figure src="node-leaf-tab-search.png" title="Node Leaf’s updated tab search lets you dynamically surface nodes instantly without digging through long menus" width="750px" >}}
+{{< figure src="node-leaf-tab-search.jpg" title="Node Leaf’s updated tab search lets you dynamically surface nodes instantly without digging through long menus" width="750px" >}}
 
 
 
