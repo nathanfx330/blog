@@ -62,7 +62,7 @@ Redleaf 2.5 is not a feature update; it is a role change.
 
 What began as a document explorer is now a backend system designed to be used by other systems. The UI remains, but it is no longer the center. 
 
-The engine is.
+The engine is the center. The GUI remains a first-class experience for the user.
 
 {{< figure src="redleaf-emmerson.jpg" width="750px" >}}
 {{< figure src="msa_handbook.jpg" width="750px" >}}

@@ -9,11 +9,11 @@
     <lastBuildDate>Wed, 29 Apr 2026 01:55:58 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Redleaf Engine 2.5</title>
+      <title>Redleaf 2.5: Why Chat Doesn&#39;t Scale for Deep Research</title>
       <link>http://localhost:1313/posts/redleaf-engine-2-5/</link>
       <pubDate>Wed, 29 Apr 2026 01:55:58 -0400</pubDate>
       <guid>http://localhost:1313/posts/redleaf-engine-2-5/</guid>
-      <description>&lt;p&gt;Redleaf was originally built to solve a human problem. In early 2025, LLMs were unreliable for deep research: feed them a long document, and they would lose the thread halfway through. So, I built Redleaf to help people do RAG properly—extract entities, map relationships, and navigate information as a living structure instead of a wall of text.&lt;/p&gt;&#xA;&lt;p&gt;Then, something changed.&lt;/p&gt;&#xA;&lt;p&gt;As open-weight models improved, they stopped feeling like simple token generators and started behaving more like agents. In that shift, something unexpected happened.&lt;/p&gt;</description>
+      <description>&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/posts/redleaf-engine-2-5/redleaf-engine1.png&#34; width=&#34;750px&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Redleaf Engine 2.5’s updated dashboard&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Redleaf was originally built to solve a human problem. In early 2025, LLMs were unreliable for deep research: feed them a long document, and they would lose the thread halfway through. So, I built Redleaf to help people do RAG properly—extract entities, map relationships, and navigate information as a living structure instead of a wall of text.&lt;/p&gt;&#xA;&lt;p&gt;Then, something changed.&lt;/p&gt;&#xA;&lt;p&gt;As open-weight models improved, they stopped feeling like simple token generators and started behaving more like agents. In that shift, something unexpected happened.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Virtual Folders</title>
