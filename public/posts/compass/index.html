@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compass | Nathaniel&#39;s Developer Blog</title>
+    
+    <meta name="author" content="Nathaniel Westveer">
+    <meta name="description" content="When I studied graphic design in college, we were taught structure.
+We learned proportion, grid systems, alignment, hierarchy, and intentionality.
+Then we …">
+    
+    <meta property="og:title" content="Compass | Nathaniel&#39;s Developer Blog">
+    <meta property="og:description" content="When I studied graphic design in college, we were taught structure.
+We learned proportion, grid systems, alignment, hierarchy, and intentionality.
+Then we …">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://localhost:1313/posts/compass/">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nathaniel Westveer",
+      "url": "http:\/\/localhost:1313\/",
+      "jobTitle": "Developer",
+      "knowsAbout": ["Local-first AI", "Flutter", "Python", "Software Design"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+    <div class="site-branding">
+        
+        <h1><a href="http://localhost:1313/">Nathaniel&#39;s Developer Blog</a></h1>
+    </div>
+    <nav class="site-navigation">
+        
+        <a href="http://localhost:1313/">Home</a>
+        <a href="/posts/">Posts</a>
+        <a href="/about/">About</a>
+    </nav>
+</header>
+
+    <main>
+        
+    <article class="post-content">
+        <header>
+            <h1>Compass</h1>
+            
+            <div class="author-byline">By Nathaniel Westveer</div>
+            <time>May 28, 2026</time>
+        </header>
+        <p>When I studied graphic design in college, we were taught structure.</p>
+<p>We learned proportion, grid systems, alignment, hierarchy, and intentionality.</p>
+<p>Then we opened the software, and all of that disappeared.</p>
+<p>Whether it’s Illustrator, Figma, or open-source alternatives like Inkscape, traditional 2D vector software does not actually understand design principles. It hands you an unopinionated Bézier spline and treats you like a digital painter. You spend hours manually nudging handles and anchor points, trying to force precision out of tools that were never structurally aware to begin with.</p>
+<p>A point is always slightly off. Complex booleans become destructive. The workflow slowly collapses into hacks and cleanup.</p>
+<p>To compensate for this, modern design software relies heavily on Smart Guides, snapping systems, and temporary canvas guides. But these are not actual structural relationships. They are visual training wheels.</p>
+<p>A guide is not a relationship.</p>
+<p>Most guides only help align shapes relative to the canvas itself. They do not establish persistent rules between the objects in your design. If two shapes should remain tangent, concentric, proportionally linked, or mathematically dependent on one another, the software has no real understanding of that relationship. The designer is expected to manually maintain it forever.</p>
+<p>The revelation for me did not come from 2D design.</p>
+<p>It came from learning Autodesk Maya.</p>
+<p>In 3D, working with NURBS (Non-Uniform Rational B-Splines) introduces a completely different philosophy. 3D software understands construction history and parented relationships. If you generate a surface from a curve, the software remembers the connection. Modify the curve later, and the surface updates automatically.</p>
+<p>The relationship persists.</p>
+<p>So why did 3D software figure out relational workflows decades ago while 2D graphic design remained trapped in the digital painting era?</p>
+<h2 id="introducing-compass">Introducing Compass</h2>
+<p>Compass brings the philosophy of 3D rigging and construction history into 2D vector design.</p>
+<p>I am not building this because I am obsessed with pure mathematics. I am building it because I want design tools where structure exists by default instead of being simulated through manual adjustment.</p>
+<p>In Compass, you do not just draw disconnected paths.</p>
+<p>You establish relationships.</p>
+<p>Drop two points. Anchor a circle to them. Move one point, and the circle recalculates perfectly. Attach a curve to a proportional scaffold, and the geometry updates automatically as the scaffold changes. The design behaves less like illustration and more like a live rig.</p>
+<p>This enables a fully parented boolean workflow.</p>
+<p>Instead of destructively cutting shapes apart with tools like Shape Builder, where the original curves are permanently lost,Compass treats boolean operations as live relationships. Shapes belong to procedural groups performing Union, Subtract, or Intersect operations continuously in real time. The visible result is always generated dynamically from the structure beneath it.</p>
+<figure><img src="/posts/compass/compass2.png" width="750px"><figcaption>
+			<h4>Early UI: A complex shape built using a parented boolean workflow. Notice the constructor shapes.</h4>
+		</figcaption>
+</figure>
+
+<p>To support this workflow, Compass introduces Constructor Shapes.</p>
+<p>Instead of eyeballing curves or dragging temporary guides across the canvas, designers can place structural systems directly into the document itself,Golden Spirals, proportional scaffolds, radial systems, and constraint paths. These act more like rigs than visual overlays. They do not need to appear in the final export; they exist purely as invisible governing structures that drive the visible geometry attached to them.</p>
+<p>Once the structure is complete, the scaffolding can simply be hidden.</p>
+<figure><img src="/posts/compass/compass.png" width="750px"><figcaption>
+			<h4>The exact same setup with the scaffolding toggled off. A clean final form generated entirely from relationships and constraints.</h4>
+		</figcaption>
+</figure>
+
+<h2 id="rethinking-the-engine">Rethinking the Engine</h2>
+<p>The interface shown above is still an early developer preview. The engine underneath it is what actually matters.</p>
+<p>Building Compass requires abandoning how traditional 2D software handles geometry and memory.</p>
+<p>In standard vector editors, deleting a shape simply removes a path. In Compass, deleting a shape is closer to deleting a node in Maya. The engine has to traverse a dependency graph, determine whether underlying points are still acting as load-bearing anchors for other geometry, and safely untangle those relationships before anything can be removed.</p>
+<p>The document is no longer a flat collection of paths.</p>
+<p>It is a live relational rig.</p>
+<p>What we learn in design school, structure, proportion, intent, and systems, should exist inside the software itself.</p>
+<p>Compass is an attempt to build a vector engine that finally understands that.</p>
+
+    </article>
+
+    </main>
+
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-lightbox');
+
+        const figures = document.querySelectorAll('.post-content figure');
+
+        figures.forEach(figure => {
+          const image = figure.querySelector('img');
+          if (image) {
+            figure.style.cursor = 'zoom-in'; 
+            figure.addEventListener('click', function() {
+              lightbox.style.display = 'flex';
+              lightboxImg.src = image.src;
+            });
+          }
+        });
+
+        function closeLightbox() {
+          lightbox.style.display = 'none';
+        }
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeLightbox();
+          }
+        });
+      });
+    </script>
+</body>
+</html>

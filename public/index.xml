@@ -1,124 +1,136 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Nathaniel&#39;s Developer Blog</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Nathaniel&#39;s Developer Blog</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 29 Apr 2026 01:55:58 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Redleaf 2.5: Why Chat Doesn&#39;t Scale for Deep Research</title>
-      <link>http://localhost:1313/posts/redleaf-engine-2-5/</link>
-      <pubDate>Wed, 29 Apr 2026 01:55:58 -0400</pubDate>
-      <guid>http://localhost:1313/posts/redleaf-engine-2-5/</guid>
-      <description>&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/posts/redleaf-engine-2-5/redleaf-engine1.png&#34; width=&#34;750px&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Redleaf Engine 2.5’s updated dashboard&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Redleaf was originally built to solve a human problem. In early 2025, LLMs were unreliable for deep research: feed them a long document, and they would lose the thread halfway through. So, I built Redleaf to help people do RAG properly—extract entities, map relationships, and navigate information as a living structure instead of a wall of text.&lt;/p&gt;&#xA;&lt;p&gt;Then, something changed.&lt;/p&gt;&#xA;&lt;p&gt;As open-weight models improved, they stopped feeling like simple token generators and started behaving more like agents. In that shift, something unexpected happened.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Virtual Folders</title>
-      <link>http://localhost:1313/posts/virtual-folders/</link>
-      <pubDate>Mon, 20 Apr 2026 19:43:01 -0400</pubDate>
-      <guid>http://localhost:1313/posts/virtual-folders/</guid>
-      <description>&lt;p&gt;Redleaf’s design mission has always been portability: a fully processed knowledge graph, encapsulated in a single folder, ready to hand to a colleague.&lt;/p&gt;&#xA;&lt;p&gt;But building a local first knowledge engine inevitably runs into a very physical constraint: data gravity.&lt;/p&gt;&#xA;&lt;p&gt;With a few dozen PDFs, keeping everything neatly inside a &lt;code&gt;documents/&lt;/code&gt; directory is trivial. At the scale of terabytes, historical archives, podcast libraries, parsed email dumps, that requirement becomes friction.&lt;/p&gt;&#xA;&lt;p&gt;You cannot always bring the data into your workspace. Sometimes you have to meet it where it lives.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>EchoText Update</title>
-      <link>http://localhost:1313/posts/echotext-update/</link>
-      <pubDate>Mon, 20 Apr 2026 03:02:47 -0400</pubDate>
-      <guid>http://localhost:1313/posts/echotext-update/</guid>
-      <description>&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/posts/echotext-update/echotextcover1a.png&#34; width=&#34;750px&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Updated Screenshot April 29 2026&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Text-to-speech has taken a massive leap this decade. We’ve gone from digging through obscure Tacotron papers to listening to neural voices that are nearly indistinguishable from human narration.&lt;/p&gt;&#xA;&lt;p&gt;There’s just one problem: the best tools are usually locked behind a paywall.&lt;/p&gt;&#xA;&lt;p&gt;There are open-source, local alternatives—but they tend to be difficult to set up and even harder to integrate into a daily workflow. That gap is what led me to build &lt;strong&gt;EchoText&lt;/strong&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Organizing Context in Node Leaf</title>
-      <link>http://localhost:1313/posts/organizing-context-in-node-leaf/</link>
-      <pubDate>Thu, 16 Apr 2026 03:05:49 -0400</pubDate>
-      <guid>http://localhost:1313/posts/organizing-context-in-node-leaf/</guid>
-      <description>&lt;p&gt;In a spatial environment, structure should be visible at a glance instead of something you have to reconstruct by squinting at a long chain of nodes.&lt;/p&gt;&#xA;&lt;p&gt;When I first built Node Leaf, there was no Merge Node.&#xA;And at the time, that made sense.&lt;/p&gt;&#xA;&lt;p&gt;Assembling context for an LLM is not like video compositing. You are not layering A over B. The model does not care about visual stacking or strict ordering. It just needs access to the full set of inputs.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Agentic Wiki</title>
-      <link>http://localhost:1313/posts/agentic-wiki/</link>
-      <pubDate>Thu, 09 Apr 2026 01:08:59 -0400</pubDate>
-      <guid>http://localhost:1313/posts/agentic-wiki/</guid>
-      <description>&lt;p&gt;Modern AI chat interfaces boast massive context windows, yet they remain fundamentally constrained by one critical flaw: they are ephemeral.&lt;/p&gt;&#xA;&lt;p&gt;You can spend hours curating inputs, extracting insights, and refining ideas within a session—but the moment that session ends, the structure of that knowledge collapses. What remains is not a system, but a transcript.&lt;/p&gt;&#xA;&lt;p&gt;Return a month later, and you don’t continue forward, you reconstruct from fragments.&lt;/p&gt;&#xA;&lt;p&gt;This makes chat interfaces powerful for isolated problem-solving, but fundamentally inadequate for long-term, compounding research. There is no continuity. No accumulation. No persistent state.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Redleaf Hub</title>
-      <link>http://localhost:1313/posts/redleaf-hub/</link>
-      <pubDate>Wed, 25 Mar 2026 02:35:15 -0400</pubDate>
-      <guid>http://localhost:1313/posts/redleaf-hub/</guid>
-      <description>&lt;p&gt;Redleaf was built around the Flask framework because it aligns perfectly with the core ethos of the project. Flask enabled me to build Redleaf as a highly portable and team-based system—one simple enough to either run over a local network or distribute as a standalone, precomputed project folder.&lt;/p&gt;&#xA;&lt;p&gt;However, to use the Redleaf Engine alongside the Node Leaf visual canvas, you often had to juggle multiple steps—open a terminal, navigate directories, activate environments, start backend services, and launch the interface. Each step adds friction. And friction is the enemy of flow.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Human RAG: The Forgotten Half of Retrieval</title>
-      <link>http://localhost:1313/posts/human-rag/</link>
-      <pubDate>Wed, 25 Mar 2026 02:35:06 -0400</pubDate>
-      <guid>http://localhost:1313/posts/human-rag/</guid>
-      <description>&lt;p&gt;The AI industry is currently fixated on RAG (Retrieval-Augmented Generation). The premise is straightforward: an LLM is only as effective as the context it receives, so we augment prompts with relevant information retrieved from vector databases.&lt;/p&gt;&#xA;&lt;p&gt;This approach works well, for machines.&lt;/p&gt;&#xA;&lt;p&gt;But it quietly overlooks something critical: the human in the loop.&lt;/p&gt;&#xA;&lt;p&gt;Before RAG became a buzzword, we called this process something much simpler, &lt;em&gt;search&lt;/em&gt;. But search has fundamentally degraded for humans. We’ve watched the death of powerful, standalone search utilities (like the old Google Search Appliance hardware) in favor of walled-garden cloud storage like Google Drive, where finding a specific document feels like a roll of the dice.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Node Leaf</title>
-      <link>http://localhost:1313/posts/node-leaf/</link>
-      <pubDate>Fri, 06 Mar 2026 14:56:41 -0500</pubDate>
-      <guid>http://localhost:1313/posts/node-leaf/</guid>
-      <description>&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/posts/node-leaf/nl.png&#34; width=&#34;750px&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;strong&gt;Update: Node Leaf is now live.&lt;/strong&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://github.com/nathanfx330/node-leaf&#34;&gt;https://github.com/nathanfx330/node-leaf&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;I recently reached a major milestone in a long-term personal project: a nodal word processor built in Flutter. Designed to integrate with the Redleaf knowledge engine, this application structures writing and research into a visual web of nodes that pipe data directly into local LLMs through Ollama. I started Node Writer to pursue a long-held dream of creating a nodal word processor, with the vision that it would naturally merge with Redleaf’s development—evolving into an assistant that grows its ability to help you work with nodes.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Deep Writer</title>
-      <link>http://localhost:1313/posts/deep-writer/</link>
-      <pubDate>Fri, 27 Feb 2026 20:58:20 -0500</pubDate>
-      <guid>http://localhost:1313/posts/deep-writer/</guid>
-      <description>&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/posts/deep-writer/dw.png&#34; width=&#34;750px&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Deep Writer&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;I recently released Node Writer. On its own, it was my response to the skeuomorphic persistence of digital paper and the blinking cursor. Traditional editors still assume writing happens linearly, as if ideas arrive fully formed from top to bottom. Node Writer challenges that assumption by abstracting writing into nodes — movable units of thought that can be stacked, rearranged, and explored spatially rather than sequentially.&lt;/p&gt;&#xA;&lt;p&gt;But that release was only the first milestone.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Node Writer</title>
-      <link>http://localhost:1313/posts/node-writer/</link>
-      <pubDate>Wed, 25 Feb 2026 10:29:22 -0500</pubDate>
-      <guid>http://localhost:1313/posts/node-writer/</guid>
-      <description>&lt;p&gt;My first word processor was ClarisWorks on Mac OS 8 in the late nineties. Since then, nothing has changed. We are still staring at a fake digital piece of paper. After years of Microsoft Word, LibreOffice, and Google Docs, the core experience remains exactly the same. Moving text with a cursor is a tedious, character-by-character chore, with no simple way to rearrange blocks of writing. Writing is about abstracting ideas, exploring structure, and developing details. We get so caught up in modern UX capabilities that we forget to innovate. Too often, we don&amp;rsquo;t reinvent the paradigm, we just digitize it.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Redleaf Ai Assistant</title>
-      <link>http://localhost:1313/posts/redleaf-ai-assistant/</link>
-      <pubDate>Mon, 27 Oct 2025 06:48:25 -0400</pubDate>
-      <guid>http://localhost:1313/posts/redleaf-ai-assistant/</guid>
-      <description>&lt;h2 id=&#34;-how-the-terminal-ai-assistant-works&#34;&gt;🔎 How the Terminal AI Assistant Works&lt;/h2&gt;&#xA;&lt;p&gt;The assistant provides a &lt;strong&gt;two-step workflow&lt;/strong&gt;: first search and summarize, then follow-up question mode.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-search-and-summarize&#34;&gt;1️⃣ Search and Summarize&lt;/h3&gt;&#xA;&lt;p&gt;When you issue a query, the assistant can:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Find documents&lt;/strong&gt; by ID or filename using &lt;code&gt;find_documents()&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Perform keyword search&lt;/strong&gt; for pages containing specific terms via &lt;code&gt;search_document_content()&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Conduct semantic search&lt;/strong&gt; using embeddings via &lt;code&gt;semantic_search_document_content()&lt;/code&gt;, returning conceptually relevant sections even if exact words aren’t matched.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Once relevant results are found, the assistant &lt;strong&gt;summarizes each document or page&lt;/strong&gt;, producing concise, context-aware overviews.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Curators and Explorers</title>
-      <link>http://localhost:1313/posts/curators-and-explorers/</link>
-      <pubDate>Sun, 28 Sep 2025 04:14:29 -0400</pubDate>
-      <guid>http://localhost:1313/posts/curators-and-explorers/</guid>
-      <description>&lt;p&gt;Today marks a major milestone for the Redleaf Engine. I’m thrilled to announce a new set of features that transform Redleaf from a personal knowledge tool into a powerful platform for &lt;strong&gt;distributing curated datasets and enabling team collaboration&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The core idea is simple but powerful: what if you could do all the heavy lifting of processing hundreds of documents and then package the entire, fully-analyzed knowledge base into a single, portable unit? What if you could send that “knowledge package” to a colleague, a research team, or even publish it for the world to explore?&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Redleaf Tutorial 2 Core Workflow</title>
-      <link>http://localhost:1313/posts/redleaf-tutorial-2-core-workflow/</link>
-      <pubDate>Tue, 09 Sep 2025 03:54:52 -0400</pubDate>
-      <guid>http://localhost:1313/posts/redleaf-tutorial-2-core-workflow/</guid>
-      <description>&lt;p&gt;Now that you have Redleaf installed and your documents added, it&amp;rsquo;s time to build your knowledge graph. The Redleaf Dashboard features three main workflow buttons that control the entire process. This guide explains what each one does.&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/posts/redleaf-tutorial-2-core-workflow/dashboard.jpg&#34; width=&#34;750px&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;The Three Main Workflow Buttons On The Redleaf Dashboard.&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;the-three-step-process&#34;&gt;The Three-Step Process&lt;/h3&gt;&#xA;&lt;p&gt;The core workflow is designed to be simple and explicit, giving you control over when your computer&amp;rsquo;s resources are used. The process consists of three sequential steps:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Redleaf Engine Update</title>
-      <link>http://localhost:1313/posts/redleaf-engine-update/</link>
-      <pubDate>Tue, 02 Sep 2025 00:50:30 -0400</pubDate>
-      <guid>http://localhost:1313/posts/redleaf-engine-update/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve always been struck by the fact that while our computers can &lt;em&gt;store&lt;/em&gt; files, they don&amp;rsquo;t really &lt;em&gt;understand&lt;/em&gt; them. That&amp;rsquo;s the idea behind &lt;strong&gt;Redleaf&lt;/strong&gt;—and I&amp;rsquo;m excited to announce that version &lt;strong&gt;2.0&lt;/strong&gt; is now ready.&lt;/p&gt;&#xA;&lt;p&gt;For anyone new to the project, Redleaf is a &lt;strong&gt;local-first knowledge engine&lt;/strong&gt;. The goal is to take a folder of documents (PDFs, transcripts, HTML, etc.) and turn it into a private, interconnected knowledge graph that you actually own and control.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>About Me</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Mon, 01 Sep 2025 08:00:00 -0400</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;figure class=&#34;float-left&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/me.jpg&#34; width=&#34;240px&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;I’m Nathaniel Westveer.&lt;/p&gt;&#xA;&lt;p&gt;My work isn’t driven by a single passion, but by a curiosity for what ideas can become.&lt;/p&gt;&#xA;&lt;p&gt;Drawing from a foundation in design and a career in VFX, I build tools designed to empower your workflow as much as they do mine.&lt;/p&gt;&#xA;&lt;p&gt;Welcome.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Anatomy of a Hugo Theme</title>
-      <link>http://localhost:1313/posts/anatomy-of-a-hugo-theme/</link>
-      <pubDate>Mon, 01 Sep 2025 02:56:51 -0400</pubDate>
-      <guid>http://localhost:1313/posts/anatomy-of-a-hugo-theme/</guid>
-      <description>&lt;p&gt;My recent journey into building a Hugo blog led me down a rabbit hole of complex themes.&lt;br&gt;&#xA;&lt;a href=&#34;https://gohugo.io/&#34;&gt;https://gohugo.io/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;While powerful, they often felt like a black box. I decided to strip everything away and ask: what are the absolute essentials to make a Hugo theme work?&lt;/p&gt;&#xA;&lt;p&gt;To truly start from &amp;ldquo;scratch,&amp;rdquo; you first need the underlying folder structure. There is a blank slate theme that nobody talks about called &lt;strong&gt;Zen&lt;/strong&gt;. It’s a bare-minimum boilerplate that sets up the necessary folders and semantic HTML without any of the bloated CSS or scripts.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Nathaniel&#39;s Developer Blog</title>
+		<link>http://localhost:1313/</link>
+		<description>Recent content on Nathaniel&#39;s Developer Blog</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 28 May 2026 17:30:49 -0400</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Compass</title>
+				<link>http://localhost:1313/posts/compass/</link>
+				<pubDate>Thu, 28 May 2026 17:30:49 -0400</pubDate>
+				<guid>http://localhost:1313/posts/compass/</guid>
+				<description>&lt;p&gt;When I studied graphic design in college, we were taught structure.&lt;/p&gt;&#xA;&lt;p&gt;We learned proportion, grid systems, alignment, hierarchy, and intentionality.&lt;/p&gt;&#xA;&lt;p&gt;Then we opened the software, and all of that disappeared.&lt;/p&gt;&#xA;&lt;p&gt;Whether it’s Illustrator, Figma, or open-source alternatives like Inkscape, traditional 2D vector software does not actually understand design principles. It hands you an unopinionated Bézier spline and treats you like a digital painter. You spend hours manually nudging handles and anchor points, trying to force precision out of tools that were never structurally aware to begin with.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Redleaf 2.5: Why Chat Doesn&#39;t Scale for Deep Research</title>
+				<link>http://localhost:1313/posts/redleaf-engine-2-5/</link>
+				<pubDate>Wed, 29 Apr 2026 01:55:58 -0400</pubDate>
+				<guid>http://localhost:1313/posts/redleaf-engine-2-5/</guid>
+				<description>&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/posts/redleaf-engine-2-5/redleaf-engine1.png&#34; width=&#34;750px&#34;&gt;&lt;figcaption&gt;&#xA;&#x9;&#x9;&#x9;&lt;h4&gt;Redleaf Engine 2.5’s updated dashboard&lt;/h4&gt;&#xA;&#x9;&#x9;&lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Redleaf was originally built to solve a human problem. In early 2025, LLMs were unreliable for deep research: feed them a long document, and they would lose the thread halfway through. So, I built Redleaf to help people do RAG properly—extract entities, map relationships, and navigate information as a living structure instead of a wall of text.&lt;/p&gt;&#xA;&lt;p&gt;Then, something changed.&lt;/p&gt;&#xA;&lt;p&gt;As open-weight models improved, they stopped feeling like simple token generators and started behaving more like agents. In that shift, something unexpected happened.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Virtual Folders</title>
+				<link>http://localhost:1313/posts/virtual-folders/</link>
+				<pubDate>Mon, 20 Apr 2026 19:43:01 -0400</pubDate>
+				<guid>http://localhost:1313/posts/virtual-folders/</guid>
+				<description>&lt;p&gt;Redleaf’s design mission has always been portability: a fully processed knowledge graph, encapsulated in a single folder, ready to hand to a colleague.&lt;/p&gt;&#xA;&lt;p&gt;But building a local first knowledge engine inevitably runs into a very physical constraint: data gravity.&lt;/p&gt;&#xA;&lt;p&gt;With a few dozen PDFs, keeping everything neatly inside a &lt;code&gt;documents/&lt;/code&gt; directory is trivial. At the scale of terabytes, historical archives, podcast libraries, parsed email dumps, that requirement becomes friction.&lt;/p&gt;&#xA;&lt;p&gt;You cannot always bring the data into your workspace. Sometimes you have to meet it where it lives.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>EchoText Update</title>
+				<link>http://localhost:1313/posts/echotext-update/</link>
+				<pubDate>Mon, 20 Apr 2026 03:02:47 -0400</pubDate>
+				<guid>http://localhost:1313/posts/echotext-update/</guid>
+				<description>&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/posts/echotext-update/echotextcover1a.png&#34; width=&#34;750px&#34;&gt;&lt;figcaption&gt;&#xA;&#x9;&#x9;&#x9;&lt;h4&gt;Updated Screenshot April 29 2026&lt;/h4&gt;&#xA;&#x9;&#x9;&lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Text-to-speech has taken a massive leap this decade. We’ve gone from digging through obscure Tacotron papers to listening to neural voices that are nearly indistinguishable from human narration.&lt;/p&gt;&#xA;&lt;p&gt;There’s just one problem: the best tools are usually locked behind a paywall.&lt;/p&gt;&#xA;&lt;p&gt;There are open-source, local alternatives—but they tend to be difficult to set up and even harder to integrate into a daily workflow. That gap is what led me to build &lt;strong&gt;EchoText&lt;/strong&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Organizing Context in Node Leaf</title>
+				<link>http://localhost:1313/posts/organizing-context-in-node-leaf/</link>
+				<pubDate>Thu, 16 Apr 2026 03:05:49 -0400</pubDate>
+				<guid>http://localhost:1313/posts/organizing-context-in-node-leaf/</guid>
+				<description>&lt;p&gt;In a spatial environment, structure should be visible at a glance instead of something you have to reconstruct by squinting at a long chain of nodes.&lt;/p&gt;&#xA;&lt;p&gt;When I first built Node Leaf, there was no Merge Node.&#xA;And at the time, that made sense.&lt;/p&gt;&#xA;&lt;p&gt;Assembling context for an LLM is not like video compositing. You are not layering A over B. The model does not care about visual stacking or strict ordering. It just needs access to the full set of inputs.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Agentic Wiki</title>
+				<link>http://localhost:1313/posts/agentic-wiki/</link>
+				<pubDate>Thu, 09 Apr 2026 01:08:59 -0400</pubDate>
+				<guid>http://localhost:1313/posts/agentic-wiki/</guid>
+				<description>&lt;p&gt;Modern AI chat interfaces boast massive context windows, yet they remain fundamentally constrained by one critical flaw: they are ephemeral.&lt;/p&gt;&#xA;&lt;p&gt;You can spend hours curating inputs, extracting insights, and refining ideas within a session—but the moment that session ends, the structure of that knowledge collapses. What remains is not a system, but a transcript.&lt;/p&gt;&#xA;&lt;p&gt;Return a month later, and you don’t continue forward, you reconstruct from fragments.&lt;/p&gt;&#xA;&lt;p&gt;This makes chat interfaces powerful for isolated problem-solving, but fundamentally inadequate for long-term, compounding research. There is no continuity. No accumulation. No persistent state.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Redleaf Hub</title>
+				<link>http://localhost:1313/posts/redleaf-hub/</link>
+				<pubDate>Wed, 25 Mar 2026 02:35:15 -0400</pubDate>
+				<guid>http://localhost:1313/posts/redleaf-hub/</guid>
+				<description>&lt;p&gt;Redleaf was built around the Flask framework because it aligns perfectly with the core ethos of the project. Flask enabled me to build Redleaf as a highly portable and team-based system—one simple enough to either run over a local network or distribute as a standalone, precomputed project folder.&lt;/p&gt;&#xA;&lt;p&gt;However, to use the Redleaf Engine alongside the Node Leaf visual canvas, you often had to juggle multiple steps—open a terminal, navigate directories, activate environments, start backend services, and launch the interface. Each step adds friction. And friction is the enemy of flow.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Human RAG: The Forgotten Half of Retrieval</title>
+				<link>http://localhost:1313/posts/human-rag/</link>
+				<pubDate>Wed, 25 Mar 2026 02:35:06 -0400</pubDate>
+				<guid>http://localhost:1313/posts/human-rag/</guid>
+				<description>&lt;p&gt;The AI industry is currently fixated on RAG (Retrieval-Augmented Generation). The premise is straightforward: an LLM is only as effective as the context it receives, so we augment prompts with relevant information retrieved from vector databases.&lt;/p&gt;&#xA;&lt;p&gt;This approach works well, for machines.&lt;/p&gt;&#xA;&lt;p&gt;But it quietly overlooks something critical: the human in the loop.&lt;/p&gt;&#xA;&lt;p&gt;Before RAG became a buzzword, we called this process something much simpler, &lt;em&gt;search&lt;/em&gt;. But search has fundamentally degraded for humans. We’ve watched the death of powerful, standalone search utilities (like the old Google Search Appliance hardware) in favor of walled-garden cloud storage like Google Drive, where finding a specific document feels like a roll of the dice.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Node Leaf</title>
+				<link>http://localhost:1313/posts/node-leaf/</link>
+				<pubDate>Fri, 06 Mar 2026 14:56:41 -0500</pubDate>
+				<guid>http://localhost:1313/posts/node-leaf/</guid>
+				<description>&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/posts/node-leaf/nl.png&#34; width=&#34;750px&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;strong&gt;Update: Node Leaf is now live.&lt;/strong&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://github.com/nathanfx330/node-leaf&#34;&gt;https://github.com/nathanfx330/node-leaf&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;I recently reached a major milestone in a long-term personal project: a nodal word processor built in Flutter. Designed to integrate with the Redleaf knowledge engine, this application structures writing and research into a visual web of nodes that pipe data directly into local LLMs through Ollama. I started Node Writer to pursue a long-held dream of creating a nodal word processor, with the vision that it would naturally merge with Redleaf’s development—evolving into an assistant that grows its ability to help you work with nodes.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Deep Writer</title>
+				<link>http://localhost:1313/posts/deep-writer/</link>
+				<pubDate>Fri, 27 Feb 2026 20:58:20 -0500</pubDate>
+				<guid>http://localhost:1313/posts/deep-writer/</guid>
+				<description>&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/posts/deep-writer/dw.png&#34; width=&#34;750px&#34;&gt;&lt;figcaption&gt;&#xA;&#x9;&#x9;&#x9;&lt;h4&gt;Deep Writer&lt;/h4&gt;&#xA;&#x9;&#x9;&lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;I recently released Node Writer. On its own, it was my response to the skeuomorphic persistence of digital paper and the blinking cursor. Traditional editors still assume writing happens linearly, as if ideas arrive fully formed from top to bottom. Node Writer challenges that assumption by abstracting writing into nodes — movable units of thought that can be stacked, rearranged, and explored spatially rather than sequentially.&lt;/p&gt;&#xA;&lt;p&gt;But that release was only the first milestone.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Node Writer</title>
+				<link>http://localhost:1313/posts/node-writer/</link>
+				<pubDate>Wed, 25 Feb 2026 10:29:22 -0500</pubDate>
+				<guid>http://localhost:1313/posts/node-writer/</guid>
+				<description>&lt;p&gt;My first word processor was ClarisWorks on Mac OS 8 in the late nineties. Since then, nothing has changed. We are still staring at a fake digital piece of paper. After years of Microsoft Word, LibreOffice, and Google Docs, the core experience remains exactly the same. Moving text with a cursor is a tedious, character-by-character chore, with no simple way to rearrange blocks of writing. Writing is about abstracting ideas, exploring structure, and developing details. We get so caught up in modern UX capabilities that we forget to innovate. Too often, we don&amp;rsquo;t reinvent the paradigm, we just digitize it.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Redleaf Ai Assistant</title>
+				<link>http://localhost:1313/posts/redleaf-ai-assistant/</link>
+				<pubDate>Mon, 27 Oct 2025 06:48:25 -0400</pubDate>
+				<guid>http://localhost:1313/posts/redleaf-ai-assistant/</guid>
+				<description>&lt;h2 id=&#34;-how-the-terminal-ai-assistant-works&#34;&gt;🔎 How the Terminal AI Assistant Works&lt;/h2&gt;&#xA;&lt;p&gt;The assistant provides a &lt;strong&gt;two-step workflow&lt;/strong&gt;: first search and summarize, then follow-up question mode.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-search-and-summarize&#34;&gt;1️⃣ Search and Summarize&lt;/h3&gt;&#xA;&lt;p&gt;When you issue a query, the assistant can:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Find documents&lt;/strong&gt; by ID or filename using &lt;code&gt;find_documents()&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Perform keyword search&lt;/strong&gt; for pages containing specific terms via &lt;code&gt;search_document_content()&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Conduct semantic search&lt;/strong&gt; using embeddings via &lt;code&gt;semantic_search_document_content()&lt;/code&gt;, returning conceptually relevant sections even if exact words aren’t matched.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Once relevant results are found, the assistant &lt;strong&gt;summarizes each document or page&lt;/strong&gt;, producing concise, context-aware overviews.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Curators and Explorers</title>
+				<link>http://localhost:1313/posts/curators-and-explorers/</link>
+				<pubDate>Sun, 28 Sep 2025 04:14:29 -0400</pubDate>
+				<guid>http://localhost:1313/posts/curators-and-explorers/</guid>
+				<description>&lt;p&gt;Today marks a major milestone for the Redleaf Engine. I’m thrilled to announce a new set of features that transform Redleaf from a personal knowledge tool into a powerful platform for &lt;strong&gt;distributing curated datasets and enabling team collaboration&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The core idea is simple but powerful: what if you could do all the heavy lifting of processing hundreds of documents and then package the entire, fully-analyzed knowledge base into a single, portable unit? What if you could send that “knowledge package” to a colleague, a research team, or even publish it for the world to explore?&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Redleaf Tutorial 2 Core Workflow</title>
+				<link>http://localhost:1313/posts/redleaf-tutorial-2-core-workflow/</link>
+				<pubDate>Tue, 09 Sep 2025 03:54:52 -0400</pubDate>
+				<guid>http://localhost:1313/posts/redleaf-tutorial-2-core-workflow/</guid>
+				<description>&lt;p&gt;Now that you have Redleaf installed and your documents added, it&amp;rsquo;s time to build your knowledge graph. The Redleaf Dashboard features three main workflow buttons that control the entire process. This guide explains what each one does.&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/posts/redleaf-tutorial-2-core-workflow/dashboard.jpg&#34; width=&#34;750px&#34;&gt;&lt;figcaption&gt;&#xA;&#x9;&#x9;&#x9;&lt;h4&gt;The Three Main Workflow Buttons On The Redleaf Dashboard.&lt;/h4&gt;&#xA;&#x9;&#x9;&lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;the-three-step-process&#34;&gt;The Three-Step Process&lt;/h3&gt;&#xA;&lt;p&gt;The core workflow is designed to be simple and explicit, giving you control over when your computer&amp;rsquo;s resources are used. The process consists of three sequential steps:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Redleaf Engine Update</title>
+				<link>http://localhost:1313/posts/redleaf-engine-update/</link>
+				<pubDate>Tue, 02 Sep 2025 00:50:30 -0400</pubDate>
+				<guid>http://localhost:1313/posts/redleaf-engine-update/</guid>
+				<description>&lt;p&gt;I&amp;rsquo;ve always been struck by the fact that while our computers can &lt;em&gt;store&lt;/em&gt; files, they don&amp;rsquo;t really &lt;em&gt;understand&lt;/em&gt; them. That&amp;rsquo;s the idea behind &lt;strong&gt;Redleaf&lt;/strong&gt;—and I&amp;rsquo;m excited to announce that version &lt;strong&gt;2.0&lt;/strong&gt; is now ready.&lt;/p&gt;&#xA;&lt;p&gt;For anyone new to the project, Redleaf is a &lt;strong&gt;local-first knowledge engine&lt;/strong&gt;. The goal is to take a folder of documents (PDFs, transcripts, HTML, etc.) and turn it into a private, interconnected knowledge graph that you actually own and control.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>About Me</title>
+				<link>http://localhost:1313/about/</link>
+				<pubDate>Mon, 01 Sep 2025 08:00:00 -0400</pubDate>
+				<guid>http://localhost:1313/about/</guid>
+				<description>&lt;figure class=&#34;float-left&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/me.jpg&#34; width=&#34;240px&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;I’m Nathaniel Westveer.&lt;/p&gt;&#xA;&lt;p&gt;My work isn’t driven by a single passion, but by a curiosity for what ideas can become.&lt;/p&gt;&#xA;&lt;p&gt;Drawing from a foundation in design and a career in VFX, I build tools designed to empower your workflow as much as they do mine.&lt;/p&gt;&#xA;&lt;p&gt;Welcome.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Anatomy of a Hugo Theme</title>
+				<link>http://localhost:1313/posts/anatomy-of-a-hugo-theme/</link>
+				<pubDate>Mon, 01 Sep 2025 02:56:51 -0400</pubDate>
+				<guid>http://localhost:1313/posts/anatomy-of-a-hugo-theme/</guid>
+				<description>&lt;p&gt;My recent journey into building a Hugo blog led me down a rabbit hole of complex themes.&lt;br&gt;&#xA;&lt;a href=&#34;https://gohugo.io/&#34;&gt;https://gohugo.io/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;While powerful, they often felt like a black box. I decided to strip everything away and ask: what are the absolute essentials to make a Hugo theme work?&lt;/p&gt;&#xA;&lt;p&gt;To truly start from &amp;ldquo;scratch,&amp;rdquo; you first need the underlying folder structure. There is a blank slate theme that nobody talks about called &lt;strong&gt;Zen&lt;/strong&gt;. It’s a bare-minimum boilerplate that sets up the necessary folders and semantic HTML without any of the bloated CSS or scripts.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>
