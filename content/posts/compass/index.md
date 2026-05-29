@@ -71,3 +71,5 @@ It is a live relational rig.
 What we learn in design school, structure, proportion, intent, and systems, should exist inside the software itself.
 
 Compass is an attempt to build a vector engine that finally understands that.
+
+https://github.com/nathanfx330/compass
