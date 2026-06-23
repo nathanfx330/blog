@@ -147,4 +147,7 @@ If this was always possible — why did no one build it this way sooner?
 
 You can find the repository and download the latest release here:
 
+Compass 0.3.5:
 https://github.com/nathanfx330/compass
+
+- Nathaniel Westveer
