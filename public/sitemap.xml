@@ -1,15 +1,17 @@
-
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/compass/</loc>
-    <lastmod>2026-05-28T17:30:49-04:00</lastmod>
+    <loc>http://localhost:1313/posts/compass-debian-test/</loc>
+    <lastmod>2026-06-22T20:49:27-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-05-28T17:30:49-04:00</lastmod>
+    <lastmod>2026-06-22T20:49:27-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-06-22T20:49:27-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/compass/</loc>
     <lastmod>2026-05-28T17:30:49-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/redleaf-engine-2-5/</loc>

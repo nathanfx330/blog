@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compass Debian Test | Nathaniel&#39;s Developer Blog</title>
+    
+    <meta name="author" content="Nathaniel Westveer">
+    <meta name="description" content="Compass is a love letter to my frustrations with vector design.
+For decades we&rsquo;ve accepted an odd compromise: vector software asks us to think …">
+    
+    <meta property="og:title" content="Compass Debian Test | Nathaniel&#39;s Developer Blog">
+    <meta property="og:description" content="Compass is a love letter to my frustrations with vector design.
+For decades we&rsquo;ve accepted an odd compromise: vector software asks us to think …">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://localhost:1313/posts/compass-debian-test/">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nathaniel Westveer",
+      "url": "http:\/\/localhost:1313\/",
+      "jobTitle": "Developer",
+      "knowsAbout": ["Local-first AI", "Flutter", "Python", "Software Design"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+    <div class="site-branding">
+        
+        <h1><a href="http://localhost:1313/">Nathaniel&#39;s Developer Blog</a></h1>
+    </div>
+    <nav class="site-navigation">
+        
+        <a href="http://localhost:1313/">Home</a>
+        <a href="/posts/">Posts</a>
+        <a href="/about/">About</a>
+    </nav>
+</header>
+
+    <main>
+        
+    <article class="post-content">
+        <header>
+            <h1>Compass Debian Test</h1>
+            
+            <div class="author-byline">By Nathaniel Westveer</div>
+            <time>June 22, 2026</time>
+        </header>
+        <p>Compass is a love letter to my frustrations with vector design.</p>
+<p>For decades we&rsquo;ve accepted an odd compromise: vector software asks us to think mathematically while forcing us to work mechanically. We switch modes, expand strokes, rebuild geometry, and destroy information over and over just to keep designing. There is no technical reason for any of it.</p>
+<p>Compass could have existed in 1998. It would have been written in C++, required a vastly larger engineering effort, and likely been prohibitively expensive to build — but the mathematics were always there. What persisted instead wasn&rsquo;t a technical limitation. It was an interaction paradigm.</p>
+<p>Modern vector tools still inherit assumptions from software designed decades ago. Even after thousands of features, the underlying experience remains familiar: construct an object, manipulate it, flatten it, convert it, and rebuild it later when intent inevitably shifts.</p>
+<p>That has always felt backwards to me.</p>
+<p>Vector design should be a continuous chain of intent. Structure should become expression without a hard boundary between the two. Geometry should stay alive for as long as possible. Designers should never be forced to choose between fluidity and precision, or between artistic freedom and mathematical rigor.</p>
+<p>Compass is my attempt to build that world — and this is the first time it feels like the system holds together end to end.</p>
+<hr>
+<h2 id="the-debian-test">The Debian Test</h2>
+<p>Every creative tool eventually needs a stress test. For Compass, I chose the Debian logo.</p>
+<p>At first glance it looks deceptively simple — a single swirling form most people assume would be trivial to reproduce. It isn&rsquo;t.</p>
+<p>The Debian swirl sits in an uncomfortable space between strict geometry and hand-drawn imperfection. There is structure hidden inside it, but also asymmetry. The line breathes. It thickens and thins in ways that are hard to describe mathematically, but immediately obvious when they are wrong.</p>
+<p>Traditional workflows force a choice: build everything rigidly and fight to introduce organic character later, or draw freely and lose structural control. Compass was built specifically to remove that tradeoff, so recreating the logo became an end-to-end test of the system itself.</p>
+<hr>
+<h2 id="step-one-establish-structure">Step One: Establish Structure</h2>
+<p>I started by laying down an open spline to define the overall motion of the logo.</p>
+<p>Rather than drawing the final form directly, I treated it as a scaffold — something that captures proportion and flow before detail. This reflects a core idea in Compass: build relationships first, expression second, and keep everything editable for as long as possible.</p>
+<figure><img src="/posts/compass-debian-test/debian_logo.png" width="750px"><figcaption>
+			<h4>The recreation begins as a structural spline defining the swirl&#39;s overall motion.</h4>
+		</figcaption>
+</figure>
+
+<hr>
+<h2 id="step-two-strokes-become-geometry">Step Two: Strokes Become Geometry</h2>
+<p>This is where traditional workflows tend to become destructive.</p>
+<p>In most software, a stroke is just a visual layer attached to a curve. The moment you want an organic taper, you expand it into geometry and begin manually adjusting hundreds of Bézier points.</p>
+<p>In Compass, strokes are geometry from the beginning.</p>
+<p>Holding <code>W</code> on a spline turns it into a Variable-Width Area Stroke. Each vertex gains a width handle that extends geometry along the curve&rsquo;s normal.</p>
+<p>Instead of adjusting every point, you can place Constraint Flags along the stroke. Two flags define a region, and Compass interpolates width across that span automatically. Moving a flag reshapes the entire taper in real time.</p>
+<p>You stop sculpting thickness manually and start defining intent. The system resolves the rest.</p>
+<p><figure><img src="/posts/compass-debian-test/debian-strokes.png" width="750px"><figcaption>
+			<h4>Variable-width strokes and Constraint Flags define the organic taper of the form.</h4>
+		</figcaption>
+</figure>
+
+<figure><img src="/posts/compass-debian-test/q_divide.png" width="750px"><figcaption>
+			<h4>Hold Q and select segments to add a vertex in the middle of two points, adding geometry where needed.</h4>
+		</figcaption>
+</figure>
+
+<figure><img src="/posts/compass-debian-test/rotation.png" width="750px"><figcaption>
+			<h4>Hold Ctrl&#43;R to rotate handle direction.</h4>
+		</figcaption>
+</figure>
+</p>
+<hr>
+<h2 id="step-three-fluid-geometry-meets-explicit-control">Step Three: Fluid Geometry Meets Explicit Control</h2>
+<p>Eventually every design reaches a point where mathematical smoothness needs to give way to deliberate control.</p>
+<p>That tension led to the X-Spline.</p>
+<p>An X-Spline allows fluid Catmull-Rom geometry and explicit Bézier control to coexist on the same path. You can sketch quickly using fluid vertices that generate smooth curves automatically. At any point, you can convert a vertex into a Bézier node.</p>
+<p>That conversion freezes its current tangent into explicit handles while surrounding points remain fluid. The curve does not break or re-evaluate abruptly — it transitions.</p>
+<p>Right-clicking again returns the point to fluid behavior.</p>
+<p>You are no longer choosing a spline system. You are assigning degrees of control.</p>
+<p>For the Debian logo, this is where the final character emerged. The structural scaffold remained intact while specific regions were pushed into subtle asymmetry to match the original&rsquo;s organic swelling.</p>
+<p>When the stroke was ready, I baked it into an editable X-Spline — a compact set of handles derived from the underlying outline, ready for direct refinement.</p>
+<p><figure><img src="/posts/compass-debian-test/debian-2-bake_a.png" width="750px"><figcaption>
+			<h4>The live stroke baked into an editable X-Spline for final refinement.</h4>
+		</figcaption>
+</figure>
+
+<figure><img src="/posts/compass-debian-test/debian-2-bake_b.png" width="750px"><figcaption>
+			<h4>Adding detail to the baked Open Spline.</h4>
+		</figcaption>
+</figure>
+
+<figure><img src="/posts/compass-debian-test/debian-detailed.png" width="750px"><figcaption>
+			<h4>The final detailed vectorization.</h4>
+		</figcaption>
+</figure>
+</p>
+<hr>
+<h2 id="designing-through-momentum">Designing Through Momentum</h2>
+<p>One of the most important discoveries while building Compass is that most friction in creative software is not geometric — it is interruptive.</p>
+<p>Modern tools are built around modes. Select. Rotate. Corner. Edit. Every transition forces a break in thought, shifting attention away from the design and onto the tool itself.</p>
+<p>Compass is built to preserve momentum.</p>
+<p>You can rotate a full system around a chosen vertex with <code>R</code>, or rotate  a vertex with <code>Ctrl+R</code>. Without dropping selection, you can hold <code>F</code> to fillet a corner interactively. From there, you can continue transforming geometry or immediately grab a single point and constrain motion to a single axis with <code>1</code> or <code>2</code>.</p>
+<p>Nothing resets context.</p>
+<p>Nothing forces reconstruction of intent.</p>
+<p>Over time it stops feeling like operating software and starts feeling like direct manipulation of the design itself.</p>
+<hr>
+<h2 id="a-better-bridge-between-2d-and-3d">A Better Bridge Between 2D and 3D</h2>
+<figure><img src="/posts/compass-debian-test/bake_to_obj.png" width="750px"><figcaption>
+			<h4>Baking Spline to OJB </h4>
+		</figcaption>
+</figure>
+
+<p>Vector workflows inevitably collide with 3D systems, and that transition is still fragile.</p>
+<p>SVG remains the standard bridge to tools like Blender, despite well-known limitations. Masks break in translation. Boolean operations behave inconsistently. Imported geometry often requires cleanup before it becomes usable.</p>
+<p>The other extreme — triangulated mesh export — is equally problematic, producing dense and irregular geometry that is technically correct but difficult to work with.</p>
+<p>Compass takes a different approach.</p>
+<p>Instead of triangulating immediately, it resolves geometry into a structured quad lattice inside the spline boundary. The interior is a regular grid; only boundary cells are clipped to match the silhouette. The result is predictable, uniform topology that survives export cleanly.</p>
+<p>When imported into Blender, it resolves into clean quad geometry with minimal intervention required. It is designed to remain editable beyond the 2D canvas rather than degrade on export.</p>
+<p><figure><img src="/posts/compass-debian-test/debian-3-blender.png" width="750px"><figcaption>
+			<h4>Imported into Blender — grid-aligned topology that resolves to clean quads in a single pass.</h4>
+		</figcaption>
+</figure>
+
+<figure><img src="/posts/compass-debian-test/blender_geo.png" width="750px"><figcaption>
+			<h4>Grid-aligned topology close up.</h4>
+		</figcaption>
+</figure>
+</p>
+<hr>
+<h2 id="the-bigger-idea">The Bigger Idea</h2>
+<p>The Debian logo was never the point. It was a proof.</p>
+<p>What matters is watching a single shape move from a structural scaffold to expressive vector form and finally into clean, usable 3D topology — without switching paradigms or rebuilding intent at any stage. That continuity is the real system.</p>
+<p>And here is what I can&rsquo;t get past: almost none of it required a breakthrough. The OBJ format has been open and trivial to write for decades; treating it as a clean, first-class export target was simply never anyone&rsquo;s priority. The same is true of nearly everything Compass does. Persistent constraints, structure that stays editable all the way into expression, a stroke that is geometry instead of a style bolted onto a curve — as far as I can tell, none of these were ever priorities for Adobe Illustrator, or for its open-source descendants like Inkscape.</p>
+<p>So Compass is not a new set of tools layered on the old model. It is a different foundation underneath it — one where geometry persists instead of collapsing at each stage, where structure and expression stop being separate phases, where the friction that defined vector design for thirty years simply isn&rsquo;t there. And it does all of that inside what, by the standards of modern software, is a microscopic codebase: pure Dart, with no external dependencies.</p>
+<p>It feels like the tool I always assumed someone would eventually build, and was somehow never handed.</p>
+<p>Which leaves the one question I keep circling and can&rsquo;t answer:</p>
+<p>If this was always possible — why did no one build it this way sooner?</p>
+<p>You can find the repository and download the latest release here:</p>
+<p><a href="https://github.com/nathanfx330/compass">https://github.com/nathanfx330/compass</a></p>
+
+    </article>
+
+    </main>
+
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-lightbox');
+
+        const figures = document.querySelectorAll('.post-content figure');
+
+        figures.forEach(figure => {
+          const image = figure.querySelector('img');
+          if (image) {
+            figure.style.cursor = 'zoom-in'; 
+            figure.addEventListener('click', function() {
+              lightbox.style.display = 'flex';
+              lightboxImg.src = image.src;
+            });
+          }
+        });
+
+        function closeLightbox() {
+          lightbox.style.display = 'none';
+        }
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeLightbox();
+          }
+        });
+      });
+    </script>
+</body>
+</html>

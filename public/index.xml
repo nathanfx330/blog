@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Thu, 28 May 2026 17:30:49 -0400</lastBuildDate>
+			<lastBuildDate>Mon, 22 Jun 2026 20:49:27 -0400</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Compass Debian Test</title>
+				<link>http://localhost:1313/posts/compass-debian-test/</link>
+				<pubDate>Mon, 22 Jun 2026 20:49:27 -0400</pubDate>
+				<guid>http://localhost:1313/posts/compass-debian-test/</guid>
+				<description>&lt;p&gt;Compass is a love letter to my frustrations with vector design.&lt;/p&gt;&#xA;&lt;p&gt;For decades we&amp;rsquo;ve accepted an odd compromise: vector software asks us to think mathematically while forcing us to work mechanically. We switch modes, expand strokes, rebuild geometry, and destroy information over and over just to keep designing. There is no technical reason for any of it.&lt;/p&gt;&#xA;&lt;p&gt;Compass could have existed in 1998. It would have been written in C++, required a vastly larger engineering effort, and likely been prohibitively expensive to build — but the mathematics were always there. What persisted instead wasn&amp;rsquo;t a technical limitation. It was an interaction paradigm.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Compass</title>
 				<link>http://localhost:1313/posts/compass/</link>
