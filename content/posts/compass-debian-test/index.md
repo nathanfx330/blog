@@ -109,9 +109,6 @@ Over time it stops feeling like operating software and starts feeling like direc
 ---
 
 ## A Better Bridge Between 2D and 3D
-{{< figure src="bake_to_obj.png" title="Baking Spline to OJB " width="750px" >}}
-
-
 
 Vector workflows inevitably collide with 3D systems, and that transition is still fragile.
 
@@ -124,6 +121,7 @@ Compass takes a different approach.
 Instead of triangulating immediately, it resolves geometry into a structured quad lattice inside the spline boundary. The interior is a regular grid; only boundary cells are clipped to match the silhouette. The result is predictable, uniform topology that survives export cleanly.
 
 When imported into Blender, it resolves into clean quad geometry with minimal intervention required. It is designed to remain editable beyond the 2D canvas rather than degrade on export.
+{{< figure src="bake_to_obj.png" title="Baking Spline to OBJ " width="750px" >}}
 
 {{< figure src="debian-3-blender.png" title="Imported into Blender — grid-aligned topology that resolves to clean quads in a single pass." width="750px" >}}
 {{< figure src="blender_geo.png" title="Grid-aligned topology close up." width="750px" >}}
