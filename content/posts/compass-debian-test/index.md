@@ -57,7 +57,7 @@ Instead of adjusting every point, you can place Constraint Flags along the strok
 You stop sculpting thickness manually and start defining intent. The system resolves the rest.
 
 {{< figure src="debian-strokes.png" title="Variable-width strokes and Constraint Flags define the organic taper of the form." width="750px" >}}
-{{< figure src="q_divide.png" title="Hold Q and select segments to add a vertex in the middle of two points, adding geometry where needed." width="750px" >}}
+{{< figure src="q_divide.png" title="Hold Q mouse over vertex segments to add a vertex in the middle of two points, adding geometry where needed." width="750px" >}}
 {{< figure src="rotation.png" title="Hold Ctrl+R to rotate handle direction." width="750px" >}}
 
 
