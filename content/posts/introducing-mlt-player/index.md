@@ -46,7 +46,7 @@ So MLT Player starts there. Explorer opens an ordinary directory and shows the m
 
 {{< figure src="mlt_1_browse.png" title="Explorer works directly with the media already on disk." width="750px" >}}
 
-*Demo footage shown in the screenshots is from **Cosmos Laundromat: First Cycle** by Blender Studio.*
+*Demo footage shown in the screenshots is from [**Cosmos Laundromat: First Cycle** by Blender Studio](https://www.youtube.com/watch?v=Y-rmzh0PI3c&t=171s).*
 
 That works well until the collection becomes large. A filesystem is excellent at answering one question: where is this file? It is much worse at answering: why do I care about this file?
 
