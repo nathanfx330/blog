@@ -46,6 +46,8 @@ So MLT Player starts there. Explorer opens an ordinary directory and shows the m
 
 {{< figure src="mlt_1_browse.png" title="Explorer works directly with the media already on disk." width="750px" >}}
 
+*Demo footage shown in the screenshots is from **Cosmos Laundromat: First Cycle** by Blender Studio.*
+
 That works well until the collection becomes large. A filesystem is excellent at answering one question: where is this file? It is much worse at answering: why do I care about this file?
 
 A video might live in one folder while being relevant to several things I am working on: a set of interviews, a particular subject, clips to review later, a collection I am preparing for somebody else. I do not want four copies of the file just because it has four meanings.
