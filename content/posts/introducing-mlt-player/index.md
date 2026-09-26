@@ -44,9 +44,7 @@ I do not want a media application to take a perfectly ordinary file on disk, imp
 
 So MLT Player starts there. Explorer opens an ordinary directory and shows the media already inside it. There is no mandatory ingest and no proprietary media store between the application and the source.
 
-<figure><img src="/posts/introducing-mlt-player/mlt_1_browse.png" width="750px"><figcaption>
-<h4>Explorer works directly with the media already on disk.</h4>
-</figcaption></figure>
+{{< figure src="mlt_1_browse.png" title="Explorer works directly with the media already on disk." width="750px" >}}
 
 That works well until the collection becomes large. A filesystem is excellent at answering one question: where is this file? It is much worse at answering: why do I care about this file?
 
@@ -60,15 +58,11 @@ So the media stays on disk exactly where it is, while Projects provide an organi
 
 That distinction became one of the central ideas of the application.
 
-<figure><img src="/posts/introducing-mlt-player/mlt_2b_project_dash.png" width="750px"><figcaption>
-<h4>The Project dashboard adds an organizational layer above the filesystem.</h4>
-</figcaption></figure>
+{{< figure src="mlt_2b_project_dash.png" title="The Project dashboard adds an organizational layer above the filesystem." width="750px" >}}
 
 The organization also stays visible and direct. Click a parent Catalog and its child Catalogs appear as simple tiles in the same space where media appears, rather than as a tree hidden in a sidebar or an empty screen claiming the parent contains nothing. Ratings, tags, color labels, favorites and bookmarks work the same way: they add ways of finding media without changing where it lives.
 
-<figure><img src="/posts/introducing-mlt-player/mlt_2_rate.png" width="750px"><figcaption>
-<h4>Ratings and other Project metadata add meaning without moving the source file.</h4>
-</figcaption></figure>
+{{< figure src="mlt_2_rate.png" title="Ratings and other Project metadata add meaning without moving the source file." width="750px" >}}
 
 ## A video should not look like one thumbnail
 
@@ -78,9 +72,7 @@ A forty-minute recording may contain people entering and leaving, several locati
 
 MLT Player has a Storyboard view that turns the video into an array of frames sampled across its length. Instead of time moving past you in one dimension, time becomes something you can scan in two. A person appears and disappears. A presentation begins. The camera changes. A particular room returns later. A pattern that would take minutes of scrubbing to discover can become obvious almost immediately.
 
-<figure><img src="/posts/introducing-mlt-player/mlt_4_storyboard.png" width="750px"><figcaption>
-<h4>Storyboard turns the length of a video into something the eye can scan at once.</h4>
-</figcaption></figure>
+{{< figure src="mlt_4_storyboard.png" title="Storyboard turns the length of a video into something the eye can scan at once." width="750px" >}}
 
 The computer already had every one of those frames. The important change is exposing them in a form the eye can compare at once. It helps me look at a video, rather than only play it.
 
@@ -90,9 +82,7 @@ The same principle applies when the important thing is not visual. If I remember
 
 MLT Player can load an SRT transcript alongside the media and make it searchable. Search for the phrase, click the result, and go to that moment.
 
-<figure><img src="/posts/introducing-mlt-player/mlt_3_srt.png" width="750px"><figcaption>
-<h4>A searchable SRT transcript turns spoken words into direct navigation.</h4>
-</figcaption></figure>
+{{< figure src="mlt_3_srt.png" title="A searchable SRT transcript turns spoken words into direct navigation." width="750px" >}}
 
 Video normally makes you search sequentially. A transcript gives time an index.
 
@@ -116,15 +106,11 @@ Finding an important moment is only half the problem. Once I find it, I need a w
 
 A bookmark in MLT Player stores an exact source-frame position. It shows a visual preview, but the preview still points back to the media. I think of bookmarks as soft screenshots. A screenshot is detached from its source; it becomes another file. A bookmark says: this exact moment matters, and I still know where it came from. Click it and return to the frame.
 
-<figure><img src="/posts/introducing-mlt-player/mlt_5_bookmarkpage.png" width="750px"><figcaption>
-<h4>Bookmarks collect exact moments without detaching them from their source.</h4>
-</figcaption></figure>
+{{< figure src="mlt_5_bookmarkpage.png" title="Bookmarks collect exact moments without detaching them from their source." width="750px" >}}
 
 A bookmark can also open into its own profile. The frame appears alongside the surrounding SRT transcript, so the image and what was being said at that moment stay together. I can right-click the particular transcript line I am pointing out and mark it as the highlight line for that bookmark. The surrounding cues remain there for context, and clicking any of them jumps back to that point in the video.
 
-<figure><img src="/posts/introducing-mlt-player/mlt_6_bookmark_profile.png" width="750px"><figcaption>
-<h4>A bookmark profile keeps the frame, surrounding transcript and chosen highlight line together.</h4>
-</figcaption></figure>
+{{< figure src="mlt_6_bookmark_profile.png" title="A bookmark profile keeps the frame, surrounding transcript and chosen highlight line together." width="750px" >}}
 
 When reviewing a one-hour recording, I might find eight moments that matter and bookmark them as I go. Later I can see them together instead of scrubbing again. And sometimes that collection of moments is itself the output: MLT Player can export all bookmarked frames as images in one operation.
 
@@ -134,25 +120,17 @@ So instead of telling someone to watch an hour-long recording and pay attention 
 
 The editing side follows the same philosophy. I did not want a timeline. I wanted the operations that are useful before a timeline becomes necessary: set an In point, set an Out point, play the selection, trim it, undo, redo, export.
 
-<figure><img src="/posts/introducing-mlt-player/mlt_7_in_out_points.png" width="750px"><figcaption>
-<h4>Exact In and Out points define the part of the source that matters.</h4>
-</figcaption></figure>
+{{< figure src="mlt_7_in_out_points.png" title="Exact In and Out points define the part of the source that matters." width="750px" >}}
 
-<figure><img src="/posts/introducing-mlt-player/mlt_8_trimmed_clip.png" width="750px"><figcaption>
-<h4>The source can then be trimmed non-destructively without building a timeline.</h4>
-</figcaption></figure>
+{{< figure src="mlt_8_trimmed_clip.png" title="The source can then be trimmed non-destructively without building a timeline." width="750px" >}}
 
-<figure><img src="/posts/introducing-mlt-player/mlt_9_export_trim.png" width="750px"><figcaption>
-<h4>The trimmed result can be exported directly when the small job is finished.</h4>
-</figcaption></figure>
+{{< figure src="mlt_9_export_trim.png" title="The trimmed result can be exported directly when the small job is finished." width="750px" >}}
 
 The same is true of layering. Wanting to put an image or video over the source does not mean I need tracks. It means I need a layer.
 
 So MLT Player has a small layered composition system. Each layer has its own timing, source range, position, scale, opacity and audio gain. There is no track hierarchy, because there is no reason to introduce one until the work actually becomes a timeline.
 
-<figure><img src="/posts/introducing-mlt-player/mlt_11_layers.png" width="750px"><figcaption>
-<h4>Layered composition without introducing a track-based timeline.</h4>
-</figcaption></figure>
+{{< figure src="mlt_11_layers.png" title="Layered composition without introducing a track-based timeline." width="750px" >}}
 
 ## Lightweight does not mean imprecise
 
@@ -168,9 +146,7 @@ That is the complexity hidden under a very simple expectation: show me this fram
 
 If I step one frame, I want one frame. If I bookmark a moment, I want the exact source frame, and if I export that bookmark later, I want the same frame. If a layered composition looks one way in preview, export should not quietly interpret it differently.
 
-<figure><img src="/posts/introducing-mlt-player/mlt_10_video_inspector.png" width="750px"><figcaption>
-<h4>The Player keeps frame-level inspection close to the media instead of hiding it behind an editing project.</h4>
-</figcaption></figure>
+{{< figure src="mlt_10_video_inspector.png" title="The Player keeps frame-level inspection close to the media instead of hiding it behind an editing project." width="750px" >}}
 
 The live preview and the export pipeline are separate internally, because playback and deterministic rendering have different needs, but they derive their decisions from the same composition rules. MLT Player can export delivery video, higher-quality masters, audio, still frames and image sequences, and bookmarks individually or in bulk. In every case, I want to be able to trust what I am looking at.
 
