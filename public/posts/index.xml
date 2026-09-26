@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Mon, 22 Jun 2026 20:49:27 -0400</lastBuildDate>
+			<lastBuildDate>Sun, 26 Jul 2026 23:48:19 -0400</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>The Gradient Tool Should Not Exist</title>
+				<link>http://localhost:1313/posts/the-gradient-tool-should-not-exist/</link>
+				<pubDate>Sun, 26 Jul 2026 23:48:19 -0400</pubDate>
+				<guid>http://localhost:1313/posts/the-gradient-tool-should-not-exist/</guid>
+				<description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;draft-true&#34;&gt;title: &amp;ldquo;The Gradient Tool Should Not Exist&amp;rdquo;&#xA;date: 2026-07-26T12:00:00-04:00&#xA;draft: true&lt;/h2&gt;&#xA;&lt;p&gt;Compass has reached a major milestone.&lt;/p&gt;&#xA;&lt;p&gt;It now supports direct Linear Gradients and fully editable Gradient Meshes.&lt;/p&gt;&#xA;&lt;p&gt;But the important part is not that Compass has gradients.&lt;/p&gt;&#xA;&lt;p&gt;Illustrator has gradients.&#xA;Inkscape has gradients.&#xA;Every serious vector application has gradients.&lt;/p&gt;&#xA;&lt;p&gt;The difference is that Compass does not need a Gradient Tool.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;the-toolbar-is-a-physical-metaphor&#34;&gt;The Toolbar Is a Physical Metaphor&lt;/h2&gt;&#xA;&lt;p&gt;Most graphic design software is organized like a physical toolbox.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Compass Debian Test</title>
 				<link>http://localhost:1313/posts/compass-debian-test/</link>

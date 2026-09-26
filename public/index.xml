@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Mon, 22 Jun 2026 20:49:27 -0400</lastBuildDate>
+			<lastBuildDate>Sun, 26 Jul 2026 23:48:19 -0400</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>The Gradient Tool Should Not Exist</title>
+				<link>http://localhost:1313/posts/the-gradient-tool-should-not-exist/</link>
+				<pubDate>Sun, 26 Jul 2026 23:48:19 -0400</pubDate>
+				<guid>http://localhost:1313/posts/the-gradient-tool-should-not-exist/</guid>
+				<description>&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/posts/the-gradient-tool-should-not-exist/gradient.png&#34; width=&#34;750px&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Compass has reached a major milestone. It now supports direct Linear Gradients and fully editable Gradient Meshes, but the important part is not simply that Compass has gradients. Illustrator has gradients. Inkscape has gradients. Every serious vector application has gradients.&lt;/p&gt;&#xA;&lt;p&gt;The difference is that Compass does not need a Gradient Tool.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-toolbar-is-a-physical-metaphor&#34;&gt;The Toolbar Is a Physical Metaphor&lt;/h2&gt;&#xA;&lt;p&gt;Most graphic design software is organized like a physical toolbox. You choose the Selection Tool, then the Pen Tool, then the Rotation Tool, and finally the Gradient Tool. Each function is represented as a separate instrument that must be picked up before the software allows you to perform a particular kind of edit.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Compass Debian Test</title>
 				<link>http://localhost:1313/posts/compass-debian-test/</link>
