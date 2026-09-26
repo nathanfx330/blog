@@ -146,7 +146,7 @@ That is the complexity hidden under a very simple expectation: show me this fram
 
 If I step one frame, I want one frame. If I bookmark a moment, I want the exact source frame, and if I export that bookmark later, I want the same frame. If a layered composition looks one way in preview, export should not quietly interpret it differently.
 
-{{< figure src="mlt_10_video_inspector.png" title="The Player keeps frame-level inspection close to the media instead of hiding it behind an editing project." width="750px" >}}
+{{< figure src="mlt_10_video_inspector.png" title="The media inspector exposes codec and source details for the current file." width="750px" >}}
 
 The live preview and the export pipeline are separate internally, because playback and deterministic rendering have different needs, but they derive their decisions from the same composition rules. MLT Player can export delivery video, higher-quality masters, audio, still frames and image sequences, and bookmarks individually or in bulk. In every case, I want to be able to trust what I am looking at.
 
