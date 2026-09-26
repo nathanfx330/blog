@@ -87,7 +87,7 @@ For decades we&rsquo;ve accepted an odd compromise: vector software asks us to t
 </figure>
 
 <figure><img src="/posts/compass-debian-test/q_divide.png" width="750px"><figcaption>
-			<h4>Hold Q mouse over vertex segments to add a vertex in the middle of two points, adding geometry where needed.</h4>
+			<h4>Hold Q and select segments to add a vertex in the middle of two points, adding geometry where needed.</h4>
 		</figcaption>
 </figure>
 
@@ -132,17 +132,17 @@ For decades we&rsquo;ve accepted an odd compromise: vector software asks us to t
 <p>Over time it stops feeling like operating software and starts feeling like direct manipulation of the design itself.</p>
 <hr>
 <h2 id="a-better-bridge-between-2d-and-3d">A Better Bridge Between 2D and 3D</h2>
+<figure><img src="/posts/compass-debian-test/bake_to_obj.png" width="750px"><figcaption>
+			<h4>Baking Spline to OJB </h4>
+		</figcaption>
+</figure>
+
 <p>Vector workflows inevitably collide with 3D systems, and that transition is still fragile.</p>
 <p>SVG remains the standard bridge to tools like Blender, despite well-known limitations. Masks break in translation. Boolean operations behave inconsistently. Imported geometry often requires cleanup before it becomes usable.</p>
 <p>The other extreme — triangulated mesh export — is equally problematic, producing dense and irregular geometry that is technically correct but difficult to work with.</p>
 <p>Compass takes a different approach.</p>
 <p>Instead of triangulating immediately, it resolves geometry into a structured quad lattice inside the spline boundary. The interior is a regular grid; only boundary cells are clipped to match the silhouette. The result is predictable, uniform topology that survives export cleanly.</p>
-<p>When imported into Blender, it resolves into clean quad geometry with minimal intervention required. It is designed to remain editable beyond the 2D canvas rather than degrade on export.
-<figure><img src="/posts/compass-debian-test/bake_to_obj.png" width="750px"><figcaption>
-			<h4>Baking Spline to OBJ </h4>
-		</figcaption>
-</figure>
-</p>
+<p>When imported into Blender, it resolves into clean quad geometry with minimal intervention required. It is designed to remain editable beyond the 2D canvas rather than degrade on export.</p>
 <p><figure><img src="/posts/compass-debian-test/debian-3-blender.png" width="750px"><figcaption>
 			<h4>Imported into Blender — grid-aligned topology that resolves to clean quads in a single pass.</h4>
 		</figcaption>
@@ -163,11 +163,7 @@ For decades we&rsquo;ve accepted an odd compromise: vector software asks us to t
 <p>Which leaves the one question I keep circling and can&rsquo;t answer:</p>
 <p>If this was always possible — why did no one build it this way sooner?</p>
 <p>You can find the repository and download the latest release here:</p>
-<p>It&rsquo;s currently in v0.3.5
-<a href="https://github.com/nathanfx330/compass">https://github.com/nathanfx330/compass</a></p>
-<ul>
-<li>Nathaniel Westveer</li>
-</ul>
+<p><a href="https://github.com/nathanfx330/compass">https://github.com/nathanfx330/compass</a></p>
 
     </article>
 
